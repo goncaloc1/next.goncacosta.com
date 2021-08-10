@@ -1,0 +1,72 @@
+#photo_1 {
+  width: 585px;
+  height: 380px;
+}
+#photo_5 {
+  width: 588px;
+  height: 380px;
+}
+#photo_7 {
+  width: 850px;
+  height: 552px;
+}
+#photo_f {
+  width: 572px;
+  height: 380px;
+}
+#photo_g {
+  width: 575px;
+  height: 380px;
+}
+#photo_h {
+  width: 566px;
+  height: 380px;
+}
+#photo_6 {
+  width: 800px;
+  height: 518px;
+}
+#photo_e {
+  width: 775px;
+  height: 518px;
+}
+#photo_a {
+  width: 782px;
+  height: 518px;
+}
+#photo_i {
+  width: 783px;
+  height: 518px;
+}
+
+.header {
+  width: 350px;
+  height: 600px;
+  margin: 0 100px 0 0px;
+}
+
+.cell_bottom {
+  display: table-cell;
+  vertical-align: bottom;
+  padding: 0 0 16px 0;
+}
+
+.boxNarrow {
+  margin: 0 20px 0 0px;
+}
+.boxDistant {
+  margin: 0 150px 0 0px;
+}
+.boxDistantX {
+  margin: 0 300px 0 0px;
+}
+.boxDistantXX {
+  margin: 0 600px 0 0px;
+}
+.boxDistantXXX {
+  margin: 0 1100px 0 0px;
+}
+
+#photo_h_box {
+  height: 552px;
+}

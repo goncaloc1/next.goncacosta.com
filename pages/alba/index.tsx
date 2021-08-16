@@ -17,9 +17,6 @@ export default function Alba() {
           <div className="cell">
             <ul id="navigation_menu">
               <li>
-                {/* <a id="back" href="../">
-                  <span>back</span>
-                </a> */}
                 <Link href="/">
                   <a id="back">
                     <span>back</span>

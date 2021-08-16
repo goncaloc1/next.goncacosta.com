@@ -158,11 +158,11 @@ function HomePage() {
     loadRandomPhoto();
     setupMenu();
 
-    var $this = this;
-    window.onload = function () {
-      // the timeout is to prevent the script from hanging (chrome 23)
-      setTimeout(function () { $this.doSiteCache(); }, 1);
-    };
+    // var $this = this;
+    // window.onload = function () {
+    //   // the timeout is to prevent the script from hanging (chrome 23)
+    //   setTimeout(function () { $this.doSiteCache(); }, 1);
+    // };
   };
 
 }(HomePage));
@@ -189,9 +189,10 @@ function ProjectPage(name, changePageTriggerElems) {
         scrollInertia: 550,
         scrollButtons: {
           enable: true,
-          scrollSpeed: 5
+          scrollSpeed: 150,
         },
-        mouseWheel: 6,
+        mouseWheel: true,
+        mouseWheelPixels: 500,
         callbacks: { onScroll: onScrollCallback }
       });
     };
@@ -205,15 +206,21 @@ function ProjectPage(name, changePageTriggerElems) {
 
     _base.setup.apply(this);
 
-    $(window).ready(function () {
+    // $(window).ready(function () {
+    //   setupScrollBar(onScrollCallback);
+    //   setupFullScreen();
+    // });
+
+    // instead of $(window).ready
+    jQuery(function () {
       setupScrollBar(onScrollCallback);
       setupFullScreen();
-    });
+    })
 
-    var $this = this;
-    $(window).load(function () {
-      $this.doSiteCache();
-    });
+    // var $this = this;
+    // $(window).load(function () {
+    //   $this.doSiteCache();
+    // });
   };
 
 }(ProjectPage));
@@ -255,14 +262,15 @@ function ReminiscenciaPage() {
 
     $('.my-cycle-slideshow').cycle();
 
-    $(window).ready(function () {
+    //$(window).ready(function () {
+    jQuery(function () {
       setupFullScreen();
     });
 
-    var $this = this;
-    $(window).load(function () {
-      $this.doSiteCache();
-    });
+    // var $this = this;
+    // $(window).load(function () {
+    //   $this.doSiteCache();
+    // });
   };
 
 }(ReminiscenciaPage));

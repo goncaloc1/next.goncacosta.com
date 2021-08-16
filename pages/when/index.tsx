@@ -43,6 +43,7 @@ export default function When() {
                   id="read_book"
                   href="https://issuu.com/goncacosta/docs/when?mode=window&viewMode=doublePage"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <span>book</span>
                 </a>

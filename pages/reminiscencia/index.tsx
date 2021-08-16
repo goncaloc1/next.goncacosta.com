@@ -38,6 +38,7 @@ export default function Reminiscencia() {
                   id="read_book"
                   href="https://issuu.com/goncacosta/docs/reminiscencia?mode=window&viewMode=doublePage"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <span>book</span>
                 </a>

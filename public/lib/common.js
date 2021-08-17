@@ -7,18 +7,8 @@ Page.prototype = {
 
   constructor: Page,
   imagesRootPath: 'images/',
-
-  doSiteCache: function () {
-    var siteCache = new SiteCache(this.name);
-
-    siteCache.initialize();
-    siteCache.preparePageExit(this.changePageTriggerElems);
-    siteCache.loadCache();
-  },
-
   setup: function () { }
 };
-
 
 function HomePage() {
   Page.call(this, 'home', ['reminiscencia', 'alba', 'when', 'paperbag', 'oulu', 'sopra', 'fado']);
@@ -44,7 +34,7 @@ function HomePage() {
     function loadRandomPhoto() {
 
       var pageInfo, mainImage, img = new Image(),
-        pages = SiteCache.prototype.getCacheableSitePages();
+        pages = [ReminiscenciaPage, AlbaPage, WhenPage, PaperbagPage, OuluPage, SopraPage, FadoPage];
 
       while (mainImage === undefined) {
         var pagesInfo = [], mainPageImages = [],
@@ -157,12 +147,6 @@ function HomePage() {
 
     loadRandomPhoto();
     setupMenu();
-
-    // var $this = this;
-    // window.onload = function () {
-    //   // the timeout is to prevent the script from hanging (chrome 23)
-    //   setTimeout(function () { $this.doSiteCache(); }, 1);
-    // };
   };
 
 }(HomePage));
@@ -216,11 +200,6 @@ function ProjectPage(name, changePageTriggerElems) {
       setupScrollBar(onScrollCallback);
       setupFullScreen();
     })
-
-    // var $this = this;
-    // $(window).load(function () {
-    //   $this.doSiteCache();
-    // });
   };
 
 }(ProjectPage));
@@ -266,11 +245,6 @@ function ReminiscenciaPage() {
     jQuery(function () {
       setupFullScreen();
     });
-
-    // var $this = this;
-    // $(window).load(function () {
-    //   $this.doSiteCache();
-    // });
   };
 
 }(ReminiscenciaPage));
@@ -724,295 +698,16 @@ function initFullScreenAPI() {
   window.fullScreenAPI = fullScreenAPI;
 }
 
-
-/*  ----------
-
-    SiteCache
-
-    ---------- */
-
-function SiteCache(currentPage) {
-  this.projects = [];
-  this.inCache = false;
-  this.currentPage = currentPage;
-};
-
-SiteCache.prototype = (function () {
-
-  var cacheQueue = [];
-
-  function checkNewSession() {
-    var newSession = sessionStorage['gcSiteSession'] === undefined;
-    if (newSession) { window.localStorage.removeItem('PhotosToCache'); }
-  };
-
-  function undressLink(href) {
-    if (!href) return '';
-    var names = href.match(/\/([^\/]+)[\/]?$/);
-
-    if (names !== null) return names[1];
-    else return href.replace(/[\/\.\\]/gi, '');
-  };
-
-  function createProject(pageInfo) {
-
-    var prj = new Project(
-      pageInfo.title,
-      pageInfo.relativePath,
-      pageInfo.imagesRootPath + pageInfo.relativePath
-    );
-
-    for (var i = 0; i < pageInfo.imagesInfo.length; ++i) {
-      prj.photos.push(new Photo(
-        prj,
-        pageInfo.imagesInfo[i].name,
-        pageInfo.imagesInfo[i].mainPage
-      ));
-    }
-
-    return prj;
-  };
-
-  function siteCacheFromScratch(projects, currentPage) {
-    var pages = SiteCache.prototype.getCacheableSitePages(), pageInfo;
-
-    for (var i = 0; i < pages.length; ++i) {
-      pageInfo = pages[i].prototype.getInfo();
-
-      if (pageInfo !== undefined && undressLink(pageInfo.relativePath) != currentPage) {
-        projects.push(createProject(pageInfo));
-      }
-    }
-  };
-
-  // clean queue (for garbage collector on ie, otherwise it keeps downloading
-  // the images even if the user leaves the page)
-  function cleanCacheQueue() {
-    //console.log('cleanCacheQueue');
-    if (cacheQueue != null) {
-      // FIXME
-      // do this only on IE - not sure if necessary in all versions of IE
-      // otherwise chrome, for instance, will put image src as null and do a HTTP GET unnecessarily
-      for (var i = 0; i < cacheQueue.length; ++i) {
-        if (!cacheQueue[i].photoInfo.inCache) {
-          cacheQueue[i] = cacheQueue[i].src = cacheQueue[i].onload = null;
-        }
-      }
-      cacheQueue = null;
-    }
-  }
-
-  function updateSessionState(photosToCache) {
-
-    sessionStorage['gcSiteSession'] = true;
-
-    if (photosToCache === undefined || photosToCache.length == 0) {
-      //console.log('SiteCache.updateSessionState(,) COMPLETED');
-      localStorage["PhotosToCache"] = 'COMPLETED';
-    }
-    else {
-      //console.log('SiteCache.updateSessionState(,) ' + localStorage["PhotosToCache"]);
-      localStorage["PhotosToCache"] = photosToCache;
-    }
-  }
-
-  function saveCacheState(siteInCache, projects, nextPage) {
-    //console.log('saveCacheState incache ' + siteInCache);
-    if (!siteInCache) {
-      var str = [], projectStr,
-        nextPage = undressLink(nextPage);
-
-      for (var i = 0; i < projects.length; ++i) {
-        project = projects[i];
-
-        // only serializes the non-cached items and if the next page
-        // isn't the project itself (no point in caching photos
-        // that are known of going to be downloaded)
-        if (!project.inCache && undressLink(project.link) != nextPage) {
-
-          projectStr = project.serialize();
-
-          // test project.inCache again because the state could have
-          // changed after the serialization (serialize() updates the project state)
-          if (!project.inCache) {
-            str.push(projectStr, '|');
-          }
-        }
-      }
-
-      var photosToCache = str.join('');
-      if (photosToCache.length == 0) { siteInCache = true; }
-
-      updateSessionState(photosToCache);
-    }
-  };
-
-  return {
-
-    getCacheableSitePages: function () {
-      return [ReminiscenciaPage, AlbaPage, WhenPage, PaperbagPage, OuluPage, SopraPage, FadoPage];
-    },
-
-    // setup the photos that were not cached yet
-    initialize: function () {
-
-      // check if it is a new Session or not
-      checkNewSession();
-
-      if (localStorage["PhotosToCache"] === undefined) {
-        //console.log('SiteCache.initialize() undefined');
-
-        siteCacheFromScratch(this.projects, this.currentPage);
-      }
-      else if (localStorage["PhotosToCache"] == 'COMPLETED') {
-        //console.log('SiteCache.initialize() COMPLETED');
-
-        this.inCache = true;
-      }
-      else {
-        //console.log('SiteCache.initialize() ' + localStorage["PhotosToCache"]);
-
-        var photosToCache = localStorage["PhotosToCache"],
-          serializedProjects = photosToCache.split('|'),
-          nSerializedProjects = serializedProjects.length - 1,
-          tokens;
-
-        for (var i = 0; i < nSerializedProjects; ++i) {
-          tokens = serializedProjects[i].split(';');
-
-          // confirm we are not going to cache the photos
-          // that were just downloaded
-          if (this.currentPage != undressLink(tokens[1])) {
-
-            var project = new Project(tokens[0], tokens[1], tokens[2]);
-            var j = 3;
-
-            while (j < tokens.length) {
-              project.photos.push(new Photo(project, tokens[j++]));
-            }
-
-            this.projects.push(project);
-          }
-        }
-      }
-    },
-
-    // elements that can provoke the click event trigger (change page) and consequently
-    // call the SaveCacheState function
-    preparePageExit: function (elementsIds) {
-      if (!this.inCache) {
-
-        var siteCacheThis = this, nextpage;
-
-        function getNextpage() {
-          if (this.href) nextpage = this.href;
-          else if (this.event.srcElement.href) nextpage = this.event.srcElement.href;
-          else nextpage = this.event.srcElement.parentElement.href;       // for back button
-        };
-
-        // for ie essencially. when user quits page and cache images are downloading
-        // onunload function is called only after these images finish downloading
-        window.onbeforeunload = function () {
-          cleanCacheQueue();
-        }
-        window.onunload = function () {
-          cleanCacheQueue();
-          saveCacheState(siteCacheThis.inCache, siteCacheThis.projects, nextpage);
-        };
-
-        for (var i = 0; i < elementsIds.length; ++i) {
-
-          var element = document.getElementById(elementsIds[i]);
-
-          if (document.addEventListener) { element.addEventListener('click', getNextpage, true); }
-          else if (document.attachEvent) { // ie<9
-            element.attachEvent("onclick", function (event) { getNextpage(); });
-          }
-        }
-      }
-    },
-
-    // keeps caching images till the user clicks
-    // on a new link or the job is done
-    loadCache: function () {
-      if (!this.inCache) {
-        var nPhotos, project, siteCacheThis = this, counter = 0;
-
-        for (var i = 0; i < this.projects.length; ++i) {
-          project = this.projects[i];
-          nPhotos = project.photos.length;
-
-          for (var j = 0; j < nPhotos; ++j) {
-
-            if (!project.photos[j].inCache) {
-
-              var cacheImg = new Image();
-              cacheImg.photoInfo = project.photos[j];
-
-              cacheImg.onload = function () {
-                this.photoInfo.inCache = true;
-                //console.log(this.photoInfo.project.name + ' ' + this.photoInfo.name);
-
-                if (--counter == 0) {
-                  //all images downloaded
-                  siteCacheThis.inCache = true;
-                  updateSessionState();
-                }
-              };
-
-              cacheImg.src = project.photosRootSrc + cacheImg.photoInfo.name + cacheImg.photoInfo.extension;
-              cacheQueue.push(cacheImg);
-              ++counter;
-            }
-          }
-        }
-      }
-    }
-  };
-})();
-
-
-
 function Project(name, link, photosRootSrc) {
   this.name = name;
   this.link = link;
   this.photosRootSrc = photosRootSrc;
   this.photos = [];
-  this.inCache = false;
 };
-
-Project.prototype.serialize = function () {
-
-  var str = [], nPhotos, photo, head = [], body = [];
-
-  head.push(this.name, this.link, this.photosRootSrc);
-
-  nPhotos = this.photos.length;
-
-  for (var i = 0; i < nPhotos; ++i) {
-    if (!this.photos[i].inCache) {
-      photo = this.photos[i];
-      body.push(photo.name);
-    }
-  }
-
-  // confirm there were photos serialized
-  if (body.length == 0) {
-    // every photo is already cached
-    this.inCache = true;
-  }
-  else {
-    str = str.concat(head, body);
-  }
-
-  return str.join(';');
-};
-
 
 function Photo(project, name, mainPage, extension) {
   this.project = project;
   this.name = name;
   this.extension = extension || '.jpg';
-  this.inCache = false;
   this.mainPage = mainPage || false;
 };

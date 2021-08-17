@@ -26,79 +26,6 @@ function HomePage() {
       return Math.floor(Math.random() * (to - from + 1) + from);
     };
 
-    function pickOne(list) {
-      var idx = randomFromInterval(0, list.length - 1);
-      return { 'obj': list[idx], 'idx': idx };
-    };
-
-    function loadRandomPhoto() {
-
-      var pageInfo, mainImage, img = new Image(),
-        pages = [ReminiscenciaPage, AlbaPage, WhenPage, PaperbagPage, OuluPage, SopraPage, FadoPage];
-
-      while (mainImage === undefined) {
-        var pagesInfo = [], mainPageImages = [],
-          res, mainPageImagesAux, lastIndex = -1;
-
-        // get all mainpage images into an array and save respective pageInfo
-        for (var i = 0; i < pages.length; ++i) {
-          pagesInfo.push(pages[i].prototype.getInfo());
-
-          mainPageImagesAux = pagesInfo[i].imagesInfo.filter(
-            function (element, index, array) { return element.mainpage; }
-          );
-
-          mainPageImages = mainPageImages.concat(mainPageImagesAux);
-
-          lastIndex += mainPageImagesAux.length;
-          pagesInfo[i].lastIndex = lastIndex;
-        }
-
-        // pick one random image and get the respective pageInfo
-        if (mainPageImages.length != 0) {
-          res = pickOne(mainPageImages);
-
-          for (var j = 0; j < pagesInfo.length; ++j) {
-            if (pagesInfo[j].lastIndex >= res.idx) {
-              pageInfo = pagesInfo[j];
-              mainImage = res.obj;
-              break;
-            }
-          }
-        }
-        else return;
-      }
-
-      mainImage.src = pageInfo.imagesRootPath + pageInfo.relativePath +
-        mainImage.name + pageInfo.imagesExtension;
-
-      img.onload = function () {
-        var wrapper = document.getElementById("main_img_wrapper"),
-          mainPhoto = document.getElementById("main_img"),
-          photoLink = document.getElementById("img_project_lnk"),
-          photoDesc = document.getElementById("main_img_project");
-
-        if (wrapper) {
-          wrapper.style.visibility = 'visible';
-          wrapper.style.opacity = '1';
-          mainPhoto.src = mainImage.src;
-          photoLink.href = pageInfo.relativePath;
-          photoDesc.innerHTML = pageInfo.title;
-        }
-      };
-      img.onerror = function () {
-        if (typeof nTry === 'undefined') { nTry = 1; }
-        // Maximum tentatives: 3
-        if (++nTry <= 3) {
-          // try again with a different image
-          loadRandomPhoto();
-        }
-      };
-
-      //preload image
-      img.src = mainImage.src;
-    };
-
     function setupMenu() {
       var goncalocosta = document.getElementById("goncalocosta"),
         email = document.getElementById("email"),
@@ -145,7 +72,6 @@ function HomePage() {
 
     _base.setup.call(this);
 
-    loadRandomPhoto();
     setupMenu();
   };
 
@@ -161,8 +87,6 @@ function ProjectPage(name, changePageTriggerElems) {
   var _base = Page.prototype;
   obj.prototype = Object.create(_base);
   obj.prototype.constructor = obj;
-
-  obj.prototype.getInfo = function () { };
 
   obj.prototype.setup = function (onScrollCallback) {
     function setupScrollBar(onScrollCallback) {
@@ -215,20 +139,6 @@ function ReminiscenciaPage() {
   obj.prototype = Object.create(_base);
   obj.prototype.constructor = obj;
 
-  obj.prototype.getInfo = function () {
-    return {
-      title: 'reminiscencia',
-      imagesRootPath: this.imagesRootPath, relativePath: 'reminiscencia/', imagesExtension: '.jpg', imagesInfo:
-        [{ name: 'a', mainpage: true }, { name: 'b', mainpage: true }, { name: 'c', mainpage: true },
-        { name: 'd', mainpage: true }, { name: 'e', mainpage: true }, { name: 'f', mainpage: false },
-        { name: 'g', mainpage: false }, { name: 'h', mainpage: false }, { name: 'i', mainpage: false },
-        { name: 'j', mainpage: false }, { name: 'k', mainpage: true }, { name: 'l', mainpage: true },
-        { name: 'm', mainpage: true }, { name: 'n', mainpage: false }, { name: 'o', mainpage: true },
-        { name: 'p', mainpage: true }, { name: 'q', mainpage: true }, { name: 'r', mainpage: true },
-        { name: 's', mainpage: true }, { name: 't', mainpage: true }, { name: 'u', mainpage: true }]
-    };
-  };
-
   obj.prototype.setup = function () {
     function setupFullScreen() {
       initFullScreenAPI();
@@ -259,21 +169,6 @@ function AlbaPage() {
   obj.prototype = Object.create(_base);
   obj.prototype.constructor = obj;
 
-  obj.prototype.getInfo = function () {
-    return {
-      title: 'alba', imagesRootPath: this.imagesRootPath, relativePath: 'alba/', imagesExtension: '.jpg', imagesInfo:
-        [{ name: 'a', mainpage: true }, { name: 'b', mainpage: true }, { name: 'c', mainpage: false },
-        { name: 'd', mainpage: true }, { name: 'e', mainpage: true }, { name: 'f', mainpage: false },
-        { name: 'g', mainpage: false }, { name: 'h', mainpage: true }, { name: 'i', mainpage: false },
-        { name: 'j', mainpage: false }, { name: 'k', mainpage: true }, { name: 'l', mainpage: true },
-        { name: 'm', mainpage: true }, { name: 'n', mainpage: true }, { name: 'o', mainpage: true },
-        { name: 'p', mainpage: true }, { name: 'q', mainpage: true }, { name: 'r', mainpage: true },
-        { name: 's', mainpage: false }, { name: 't', mainpage: false }, { name: 'u', mainpage: false },
-        { name: 'v', mainpage: true }, { name: 'w', mainpage: true }, { name: 'x', mainpage: false },
-        { name: 'y', mainpage: false }]
-    };
-  };
-
 }(AlbaPage));
 
 
@@ -286,20 +181,6 @@ function WhenPage() {
   var _base = ProjectPage.prototype;
   obj.prototype = Object.create(_base);
   obj.prototype.constructor = obj;
-
-  obj.prototype.getInfo = function () {
-    return {
-      title: 'when was the last time someone wrote you a love letter?',
-      imagesRootPath: this.imagesRootPath, relativePath: 'when/', imagesExtension: '.jpg', imagesInfo:
-        [{ name: 'a', mainpage: true }, { name: 'b', mainpage: true }, { name: 'c', mainpage: true },
-        { name: 'd', mainpage: true }, { name: 'e', mainpage: true }, { name: 'f', mainpage: true },
-        { name: 'g', mainpage: false }, { name: 'g1', mainpage: false }, { name: 'g2', mainpage: false },
-        { name: 'h', mainpage: false }, { name: 'i', mainpage: true },
-        { name: 'j', mainpage: false }, { name: 'k', mainpage: true }, { name: 'l', mainpage: true },
-        { name: 'm', mainpage: false }, { name: 'n', mainpage: true }, { name: 'o', mainpage: true },
-        { name: 'p', mainpage: false }, { name: 'q', mainpage: false }, { name: 'z', mainpage: true }]
-    };
-  };
 
   obj.prototype.setup = function () {
     function setupLayout() {
@@ -379,17 +260,6 @@ function PaperbagPage() {
   obj.prototype = Object.create(_base);
   obj.prototype.constructor = obj;
 
-  obj.prototype.getInfo = function () {
-    return {
-      title: "it's a paper bag to scream, it's a bag of affections",
-      imagesRootPath: this.imagesRootPath, relativePath: 'paperbag/', imagesExtension: '.jpg', imagesInfo:
-        [{ name: '1', mainpage: true }, { name: '5', mainpage: true }, { name: '7', mainpage: true },
-        { name: 'f', mainpage: false }, { name: 'g', mainpage: false }, { name: 'h', mainpage: false },
-        { name: '6', mainpage: true }, { name: 'e', mainpage: false }, { name: 'a', mainpage: false },
-        { name: 'i', mainpage: true }]
-    };
-  };
-
 }(PaperbagPage));
 
 
@@ -402,17 +272,6 @@ function OuluPage() {
   var _base = ProjectPage.prototype;
   obj.prototype = Object.create(_base);
   obj.prototype.constructor = obj;
-
-  obj.prototype.getInfo = function () {
-    return {
-      title: 'oulu', imagesRootPath: this.imagesRootPath, relativePath: 'oulu/', imagesExtension: '.jpg', imagesInfo:
-        [{ name: '4', mainpage: false }, { name: '20', mainpage: false }, { name: '30', mainpage: false },
-        { name: '31', mainpage: false }, { name: 'q', mainpage: true }, { name: 'g', mainpage: false },
-        { name: '18', mainpage: false }, { name: '99', mainpage: true }, { name: 'j', mainpage: false },
-        { name: '98', mainpage: false }, { name: '28', mainpage: false },
-        { name: 'f', mainpage: false }, { name: 'i', mainpage: false }, { name: 'k', mainpage: false }]
-    };
-  };
 
 }(OuluPage));
 
@@ -427,21 +286,6 @@ function SopraPage() {
   obj.prototype = Object.create(_base);
   obj.prototype.constructor = obj;
 
-  obj.prototype.getInfo = function () {
-    return {
-      title: 'sopra', imagesRootPath: this.imagesRootPath, relativePath: 'sopra/', imagesExtension: '.jpg', imagesInfo:
-        [{ name: '7', mainpage: false }, { name: '6', mainpage: false }, { name: '26', mainpage: false },
-        { name: '2', mainpage: false }, { name: '4', mainpage: false }, { name: '15', mainpage: false },
-        { name: '10 (1)', mainpage: false }, { name: 'prove0004', mainpage: false }, { name: '8', mainpage: false },
-        { name: '10', mainpage: false }, { name: '14', mainpage: false }, { name: '11', mainpage: false },
-        { name: '16', mainpage: false }, { name: '8 (1)', mainpage: false }, { name: '5', mainpage: false },
-        { name: '35', mainpage: false }, { name: '34', mainpage: false }, { name: 'prov0005', mainpage: false },
-        { name: '20', mainpage: false }, { name: 'prove0005', mainpage: false }, { name: '30', mainpage: false },
-        { name: '6 (1)', mainpage: false }, { name: '6 (2)', mainpage: false }, { name: '7 (1)', mainpage: false },
-        { name: '31', mainpage: false }, { name: '33', mainpage: false }, { name: 'provenc0006', mainpage: false }]
-    };
-  };
-
 }(SopraPage));
 
 
@@ -454,18 +298,6 @@ function FadoPage() {
   var _base = ProjectPage.prototype;
   obj.prototype = Object.create(_base);
   obj.prototype.constructor = obj;
-
-  obj.prototype.getInfo = function () {
-    return {
-      title: 'fado', imagesRootPath: this.imagesRootPath, relativePath: 'fado/', imagesExtension: '.jpg', imagesInfo:
-        [{ name: 'proven0004', mainpage: true }, { name: 'pro0018', mainpage: true }, { name: 'prov0002', mainpage: false },
-        { name: 'prov0012', mainpage: true }, { name: '21', mainpage: false }, { name: '9', mainpage: false },
-        { name: '7', mainpage: false }, { name: '35(2)', mainpage: true }, { name: '16', mainpage: false },
-        { name: '2', mainpage: false }, { name: 'provence0019', mainpage: false }, { name: '33', mainpage: false },
-        { name: '10', mainpage: false }]
-    };
-  };
-
 }(FadoPage));
 
 

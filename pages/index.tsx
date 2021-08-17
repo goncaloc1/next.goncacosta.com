@@ -38,12 +38,12 @@ export default function Home() {
               <Link href="/oulu">
                 <a id="oulu">oulu</a>
               </Link>
-              <a id="sopra" href="./sopra">
-                sopra
-              </a>
-              <a id="fado" href="./fado">
-                fado
-              </a>
+              <Link href="/sopra">
+                <a id="sopra">sopra</a>
+              </Link>
+              <Link href="/fado">
+                <a id="fado">fado</a>
+              </Link>
               <a className="spacer">&nbsp;</a>
               <a id="email">goncacosta at gmail dot com</a>
             </div>

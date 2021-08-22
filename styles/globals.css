@@ -253,6 +253,9 @@ html:-moz-full-screen {
   padding-bottom: 0;
   padding-right: 20px;
 }
+.mCSB_horizontal .mCSB_scrollTools .mCSB_dragger {
+  padding-left: 20px;
+}
 .mCSB_horizontal .mCSB_scrollTools .mCSB_draggerRail {
   width: 100%;
   height: 2px;

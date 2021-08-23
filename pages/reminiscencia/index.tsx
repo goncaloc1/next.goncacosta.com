@@ -1,8 +1,31 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Reminiscencia.module.css";
 
 import Script from "next/script";
+
+import photou from "/public/images/reminiscencia/u.jpg";
+import photoa from "/public/images/reminiscencia/a.jpg";
+import photob from "/public/images/reminiscencia/b.jpg";
+import photoc from "/public/images/reminiscencia/c.jpg";
+import photod from "/public/images/reminiscencia/d.jpg";
+import photoe from "/public/images/reminiscencia/e.jpg";
+import photof from "/public/images/reminiscencia/f.jpg";
+import photog from "/public/images/reminiscencia/g.jpg";
+import photot from "/public/images/reminiscencia/t.jpg";
+import photoh from "/public/images/reminiscencia/h.jpg";
+import photoi from "/public/images/reminiscencia/i.jpg";
+import photoj from "/public/images/reminiscencia/j.jpg";
+import photok from "/public/images/reminiscencia/k.jpg";
+import photol from "/public/images/reminiscencia/l.jpg";
+import photom from "/public/images/reminiscencia/m.jpg";
+import photon from "/public/images/reminiscencia/n.jpg";
+import photoo from "/public/images/reminiscencia/o.jpg";
+import photop from "/public/images/reminiscencia/p.jpg";
+import photoq from "/public/images/reminiscencia/q.jpg";
+import photos from "/public/images/reminiscencia/s.jpg";
+import photor from "/public/images/reminiscencia/r.jpg";
 
 export default function Reminiscencia() {
   return (
@@ -59,10 +82,14 @@ export default function Reminiscencia() {
                 data-cycle-auto-height="false"
               >
                 <div className="first">
-                  <img
-                    id={styles.photo_u}
-                    src="images/reminiscencia/u.jpg"
+                  <Image
+                    src={photou}
                     alt="photo u"
+                    layout="fixed"
+                    width={602}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
@@ -71,17 +98,25 @@ export default function Reminiscencia() {
                   </div>
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_a}
-                    src="images/reminiscencia/a.jpg"
+                  <Image
+                    src={photoa}
                     alt="photo a"
+                    layout="fixed"
+                    width={602}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_b}
-                    src="images/reminiscencia/b.jpg"
+                  <Image
+                    src={photob}
                     alt="photo b"
+                    layout="fixed"
+                    width={597}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
@@ -96,66 +131,94 @@ export default function Reminiscencia() {
                   <p className="author">Walter Benjamin</p>
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_c}
-                    src="images/reminiscencia/c.jpg"
+                  <Image
+                    src={photoc}
                     alt="photo c"
+                    layout="fixed"
+                    width={601}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_d}
-                    src="images/reminiscencia/d.jpg"
+                  <Image
+                    src={photod}
                     alt="photo d"
+                    width={602}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_e}
-                    src="images/reminiscencia/e.jpg"
+                  <Image
+                    src={photoe}
                     alt="photo e"
+                    width={597}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_f}
-                    src="images/reminiscencia/f.jpg"
+                  <Image
+                    src={photof}
                     alt="photo f"
+                    width={596}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_g}
-                    src="images/reminiscencia/g.jpg"
+                  <Image
+                    src={photog}
                     alt="photo g"
+                    width={596}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_t}
-                    src="images/reminiscencia/t.jpg"
+                  <Image
+                    src={photot}
                     alt="photo t"
+                    width={752}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_h}
-                    src="images/reminiscencia/h.jpg"
+                  <Image
+                    src={photoh}
                     alt="photo h"
+                    width={601}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_i}
-                    src="images/reminiscencia/i.jpg"
+                  <Image
+                    src={photoi}
                     alt="photo i"
+                    width={596}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_j}
-                    src="images/reminiscencia/j.jpg"
+                  <Image
+                    src={photoj}
                     alt="photo j"
+                    width={597}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
@@ -248,31 +311,43 @@ export default function Reminiscencia() {
                   <p className={styles.author}>Jorge Luis Borges</p>
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_k}
-                    src="images/reminiscencia/k.jpg"
+                  <Image
+                    src={photok}
                     alt="photo k"
+                    width={600}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_l}
-                    src="images/reminiscencia/l.jpg"
+                  <Image
+                    src={photol}
                     alt="photo l"
+                    width={598}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_m}
-                    src="images/reminiscencia/m.jpg"
+                  <Image
+                    src={photom}
                     alt="photo m"
+                    width={483}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_n}
-                    src="images/reminiscencia/n.jpg"
+                  <Image
+                    src={photon}
                     alt="photo n"
+                    width={596}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
@@ -304,38 +379,53 @@ export default function Reminiscencia() {
                   <p className="author">Paul Bowles</p>
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_o}
-                    src="images/reminiscencia/o.jpg"
+                  <Image
+                    src={photoo}
                     alt="photo o"
+                    width={752}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_p}
-                    src="images/reminiscencia/p.jpg"
+                  <Image
+                    src={photop}
                     alt="photo p"
+                    width={600}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_q}
-                    src="images/reminiscencia/q.jpg"
+                  <Image
+                    src={photoq}
                     alt="photo q"
+                    width={602}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_s}
-                    src="images/reminiscencia/s.jpg"
+                  <Image
+                    src={photos}
                     alt="photo s"
+                    width={749}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div>
-                  <img
-                    id={styles.photo_r}
-                    src="images/reminiscencia/r.jpg"
+                  <Image
+                    src={photor}
                     alt="photo r"
+                    width={598}
+                    height={600}
+                    quality={100}
+                    priority={true}
                   />
                 </div>
                 <div className="last">
@@ -368,7 +458,7 @@ export default function Reminiscencia() {
       <style jsx>{`
         .my-cycle-slideshow {
           height: 600px;
-          margin: auto;
+          margin: auto 10% auto auto;
         }
 
         .my-cycle-slideshow > div.first {
@@ -381,9 +471,6 @@ export default function Reminiscencia() {
           text-align: right;
         }
 
-        .my-cycle-slideshow > div img,
-        .my-cycle-slideshow > div p,
-        .my-cycle-slideshow > div div.main_title,
         .slideshow_buttons {
           margin: 0 10% 0 0;
         }

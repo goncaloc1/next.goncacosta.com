@@ -1,14 +1,9 @@
-//import "../styles/globals.css";
+import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <link rel="stylesheet" href="/globals.css" type="text/css" />
-      </Head>
-
       <Component {...pageProps} />
 
       <script

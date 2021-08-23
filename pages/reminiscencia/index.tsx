@@ -145,6 +145,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photod}
                     alt="photo d"
+                    layout="fixed"
                     width={602}
                     height={600}
                     quality={100}
@@ -155,6 +156,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photoe}
                     alt="photo e"
+                    layout="fixed"
                     width={597}
                     height={600}
                     quality={100}
@@ -165,6 +167,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photof}
                     alt="photo f"
+                    layout="fixed"
                     width={596}
                     height={600}
                     quality={100}
@@ -175,6 +178,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photog}
                     alt="photo g"
+                    layout="fixed"
                     width={596}
                     height={600}
                     quality={100}
@@ -185,6 +189,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photot}
                     alt="photo t"
+                    layout="fixed"
                     width={752}
                     height={600}
                     quality={100}
@@ -195,6 +200,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photoh}
                     alt="photo h"
+                    layout="fixed"
                     width={601}
                     height={600}
                     quality={100}
@@ -205,6 +211,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photoi}
                     alt="photo i"
+                    layout="fixed"
                     width={596}
                     height={600}
                     quality={100}
@@ -215,6 +222,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photoj}
                     alt="photo j"
+                    layout="fixed"
                     width={597}
                     height={600}
                     quality={100}
@@ -314,6 +322,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photok}
                     alt="photo k"
+                    layout="fixed"
                     width={600}
                     height={600}
                     quality={100}
@@ -324,6 +333,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photol}
                     alt="photo l"
+                    layout="fixed"
                     width={598}
                     height={600}
                     quality={100}
@@ -334,6 +344,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photom}
                     alt="photo m"
+                    layout="fixed"
                     width={483}
                     height={600}
                     quality={100}
@@ -344,6 +355,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photon}
                     alt="photo n"
+                    layout="fixed"
                     width={596}
                     height={600}
                     quality={100}
@@ -382,6 +394,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photoo}
                     alt="photo o"
+                    layout="fixed"
                     width={752}
                     height={600}
                     quality={100}
@@ -392,6 +405,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photop}
                     alt="photo p"
+                    layout="fixed"
                     width={600}
                     height={600}
                     quality={100}
@@ -402,6 +416,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photoq}
                     alt="photo q"
+                    layout="fixed"
                     width={602}
                     height={600}
                     quality={100}
@@ -412,6 +427,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photos}
                     alt="photo s"
+                    layout="fixed"
                     width={749}
                     height={600}
                     quality={100}
@@ -422,6 +438,7 @@ export default function Reminiscencia() {
                   <Image
                     src={photor}
                     alt="photo r"
+                    layout="fixed"
                     width={598}
                     height={600}
                     quality={100}
@@ -447,8 +464,8 @@ export default function Reminiscencia() {
                 </div>
               </div>
               <div className="slideshow_buttons">
-                <a href="#" id="next" className={styles.rightbutton}></a>
-                <a href="#" id="prev" className={styles.leftbutton}></a>
+                <a href="#" id="next" className="mCSB_buttonRight"></a>
+                <a href="#" id="prev" className="mCSB_buttonLeft"></a>
               </div>
             </div>
           </div>
@@ -528,6 +545,18 @@ export default function Reminiscencia() {
         .slideshow_buttons {
           margin-top: 5px;
           padding: 0 10px 0 0;
+        }
+
+        .mCSB_buttonRight,
+        .mCSB_buttonLeft {
+          display: block;
+          position: relative;
+          width: 20px;
+          height: 17px;
+          overflow: hidden;
+          margin: 0 auto;
+          cursor: pointer;
+          float: right;
         }
       `}</style>
 

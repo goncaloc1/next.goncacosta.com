@@ -1,12 +1,12 @@
-#photo_a {
+/* #photo_a {
   width: 602px;
   height: 600px;
-}
-#photo_b {
+} */
+/* #photo_b {
   width: 597px;
   height: 600px;
-}
-#photo_c {
+} */
+/* #photo_c {
   width: 601px;
   height: 600px;
 }
@@ -77,7 +77,7 @@
 #photo_t {
   width: 752px;
   height: 600px;
-}
+} */
 /* #photo_u {
   width: 602px;
   height: 600px;
@@ -92,43 +92,4 @@
 
 .slideshow_wrapper {
   width: 100%;
-}
-
-.leftbutton,
-.rightbutton {
-  display: block;
-  position: relative;
-  width: 20px;
-  height: 17px;
-  overflow: hidden;
-  margin: 0 auto;
-  cursor: pointer;
-  float: right;
-}
-
-.leftbutton,
-.rightbutton {
-  background-image: url(../../public/icons.png);
-  background-repeat: no-repeat;
-  opacity: 0.3;
-  filter: "alpha(opacity=30)";
-}
-
-.leftbutton {
-  background-position: -100px -40px;
-}
-.rightbutton {
-  background-position: -100px -56px;
-}
-
-.leftbutton:hover,
-.rightbutton:hover {
-  opacity: 0.2;
-  filter: "alpha(opacity=20)";
-}
-
-.leftbutton:active,
-.rightbutton:active {
-  opacity: 0.15;
-  filter: "alpha(opacity=15)";
 }

@@ -1,169 +1,153 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-const reminiscencia = {
-  title: "reminiscencia",
-  imagesRootPath: "images/",
-  relativePath: "reminiscencia/",
-  imagesExtension: ".jpg",
-  imagesInfo: [
-    { name: "a" },
-    { name: "b" },
-    { name: "c" },
-    { name: "d" },
-    { name: "e" },
-    { name: "k" },
-    { name: "l" },
-    { name: "m" },
-    { name: "o" },
-    { name: "p" },
-    { name: "q" },
-    { name: "r" },
-    { name: "s" },
-    { name: "t" },
-    { name: "u" },
-  ],
+const prefix = "/public/images/";
+
+export type Photo = {
+  path: string;
+  filename: string;
+  title: string;
 };
 
-const alba = {
-  title: "alba",
-  imagesRootPath: "images/",
-  relativePath: "alba/",
-  imagesExtension: ".jpg",
-  imagesInfo: [
-    { name: "a" },
-    { name: "b" },
-    { name: "d" },
-    { name: "e" },
-    { name: "h" },
-    { name: "k" },
-    { name: "l" },
-    { name: "m" },
-    { name: "n" },
-    { name: "o" },
-    { name: "p" },
-    { name: "q" },
-    { name: "r" },
-    { name: "v" },
-    { name: "w" },
-  ],
-};
+const photos = [
+  { path: "reminiscencia/", filename: "a.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "b.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "c.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "d.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "e.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "k.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "l.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "m.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "o.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "p.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "q.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "r.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "s.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "t.jpg", title: "reminiscencia" },
+  { path: "reminiscencia/", filename: "u.jpg", title: "reminiscencia" },
+  { path: "alba/", filename: "a.jpg", title: "alba" },
+  { path: "alba/", filename: "b.jpg", title: "alba" },
+  { path: "alba/", filename: "d.jpg", title: "alba" },
+  { path: "alba/", filename: "e.jpg", title: "alba" },
+  { path: "alba/", filename: "h.jpg", title: "alba" },
+  { path: "alba/", filename: "k.jpg", title: "alba" },
+  { path: "alba/", filename: "l.jpg", title: "alba" },
+  { path: "alba/", filename: "m.jpg", title: "alba" },
+  { path: "alba/", filename: "n.jpg", title: "alba" },
+  { path: "alba/", filename: "o.jpg", title: "alba" },
+  { path: "alba/", filename: "p.jpg", title: "alba" },
+  { path: "alba/", filename: "q.jpg", title: "alba" },
+  { path: "alba/", filename: "r.jpg", title: "alba" },
+  { path: "alba/", filename: "v.jpg", title: "alba" },
+  { path: "alba/", filename: "w.jpg", title: "alba" },
+  {
+    path: "when/",
+    filename: "a.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "b.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "c.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "d.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "e.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "f.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "i.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "k.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "l.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "n.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "o.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "when/",
+    filename: "z.jpg",
+    title: "when was the last time someone wrote you a love letter?",
+  },
+  {
+    path: "paperbag/",
+    filename: "1.jpg",
+    title: "it's a paper bag to scream, it's a bag of affections",
+  },
+  {
+    path: "paperbag/",
+    filename: "5.jpg",
+    title: "it's a paper bag to scream, it's a bag of affections",
+  },
+  {
+    path: "paperbag/",
+    filename: "7.jpg",
+    title: "it's a paper bag to scream, it's a bag of affections",
+  },
+  {
+    path: "paperbag/",
+    filename: "6.jpg",
+    title: "it's a paper bag to scream, it's a bag of affections",
+  },
+  {
+    path: "paperbag/",
+    filename: "i.jpg",
+    title: "it's a paper bag to scream, it's a bag of affections",
+  },
+  { path: "oulu/", filename: "q.jpg", title: "oulu" },
+  { path: "oulu/", filename: "99.jpg", title: "oulu" },
+  { path: "fado/", filename: "proven0004.jpg", title: "fado" },
+  { path: "fado/", filename: "pro0018.jpg", title: "fado" },
+  { path: "fado/", filename: "prov0012.jpg", title: "fado" },
+  { path: "fado/", filename: "35(2).jpg", title: "fado" },
+];
 
-const when = {
-  title: "when was the last time someone wrote you a love letter?",
-  imagesRootPath: "images/",
-  relativePath: "when/",
-  imagesExtension: ".jpg",
-  imagesInfo: [
-    { name: "a" },
-    { name: "b" },
-    { name: "c" },
-    { name: "d" },
-    { name: "e" },
-    { name: "f" },
-    { name: "i" },
-    { name: "k" },
-    { name: "l" },
-    { name: "n" },
-    { name: "o" },
-    { name: "z" },
-  ],
-};
-
-const paperbag = {
-  title: "it's a paper bag to scream, it's a bag of affections",
-  imagesRootPath: "images/",
-  relativePath: "paperbag/",
-  imagesExtension: ".jpg",
-  imagesInfo: [
-    { name: "1" },
-    { name: "5" },
-    { name: "7" },
-    { name: "6" },
-    { name: "i" },
-  ],
-};
-
-const oulu = {
-  title: "oulu",
-  imagesRootPath: "images/",
-  relativePath: "oulu/",
-  imagesExtension: ".jpg",
-  imagesInfo: [{ name: "q" }, { name: "99" }],
-};
-
-const fado = {
-  title: "fado",
-  imagesRootPath: "images/",
-  relativePath: "fado/",
-  imagesExtension: ".jpg",
-  imagesInfo: [
-    { name: "proven0004" },
-    { name: "pro0018" },
-    { name: "prov0012" },
-    { name: "35(2)" },
-  ],
-};
-
-function randomFromInterval(from: number, to: number) {
+const randomFromInterval = (from: number, to: number) => {
   return Math.floor(Math.random() * (to - from + 1) + from);
-}
-
-function pickOne(list: any[]) {
-  var idx = randomFromInterval(0, list.length - 1);
-  return { obj: list[idx], idx: idx };
-}
-
-function loadRandomPhoto() {
-  var pageInfo,
-    mainImage,
-    pages = [reminiscencia, alba, when, paperbag, oulu, fado];
-
-  while (mainImage === undefined) {
-    var pagesInfo = [],
-      images: any[] = [],
-      res,
-      lastIndex = -1;
-
-    // get all mainpage images into an array and save respective pageInfo
-    for (var i = 0; i < pages.length; ++i) {
-      pagesInfo.push(pages[i]);
-
-      images = images.concat(pagesInfo[i].imagesInfo);
-
-      lastIndex += pagesInfo[i].imagesInfo.length;
-      (pagesInfo[i] as any).lastIndex = lastIndex;
-    }
-
-    // pick one random image and get the respective pageInfo
-    res = pickOne(images);
-
-    for (var j = 0; j < pagesInfo.length; ++j) {
-      if ((pagesInfo[j] as any).lastIndex >= res.idx) {
-        pageInfo = pagesInfo[j];
-        mainImage = res.obj;
-        return { pageInfo, mainImage };
-      }
-    }
-  }
-}
-
-export const useRandomPhoto = () => {
-  const [pageInfo, setPageInfo] = useState<Record<string, unknown> | null>(
-    null
-  );
-  const [mainImage, setMainImage] = useState<Record<string, unknown> | null>(
-    null
-  );
-
-  useEffect(() => {
-    if (mainImage) return;
-
-    const random = loadRandomPhoto();
-    if (random) {
-      setPageInfo(random.pageInfo);
-      setMainImage(random.mainImage);
-    }
-  }, []);
-
-  return { pageInfo, mainImage };
 };
+
+export const getRandomPhoto = (): Photo => {
+  const idx = randomFromInterval(0, photos.length - 1);
+  return photos[idx];
+};
+
+// export const useRandomPhoto = () => {
+//   const [photo, setPhoto] = useState(getRandomPhoto());
+
+//   const refresh = useMemo(() => {
+//     const newPhoto = getRandomPhoto();
+//     setPhoto(newPhoto);
+//   }, []);
+
+//   return { photo, refresh };
+// };

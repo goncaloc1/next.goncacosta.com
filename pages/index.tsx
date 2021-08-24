@@ -1,13 +1,30 @@
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
 import { useRandomColors } from "../hooks/useRandomColors";
-import { useRandomPhoto } from "../hooks/useRandomPhoto";
+import { getRandomPhoto, Photo } from "../hooks/useRandomPhoto";
 
 export default function Home() {
-  const { pageInfo, mainImage } = useRandomPhoto();
-
   useRandomColors();
+
+  const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
+
+  const [photo] = useState<Photo>(getRandomPhoto());
+  const [photoSrc, setPhotoSrc] = useState<StaticImageData | null>(null);
+
+  useEffect(() => {
+    const loadPhoto = async () => {
+      const src = (
+        await import(`/public/images/${photo.path}${photo.filename}`)
+      ).default;
+
+      setIsPhotoLoaded(false);
+      setPhotoSrc(src);
+    };
+
+    loadPhoto();
+  }, [photo]);
 
   return (
     <>
@@ -66,24 +83,30 @@ export default function Home() {
             <div
               id="main_img_wrapper"
               style={
-                pageInfo && mainImage
-                  ? { visibility: "visible", opacity: "1" }
-                  : {}
+                isPhotoLoaded ? { visibility: "visible", opacity: "1" } : {}
               }
             >
-              {pageInfo && mainImage && (
-                <Link href={pageInfo.relativePath as string}>
-                  <a>
-                    <img
-                      src={`${pageInfo.imagesRootPath}${pageInfo.relativePath}${mainImage.name}${pageInfo.imagesExtension}`}
-                      alt="&nbsp"
-                      id="main_img"
-                    />
+              {photo && photoSrc && (
+                <Link href={photo.path as string}>
+                  <a style={{ float: "right" }}>
+                    <div
+                      style={{
+                        position: "relative",
+                        maxWidth: "600px",
+                      }}
+                    >
+                      <Image
+                        alt="&nbsp"
+                        src={photoSrc}
+                        priority={true}
+                        quality={100}
+                        onLoadingComplete={() => setIsPhotoLoaded(true)}
+                      />
+                    </div>
+
                     <p id="main_img_desc">
                       in&nbsp;
-                      <span id="main_img_project">
-                        {pageInfo.title as string}
-                      </span>
+                      <span id="main_img_project">{photo.title as string}</span>
                     </p>
                   </a>
                 </Link>

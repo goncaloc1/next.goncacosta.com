@@ -561,8 +561,6 @@ html:-moz-full-screen {
   font-variant: normal;
   font-style: italic;
   margin: 5px 10px 0 0;
-  /*  opacity: 0;
-    filter: alpha(opacity=0); */
 }
 
 #main_img_project {

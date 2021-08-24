@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
-import Script from "next/script";
 import React from "react";
+import { useRandomColors } from "../hooks/useRandomColors";
 import { useRandomPhoto } from "../hooks/useRandomPhoto";
 
 export default function Home() {
   const { pageInfo, mainImage } = useRandomPhoto();
+
+  useRandomColors();
 
   return (
     <>
@@ -118,8 +120,6 @@ export default function Home() {
           width: 100%;
         }
       `}</style>
-
-      <Script>{`new HomePage().setup();`}</Script>
     </>
   );
 }

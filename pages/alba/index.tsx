@@ -1,8 +1,35 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Alba.module.css";
 
 import Script from "next/script";
+
+import photoa from "/public/images/alba/a.jpg";
+import photob from "/public/images/alba/b.jpg";
+import photoc from "/public/images/alba/c.jpg";
+import photod from "/public/images/alba/d.jpg";
+import photoe from "/public/images/alba/e.jpg";
+import photof from "/public/images/alba/f.jpg";
+import photog from "/public/images/alba/g.jpg";
+import photoh from "/public/images/alba/h.jpg";
+import photoi from "/public/images/alba/i.jpg";
+import photoj from "/public/images/alba/j.jpg";
+import photok from "/public/images/alba/k.jpg";
+import photol from "/public/images/alba/l.jpg";
+import photom from "/public/images/alba/m.jpg";
+import photon from "/public/images/alba/n.jpg";
+import photoo from "/public/images/alba/o.jpg";
+import photop from "/public/images/alba/p.jpg";
+import photoq from "/public/images/alba/q.jpg";
+import photor from "/public/images/alba/r.jpg";
+import photos from "/public/images/alba/s.jpg";
+import photot from "/public/images/alba/t.jpg";
+import photou from "/public/images/alba/u.jpg";
+import photov from "/public/images/alba/v.jpg";
+import photow from "/public/images/alba/w.jpg";
+import photox from "/public/images/alba/x.jpg";
+import photoy from "/public/images/alba/y.jpg";
 
 export default function Alba() {
   return (
@@ -54,22 +81,54 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_a} alt="photo a" src="images/alba/a.jpg" />
+              <Image
+                alt="photo a"
+                src={photoa}
+                layout="fixed"
+                width={598}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_b} alt="photo b" src="images/alba/b.jpg" />
+              <Image
+                alt="photo b"
+                src={photob}
+                layout="fixed"
+                width={599}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_c} alt="photo c" src="images/alba/c.jpg" />
+              <Image
+                alt="photo c"
+                src={photoc}
+                layout="fixed"
+                width={599}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistant">
-              <img id={styles.photo_d} alt="photo d" src="images/alba/d.jpg" />
+              <Image
+                alt="photo d"
+                src={photod}
+                layout="fixed"
+                width={598}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
@@ -137,17 +196,41 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_e} alt="photo e" src="images/alba/e.jpg" />
+              <Image
+                alt="photo e"
+                src={photoe}
+                layout="fixed"
+                width={601}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_f} alt="photo f" src="images/alba/f.jpg" />
+              <Image
+                alt="photo f"
+                src={photof}
+                layout="fixed"
+                width={604}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantX">
-              <img id={styles.photo_g} alt="photo g" src="images/alba/g.jpg" />
+              <Image
+                alt="photo g"
+                src={photog}
+                layout="fixed"
+                width={605}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
@@ -184,22 +267,54 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className="boxDistantX">
-              <img id={styles.photo_h} alt="photo h" src="images/alba/h.jpg" />
+              <Image
+                alt="photo h"
+                src={photoh}
+                layout="fixed"
+                width={604}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_i} alt="photo i" src="images/alba/i.jpg" />
+              <Image
+                alt="photo i"
+                src={photoi}
+                layout="fixed"
+                width={598}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_j} alt="photo j" src="images/alba/j.jpg" />
+              <Image
+                alt="photo j"
+                src={photoj}
+                layout="fixed"
+                width={598}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantX">
-              <img id={styles.photo_k} alt="photo k" src="images/alba/k.jpg" />
+              <Image
+                alt="photo k"
+                src={photok}
+                layout="fixed"
+                width={598}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
@@ -226,37 +341,93 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_l} alt="photo l" src="images/alba/l.jpg" />
+              <Image
+                alt="photo l"
+                src={photol}
+                layout="fixed"
+                width={607}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_m} alt="photo m" src="images/alba/m.jpg" />
+              <Image
+                alt="photo m"
+                src={photom}
+                layout="fixed"
+                width={600}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_n} alt="photo n" src="images/alba/n.jpg" />
+              <Image
+                alt="photo n"
+                src={photon}
+                layout="fixed"
+                width={597}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_o} alt="photo o" src="images/alba/o.jpg" />
+              <Image
+                alt="photo o"
+                src={photoo}
+                layout="fixed"
+                width={601}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_p} alt="photo p " src="images/alba/p.jpg" />
+              <Image
+                alt="photo p "
+                src={photop}
+                layout="fixed"
+                width={599}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_q} alt="photo q" src="images/alba/q.jpg" />
+              <Image
+                alt="photo q"
+                src={photoq}
+                layout="fixed"
+                width={601}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantX">
-              <img id={styles.photo_r} alt="photo r" src="images/alba/r.jpg" />
+              <Image
+                alt="photo r"
+                src={photor}
+                layout="fixed"
+                width={596}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
@@ -294,27 +465,67 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_s} alt="photo s" src="images/alba/s.jpg" />
+              <Image
+                alt="photo s"
+                src={photos}
+                layout="fixed"
+                width={600}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_t} alt="photo t" src="images/alba/t.jpg" />
+              <Image
+                alt="photo t"
+                src={photot}
+                layout="fixed"
+                width={604}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistant">
-              <img id={styles.photo_u} alt="photo u" src="images/alba/u.jpg" />
+              <Image
+                alt="photo u"
+                src={photou}
+                layout="fixed"
+                width={607}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_v} alt="photo v" src="images/alba/v.jpg" />
+              <Image
+                alt="photo v"
+                src={photov}
+                layout="fixed"
+                width={600}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistant">
-              <img id={styles.photo_w} alt="photo w" src="images/alba/w.jpg" />
+              <Image
+                alt="photo w"
+                src={photow}
+                layout="fixed"
+                width={596}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
@@ -345,12 +556,28 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className="box">
-              <img id={styles.photo_x} alt="photo x" src="images/alba/x.jpg" />
+              <Image
+                alt="photo x"
+                src={photox}
+                layout="fixed"
+                width={599}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX">
-              <img id={styles.photo_y} alt="photo y" src="images/alba/y.jpg" />
+              <Image
+                alt="photo y"
+                src={photoy}
+                layout="fixed"
+                width={599}
+                height={600}
+                quality={100}
+                priority={true}
+              />
             </div>
           </div>
         </div>

@@ -15,6 +15,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* TODO encapsulate cache in a component */}
+      <div style={{ visibility: "hidden", height: 0 }}>
+        <div className="mCSB_buttonLeft"></div>
+        <div id="navigation_menu" style={{ margin: 0 }}>
+          <a href="#" id="back" />
+        </div>
+      </div>
+
       <div id="content">
         <div className="wrapper">
           <div className="cell">

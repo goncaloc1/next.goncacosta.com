@@ -1,30 +1,39 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRandomColors } from "../hooks/useRandomColors";
-import { getRandomPhoto, Photo } from "../hooks/useRandomPhoto";
+import { usePhoto, Photo } from "../hooks/usePhoto";
 
 export default function Home() {
   useRandomColors();
 
   const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
+  const [photo, setPhoto] = useState<Photo | null>(null);
 
-  const [photo] = useState<Photo>(getRandomPhoto());
-  const [photoSrc, setPhotoSrc] = useState<StaticImageData | null>(null);
+  const getRandomPhoto = usePhoto();
+
+  const getRandomPhotoRef = useRef<() => Promise<Photo>>();
+
+  /**
+   * We really want to only run getRandomPhoto once hence useRef.
+   * Lint would ask getRandomPhoto to be in the list of dependencies
+   * which actually we do not need (even if getRandomPhoto instance changes).
+   */
+  useEffect(() => {
+    getRandomPhotoRef.current = getRandomPhoto;
+  });
 
   useEffect(() => {
     const loadPhoto = async () => {
-      const src = (
-        await import(`/public/images/${photo.path}${photo.filename}`)
-      ).default;
+      const result = await getRandomPhotoRef.current!();
 
       setIsPhotoLoaded(false);
-      setPhotoSrc(src);
+      setPhoto(result);
     };
 
     loadPhoto();
-  }, [photo]);
+  }, []);
 
   return (
     <>
@@ -86,8 +95,8 @@ export default function Home() {
                 isPhotoLoaded ? { visibility: "visible", opacity: "1" } : {}
               }
             >
-              {photo && photoSrc && (
-                <Link href={photo.path as string}>
+              {photo && (
+                <Link href={photo.metadata.path as string}>
                   <a style={{ float: "right" }}>
                     <div
                       style={{
@@ -97,7 +106,7 @@ export default function Home() {
                     >
                       <Image
                         alt="&nbsp"
-                        src={photoSrc}
+                        src={photo.src}
                         priority={true}
                         quality={100}
                         onLoadingComplete={() => setIsPhotoLoaded(true)}
@@ -106,7 +115,9 @@ export default function Home() {
 
                     <p id="main_img_desc">
                       in&nbsp;
-                      <span id="main_img_project">{photo.title as string}</span>
+                      <span id="main_img_project">
+                        {photo.metadata.title as string}
+                      </span>
                     </p>
                   </a>
                 </Link>

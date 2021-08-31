@@ -1,10 +1,13 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
+import { PhotoProvider } from "../hooks/usePhoto";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Component {...pageProps} />
+      <PhotoProvider>
+        <Component {...pageProps} />
+      </PhotoProvider>
 
       <script
         type="text/javascript"

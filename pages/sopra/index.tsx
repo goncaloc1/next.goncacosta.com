@@ -7,8 +7,8 @@ export default function Sopra() {
   return (
     <>
       <Head>
-        <title>Sopra TODO</title>
-        <meta name="description" content="Sopra TODO" />
+        <title>Sopra</title>
+        <meta name="description" content="Sopra - Gonçalo Costa, 2010-11" />
       </Head>
 
       <div id="content">

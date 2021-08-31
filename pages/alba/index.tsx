@@ -35,8 +35,8 @@ export default function Alba() {
   return (
     <>
       <Head>
-        <title>Alba TODO</title>
-        <meta name="description" content="Alba TODO" />
+        <title>Alba</title>
+        <meta name="description" content="Alba - Gonçalo Costa, 2011" />
       </Head>
 
       <div id="content">

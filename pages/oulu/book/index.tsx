@@ -7,8 +7,8 @@ export default function Oulu() {
   return (
     <>
       <Head>
-        <title>Oulu book TODO</title>
-        <meta name="description" content="Oulu book TODO" />
+        <title>Oulu book</title>
+        <meta name="description" content="Oulu book - Gonçalo Costa, 2009" />
       </Head>
 
       <div id="content">

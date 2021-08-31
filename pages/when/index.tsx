@@ -30,12 +30,10 @@ export default function When() {
   return (
     <>
       <Head>
-        <title>
-          When was the last time someone wrote you a love letter? TODO
-        </title>
+        <title>When was the last time someone wrote you a love letter?</title>
         <meta
           name="description"
-          content="When was the last time someone wrote you a love letter? TODO"
+          content="When was the last time someone wrote you a love letter? - Gonçalo Costa, 2009-10"
         />
       </Head>
 

@@ -7,8 +7,8 @@ export default function Fado() {
   return (
     <>
       <Head>
-        <title>Fado TODO</title>
-        <meta name="description" content="Fado TODO" />
+        <title>Fado</title>
+        <meta name="description" content="Fado - Gonçalo Costa, 2010" />
       </Head>
 
       <div id="content">

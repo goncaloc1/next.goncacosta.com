@@ -31,8 +31,11 @@ export default function Reminiscencia() {
   return (
     <>
       <Head>
-        <title>Reminiscencia TODO</title>
-        <meta name="description" content="Reminiscencia TODO" />
+        <title>Reminiscencia</title>
+        <meta
+          name="description"
+          content="Reminiscencia - Gonçalo Costa, 2011-12"
+        />
       </Head>
 
       <div id="content">

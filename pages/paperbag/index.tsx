@@ -20,8 +20,11 @@ export default function Paperbag() {
   return (
     <>
       <Head>
-        <title>Paperbag TODO</title>
-        <meta name="description" content="Paperbag TODO" />
+        <title>It's a paper bag to scream, It's a bag of affections</title>
+        <meta
+          name="description"
+          content="It's a paper bag to scream, It's a bag of affections - Gonçalo Costa, 2008"
+        />
       </Head>
 
       <div id="content">

@@ -1,7 +1,3 @@
-import { useEffect, useMemo, useState } from "react";
-
-const prefix = "/public/images/";
-
 export type PhotoMetadata = {
   path: string;
   filename: string;
@@ -140,14 +136,3 @@ export const getRandomPhotoMetadata = (): PhotoMetadata => {
   const idx = randomFromInterval(0, photos.length - 1);
   return photos[idx];
 };
-
-// export const useRandomPhoto = () => {
-//   const [photo, setPhoto] = useState(getRandomPhoto());
-
-//   const refresh = useMemo(() => {
-//     const newPhoto = getRandomPhoto();
-//     setPhoto(newPhoto);
-//   }, []);
-
-//   return { photo, refresh };
-// };

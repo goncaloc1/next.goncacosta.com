@@ -5,7 +5,7 @@ import {
   useContext,
   useState,
 } from "react";
-import { getRandomPhotoMetadata, PhotoMetadata } from "./useRandomPhoto";
+import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
 
 import Image from "next/image";
 

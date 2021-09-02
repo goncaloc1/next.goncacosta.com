@@ -6,6 +6,7 @@ import styles from "./When.module.css";
 import Script from "next/script";
 
 import photoz from "/public/images/when/z.jpg";
+import whenZoomIn from "/public/images/when/when_zoom_in.png";
 import photoa from "/public/images/when/a.jpg";
 import photob from "/public/images/when/b.jpg";
 import photoc from "/public/images/when/c.jpg";
@@ -70,73 +71,57 @@ export default function When() {
               </li>
             </ul>
           </div>
-          <div id="secondCell" className="cell"></div>
 
           <div className="cell">
-            <div
-              id="first_img_wrapper"
-              //style={{ height: "600px", width: "597px" }}
-            >
+            <div className="boxDistantXX" style={{ marginLeft: "600px" }}>
               <Image
-                //id={styles.photo_z}
                 alt="portrait z"
                 src={photoz}
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={597}
-                height={600}
+                width={640}
+                height={643}
+              />
+            </div>
+          </div>
+          <div className="cell">
+            <div className="boxDistantXX">
+              <Image
+                alt="when text"
+                src={whenZoomIn}
+                layout="fixed"
+                priority={true}
+                quality={100}
+                width={750}
+                height={558}
               />
             </div>
           </div>
 
           <div className="cell">
-            <div id="viewport">
-              <div id="viewportCell">
-                <img
-                  src="images/when/when_zoom_out.png"
-                  alt='"When was the last time someone wrote you a love letter? context'
-                />
-                <div id="zoomView">
-                  <img
-                    src="images/when/when_zoom_in.png"
-                    alt='"When was the last time someone wrote you a love letter? context (zoom)'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="cell">
-            <div
-              className="boxDistantXX"
-              //id={styles.photo_a}
-            >
+            <div className="boxDistantXX">
               <Image
                 alt="portrait a"
                 src={photoa}
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={594}
-                height={600}
+                width={640}
+                height={646}
               />
             </div>
           </div>
           <div className="cell">
-            <div
-              className="boxDistantXX"
-              //id={styles.photo_b}
-              //style={{ height: "600px", width: "595px" }}
-            >
+            <div className="boxDistantXX">
               <Image
                 alt="portrait b"
                 src={photob}
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={595}
-                height={600}
+                width={640}
+                height={645}
               />
             </div>
           </div>
@@ -148,8 +133,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={598}
-                height={600}
+                width={640}
+                height={642}
               />
             </div>
           </div>
@@ -162,8 +147,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={599}
-                height={600}
+                width={640}
+                height={642}
               />
             </div>
           </div>
@@ -176,8 +161,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={596}
-                height={600}
+                width={640}
+                height={644}
               />
             </div>
           </div>
@@ -190,8 +175,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={601}
-                height={600}
+                width={640}
+                height={639}
               />
             </div>
           </div>
@@ -204,8 +189,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={599}
-                height={600}
+                width={640}
+                height={641}
               />
             </div>
           </div>
@@ -218,8 +203,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={605}
-                height={600}
+                width={640}
+                height={638}
               />
             </div>
           </div>
@@ -232,8 +217,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={602}
-                height={600}
+                width={640}
+                height={644}
               />
             </div>
           </div>
@@ -246,8 +231,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={594}
-                height={600}
+                width={640}
+                height={646}
               />
             </div>
           </div>
@@ -260,8 +245,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={601}
-                height={600}
+                width={640}
+                height={639}
               />
             </div>
           </div>
@@ -274,8 +259,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={600}
-                height={600}
+                width={640}
+                height={640}
               />
             </div>
           </div>
@@ -288,8 +273,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={601}
-                height={600}
+                width={640}
+                height={639}
               />
             </div>
           </div>
@@ -302,8 +287,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={599}
-                height={600}
+                width={640}
+                height={641}
               />
             </div>
           </div>
@@ -316,8 +301,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={599}
-                height={600}
+                width={640}
+                height={642}
               />
             </div>
           </div>
@@ -330,8 +315,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={598}
-                height={600}
+                width={640}
+                height={642}
               />
             </div>
           </div>
@@ -344,8 +329,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={596}
-                height={600}
+                width={640}
+                height={644}
               />
             </div>
           </div>
@@ -358,8 +343,8 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={600}
-                height={600}
+                width={640}
+                height={641}
               />
             </div>
           </div>
@@ -372,54 +357,13 @@ export default function When() {
                 layout="fixed"
                 priority={true}
                 quality={100}
-                width={596}
-                height={600}
+                width={640}
+                height={645}
               />
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        #first_img_wrapper {
-          width: 1040px; /* value to be replaced in js */
-          text-align: center;
-        }
-
-        /*	------------------
-        Zoom in / Zoom out
-        ------------------ */
-        #viewport {
-          display: table;
-          width: 672px;
-          height: 500px;
-          position: relative;
-        }
-
-        #viewportCell {
-          display: table-cell;
-          vertical-align: middle;
-          text-align: center;
-        }
-
-        #viewportCell > img {
-          width: 537px;
-          height: 400px;
-          visibility: hidden;
-        }
-
-        #zoomView {
-          float: left;
-          position: absolute;
-          top: 0;
-          display: none;
-        }
-
-        #zoomView img {
-          width: 672px;
-          height: 500px;
-        }
-      `}</style>
 
       <Script>{`new WhenPage().setup();`}</Script>
     </>

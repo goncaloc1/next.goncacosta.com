@@ -34,10 +34,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         type="text/javascript"
         src="/lib/jquery/jquery.cycle2.center.min.js"
       ></script>
-      <script
-        type="text/javascript"
-        src="/lib/jquery/jquery.viewport.mini.js"
-      ></script>
       <script type="text/javascript" src="/lib/common.js"></script>
     </>
   );

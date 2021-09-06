@@ -24,16 +24,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         type="text/javascript"
         src="/lib/mCustomScrollbar2.8.7/jquery.mousewheel.min.js"
       ></script>
-      {/* Could download scripts from https://malsup.github.io/min/jquery.cycle2.min.js but prefer
-       not risking jquery.cycle2 being deprecated and loosing the references. */}
-      <script
-        type="text/javascript"
-        src="/lib/jquery/jquery.cycle2.min.js"
-      ></script>
-      <script
-        type="text/javascript"
-        src="/lib/jquery/jquery.cycle2.center.min.js"
-      ></script>
       <script type="text/javascript" src="/lib/common.js"></script>
     </>
   );

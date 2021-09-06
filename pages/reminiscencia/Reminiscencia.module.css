@@ -1,88 +1,3 @@
-/* #photo_a {
-  width: 602px;
-  height: 600px;
-} */
-/* #photo_b {
-  width: 597px;
-  height: 600px;
-} */
-/* #photo_c {
-  width: 601px;
-  height: 600px;
-}
-#photo_d {
-  width: 602px;
-  height: 600px;
-}
-#photo_e {
-  width: 597px;
-  height: 600px;
-}
-#photo_f {
-  width: 596px;
-  height: 600px;
-}
-#photo_g {
-  width: 596px;
-  height: 600px;
-}
-#photo_h {
-  width: 601px;
-  height: 600px;
-}
-#photo_i {
-  width: 596px;
-  height: 600px;
-}
-#photo_j {
-  width: 597px;
-  height: 600px;
-}
-#photo_k {
-  width: 600px;
-  height: 600px;
-}
-#photo_l {
-  width: 598px;
-  height: 600px;
-}
-#photo_m {
-  width: 483px;
-  height: 600px;
-}
-#photo_n {
-  width: 596px;
-  height: 600px;
-}
-#photo_o {
-  width: 752px;
-  height: 600px;
-}
-#photo_p {
-  width: 600px;
-  height: 600px;
-}
-#photo_q {
-  width: 602px;
-  height: 600px;
-}
-#photo_r {
-  width: 598px;
-  height: 600px;
-}
-#photo_s {
-  width: 749px;
-  height: 600px;
-}
-#photo_t {
-  width: 752px;
-  height: 600px;
-} */
-/* #photo_u {
-  width: 602px;
-  height: 600px;
-} */
-
 .wrapper {
   width: 100%;
 }
@@ -92,4 +7,88 @@
 
 .slideshow_wrapper {
   width: 100%;
+}
+
+.my_cycle_slideshow > div {
+  position: absolute;
+  right: 10%;
+  transition: opacity 1000ms ease-in-out;
+  -moz-transition: opacity 1000ms ease-in-out;
+  -webkit-transition: opacity 1000ms ease-in-out;
+}
+
+.my_cycle_slideshow .transition_hide {
+  opacity: 0;
+}
+
+.my_cycle_slideshow .transition_show {
+  opacity: 1;
+}
+
+.my_cycle_slideshow {
+  height: 600px;
+  margin: auto 10% auto auto;
+}
+
+.my_cycle_slideshow > div {
+  width: 100%;
+  text-align: right;
+}
+
+/* Center vertically */
+.my_cycle_slideshow > div div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 600px;
+}
+
+/* main title */
+.my_cycle_slideshow > div .main_title {
+  width: 600px;
+  text-align: center;
+  float: right;
+}
+
+.my_cycle_slideshow > div .main_title p {
+  font-variant: small-caps;
+  font-size: 2em;
+  font-style: normal;
+  letter-spacing: 0.09em;
+  margin: 0;
+}
+
+/* texts */
+.my_cycle_slideshow > div p {
+  font-family: georgia, serif;
+  line-height: 1.6em;
+  font-size: 1.3em;
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+.my_cycle_slideshow > div div p.author {
+  font-variant: small-caps;
+  padding-top: 3px;
+}
+
+/* last slide, info */
+.my_cycle_slideshow > div div.last p {
+  font-style: normal;
+}
+
+.my_cycle_slideshow > div div.last p.title {
+  display: block;
+  font-variant: small-caps;
+  font-size: 1.9em;
+  padding-bottom: 15px;
+  letter-spacing: 0.09em;
+  margin-top: 400px;
+}
+
+.my_cycle_slideshow > div div.last p.date {
+  padding-bottom: 50px;
+}
+
+.my_cycle_slideshow > div div.last p.bibliography {
+  font-size: 1.1em;
 }

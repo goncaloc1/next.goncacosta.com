@@ -80,8 +80,6 @@ function ReminiscenciaPage() {
 
     Page.prototype.setup.apply(this);
 
-    $('.my-cycle-slideshow').cycle();
-
     //$(window).ready(function () {
     jQuery(function () {
       setupFullScreen();

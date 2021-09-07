@@ -16,7 +16,11 @@ import photoe from "/public/images/paperbag/e.jpg";
 import photoa from "/public/images/paperbag/a.jpg";
 import photoi from "/public/images/paperbag/i.jpg";
 
+import { useWheel } from "../../hooks/useWheel";
+
 export default function Paperbag() {
+  useWheel();
+
   return (
     <>
       <Head>
@@ -27,8 +31,8 @@ export default function Paperbag() {
         />
       </Head>
 
-      <div id="content">
-        <div className="wrapper">
+      <div id="content" className="horizontal_scroll">
+        <div className="wrapper" style={{ width: "max-content" }}>
           <div className="cell">
             <ul id="navigation_menu">
               <li>

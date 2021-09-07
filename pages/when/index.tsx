@@ -27,7 +27,11 @@ import photoo from "/public/images/when/o.jpg";
 import photop from "/public/images/when/p.jpg";
 import photoq from "/public/images/when/q.jpg";
 
+import { useWheel } from "../../hooks/useWheel";
+
 export default function When() {
+  useWheel();
+
   return (
     <>
       <Head>
@@ -38,7 +42,7 @@ export default function When() {
         />
       </Head>
 
-      <div id="content">
+      <div id="content" className="horizontal_scroll">
         <div className="wrapper">
           <div id="firstCell" className="cell">
             <ul id="navigation_menu">

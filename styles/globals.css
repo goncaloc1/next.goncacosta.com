@@ -46,6 +46,33 @@ div#__next {
   height: 100%;
 }
 
+/* HORIZONTAL SCROLL */
+#content.horizontal_scroll {
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #eee;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+/* END OF HORIZONTAL SCROLL */
+
 .wrapper {
   display: table;
   height: 100%;
@@ -219,103 +246,6 @@ html:-moz-full-screen {
   background-position: 0 -122px;
 }
 
-/*  ---------------
-    Basic Scrollbar
-    --------------- */
-
-/* horizontal scrollbar */
-.mCSB_horizontal .mCSB_container {
-  height: auto;
-  margin-right: 0;
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-.mCSB_horizontal .mCSB_container.mCS_no_scrollbar {
-  margin-bottom: 0;
-}
-.mCSB_horizontal.mCustomScrollBox .mCSB_scrollTools {
-  width: 100%;
-  height: 16px;
-  top: auto;
-  right: auto;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-}
-.mCSB_horizontal .mCSB_scrollTools .mCSB_draggerContainer {
-  height: 100%;
-  width: auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonLeft + .mCSB_draggerContainer {
-  padding-bottom: 0;
-  padding-right: 20px;
-}
-.mCSB_horizontal .mCSB_scrollTools .mCSB_dragger {
-  padding-left: 20px;
-}
-.mCSB_horizontal .mCSB_scrollTools .mCSB_draggerRail {
-  width: 100%;
-  height: 2px;
-  margin: 7px 0;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
-.mCSB_horizontal .mCSB_scrollTools .mCSB_dragger {
-  width: 30px;
-  height: 100%;
-}
-.mCSB_horizontal .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  width: 100%;
-  height: 4px;
-  margin: 6px auto;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
-.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonLeft,
-.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonRight {
-  width: 20px;
-  height: 100%;
-  overflow: hidden;
-  margin: 0 auto;
-  cursor: pointer;
-  float: left;
-}
-.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonRight {
-  right: 0;
-  bottom: auto;
-  margin-left: -40px;
-  margin-top: -16px;
-  float: right;
-}
-
-/* scrollbar colors and backgrounds */
-.mCustomScrollBox .mCSB_scrollTools {
-  opacity: 0.75;
-}
-.mCustomScrollBox:hover .mCSB_scrollTools {
-  opacity: 1;
-}
-.mCSB_scrollTools .mCSB_draggerRail {
-  background: #ddd; /* rgba fallback */
-  background: rgba(0, 0, 0, 0.1);
-}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  background: #aaa; /* rgba fallback */
-  background: rgba(0, 0, 0, 0.2);
-}
-.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
-  background: rgba(0, 0, 0, 0.15);
-}
-.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
-.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
-  background: rgba(0, 0, 0, 0.1);
-}
 .mCSB_buttonUp,
 .mCSB_buttonDown,
 .mCSB_buttonLeft,

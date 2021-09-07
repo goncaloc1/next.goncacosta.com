@@ -19,22 +19,7 @@ function ProjectPage(name, changePageTriggerElems) {
   obj.prototype = Object.create(_base);
   obj.prototype.constructor = obj;
 
-  obj.prototype.setup = function (onScrollCallback) {
-    function setupScrollBar(onScrollCallback) {
-      var onScrollCallback = onScrollCallback || function () { };
-
-      $("#content").mCustomScrollbar({
-        horizontalScroll: true,
-        scrollInertia: 550,
-        scrollButtons: {
-          enable: true,
-          scrollSpeed: 150,
-        },
-        mouseWheel: true,
-        mouseWheelPixels: 500,
-        callbacks: { onScroll: onScrollCallback }
-      });
-    };
+  obj.prototype.setup = function () {
 
     function setupFullScreen() {
       initFullScreenAPI();
@@ -45,16 +30,13 @@ function ProjectPage(name, changePageTriggerElems) {
 
     _base.setup.apply(this);
 
-    // $(window).ready(function () {
-    //   setupScrollBar(onScrollCallback);
-    //   setupFullScreen();
-    // });
-
-    // instead of $(window).ready
-    jQuery(function () {
-      setupScrollBar(onScrollCallback);
+    if (document.readyState !== 'loading') {
       setupFullScreen();
-    })
+    } else {
+      document.addEventListener('DOMContentLoaded', () => {
+        setupFullScreen();
+      });
+    }
   };
 
 }(ProjectPage));
@@ -80,10 +62,13 @@ function ReminiscenciaPage() {
 
     Page.prototype.setup.apply(this);
 
-    //$(window).ready(function () {
-    jQuery(function () {
+    if (document.readyState !== 'loading') {
       setupFullScreen();
-    });
+    } else {
+      document.addEventListener('DOMContentLoaded', () => {
+        setupFullScreen();
+      });
+    }
   };
 
 }(ReminiscenciaPage));

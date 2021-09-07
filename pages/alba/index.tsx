@@ -31,7 +31,11 @@ import photow from "/public/images/alba/w.jpg";
 import photox from "/public/images/alba/x.jpg";
 import photoy from "/public/images/alba/y.jpg";
 
+import { useWheel } from "../../hooks/useWheel";
+
 export default function Alba() {
+  useWheel();
+
   return (
     <>
       <Head>
@@ -39,7 +43,7 @@ export default function Alba() {
         <meta name="description" content="Alba - Gonçalo Costa, 2011" />
       </Head>
 
-      <div id="content">
+      <div id="content" className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
             <ul id="navigation_menu">

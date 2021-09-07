@@ -3,7 +3,11 @@ import Link from "next/link";
 
 import Script from "next/script";
 
+import { useWheel } from "../../../hooks/useWheel";
+
 export default function Oulu() {
+  useWheel();
+
   return (
     <>
       <Head>
@@ -11,7 +15,7 @@ export default function Oulu() {
         <meta name="description" content="Oulu book - Gonçalo Costa, 2009" />
       </Head>
 
-      <div id="content">
+      <div id="content" className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
             <ul id="navigation_menu">

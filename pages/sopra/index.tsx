@@ -3,7 +3,11 @@ import Link from "next/link";
 
 import Script from "next/script";
 
+import { useWheel } from "../../hooks/useWheel";
+
 export default function Sopra() {
+  useWheel();
+
   return (
     <>
       <Head>
@@ -11,7 +15,7 @@ export default function Sopra() {
         <meta name="description" content="Sopra - Gonçalo Costa, 2010-11" />
       </Head>
 
-      <div id="content">
+      <div id="content" className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
             <ul id="navigation_menu">

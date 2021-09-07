@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./When.module.css";
 
-import Script from "next/script";
-
 import photoz from "/public/images/when/z.jpg";
 import whenZoomIn from "/public/images/when/when_zoom_in.png";
 import photoa from "/public/images/when/a.jpg";
@@ -28,9 +26,11 @@ import photop from "/public/images/when/p.jpg";
 import photoq from "/public/images/when/q.jpg";
 
 import { useWheel } from "../../hooks/useWheel";
+import { useFullScreen } from "../../hooks/useFullScreen";
 
 export default function When() {
   useWheel();
+  useFullScreen();
 
   return (
     <>
@@ -368,8 +368,6 @@ export default function When() {
           </div>
         </div>
       </div>
-
-      <Script>{`new WhenPage().setup();`}</Script>
     </>
   );
 }

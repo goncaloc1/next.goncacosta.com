@@ -5,8 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Reminiscencia.module.css";
 
-import Script from "next/script";
-
 import photou from "/public/images/reminiscencia/u.jpg";
 import photoa from "/public/images/reminiscencia/a.jpg";
 import photob from "/public/images/reminiscencia/b.jpg";
@@ -28,7 +26,9 @@ import photop from "/public/images/reminiscencia/p.jpg";
 import photoq from "/public/images/reminiscencia/q.jpg";
 import photos from "/public/images/reminiscencia/s.jpg";
 import photor from "/public/images/reminiscencia/r.jpg";
+
 import { useState } from "react";
+import { useFullScreen } from "../../hooks/useFullScreen";
 
 const slides: any = [
   <Image
@@ -316,6 +316,8 @@ const slides: any = [
 type Placeholder = "placeholderX" | "placeholderY" | "placeholderZ";
 
 export default function Reminiscencia() {
+  useFullScreen();
+
   //TODO validate slides length
   //TODO create component
 
@@ -571,8 +573,6 @@ export default function Reminiscencia() {
           float: right;
         }
       `}</style>
-
-      <Script>{`new ReminiscenciaPage().setup();`}</Script>
     </>
   );
 }

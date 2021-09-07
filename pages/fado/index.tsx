@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import Script from "next/script";
-
 import { useWheel } from "../../hooks/useWheel";
+import { useFullScreen } from "../../hooks/useFullScreen";
 
 export default function Fado() {
   useWheel();
+  useFullScreen();
 
   return (
     <>
@@ -145,8 +145,6 @@ export default function Fado() {
           margin: 0 100px 0 50px;
         }
       `}</style>
-
-      <Script>{`new FadoPage().setup();`}</Script>
     </>
   );
 }

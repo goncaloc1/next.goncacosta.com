@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import Script from "next/script";
-
 import { useWheel } from "../../hooks/useWheel";
+import { useFullScreen } from "../../hooks/useFullScreen";
 
 export default function Sopra() {
   useWheel();
+  useFullScreen();
 
   return (
     <>
@@ -212,8 +212,6 @@ export default function Sopra() {
           margin: 0 100px 0 25px;
         }
       `}</style>
-
-      <Script>{`new SopraPage().setup();`}</Script>
     </>
   );
 }

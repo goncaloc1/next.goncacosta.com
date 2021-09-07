@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 
 import styles from "./Paperbag.module.css";
 
@@ -17,9 +16,11 @@ import photoa from "/public/images/paperbag/a.jpg";
 import photoi from "/public/images/paperbag/i.jpg";
 
 import { useWheel } from "../../hooks/useWheel";
+import { useFullScreen } from "../../hooks/useFullScreen";
 
 export default function Paperbag() {
   useWheel();
+  useFullScreen();
 
   return (
     <>
@@ -117,8 +118,6 @@ export default function Paperbag() {
           </div>
         </div>
       </div>
-
-      <Script>{`new PaperbagPage().setup();`}</Script>
     </>
   );
 }

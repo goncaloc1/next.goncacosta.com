@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import Script from "next/script";
-
 import { useWheel } from "../../hooks/useWheel";
+import { useFullScreen } from "../../hooks/useFullScreen";
 
 export default function Oulu() {
   useWheel();
+  useFullScreen();
 
   return (
     <>
@@ -152,8 +152,6 @@ export default function Oulu() {
           margin: 0 120px 0 50px;
         }
       `}</style>
-
-      <Script>{`new OuluPage().setup();`}</Script>
     </>
   );
 }

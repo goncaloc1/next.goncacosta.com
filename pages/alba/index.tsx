@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Alba.module.css";
 
-import Script from "next/script";
-
 import photoa from "/public/images/alba/a.jpg";
 import photob from "/public/images/alba/b.jpg";
 import photoc from "/public/images/alba/c.jpg";
@@ -32,9 +30,11 @@ import photox from "/public/images/alba/x.jpg";
 import photoy from "/public/images/alba/y.jpg";
 
 import { useWheel } from "../../hooks/useWheel";
+import { useFullScreen } from "../../hooks/useFullScreen";
 
 export default function Alba() {
   useWheel();
+  useFullScreen();
 
   return (
     <>
@@ -586,8 +586,6 @@ export default function Alba() {
           </div>
         </div>
       </div>
-
-      <Script>{`new AlbaPage().setup();`}</Script>
     </>
   );
 }

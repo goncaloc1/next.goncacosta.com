@@ -2,11 +2,11 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { useRandomColors } from "../hooks/useRandomColors";
+import { useNavigationColors } from "../hooks/useNavigationColors";
 import { usePhoto, Photo } from "../hooks/usePhoto";
 
 export default function Home() {
-  useRandomColors();
+  const navigationColors = useNavigationColors();
 
   const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
   const [photo, setPhoto] = useState<Photo | null>(null);
@@ -35,6 +35,8 @@ export default function Home() {
     loadPhoto();
   }, []);
 
+  if (!navigationColors) return <></>;
+
   return (
     <>
       <Head>
@@ -59,37 +61,39 @@ export default function Home() {
         <div className="wrapper">
           <div className="cell">
             <div className="linksWrapper">
-              <a id="goncalocosta">gonçalo costa</a>
+              <a className={navigationColors.goncalocosta}>gonçalo costa</a>
               <a className="spacer">&nbsp;</a>
-              <a id="gallery">gallery</a>
+              <a className={navigationColors.gallery}>gallery</a>
               <Link href="/reminiscencia">
-                <a id="reminiscencia">reminiscencia</a>
+                <a className={navigationColors.reminiscencia}>reminiscencia</a>
               </Link>
               <Link href="/alba">
-                <a id="alba">alba</a>
+                <a className={navigationColors.alba}>alba</a>
               </Link>
               <Link href="/when">
-                <a id="when">
+                <a id="when" className={navigationColors.when}>
                   when was the last time someone wrote you a love letter?
                 </a>
               </Link>
               <Link href="/paperbag">
-                <a id="paperbag">
+                <a id="paperbag" className={navigationColors.paperbag}>
                   it's a paper bag to scream, it's a bag of affections
                 </a>
               </Link>
-              <a id="archive">archive</a>
+              <a className={navigationColors.archive}>archive</a>
               <Link href="/oulu">
-                <a id="oulu">oulu</a>
+                <a className={navigationColors.oulu}>oulu</a>
               </Link>
               <Link href="/sopra">
-                <a id="sopra">sopra</a>
+                <a className={navigationColors.sopra}>sopra</a>
               </Link>
               <Link href="/fado">
-                <a id="fado">fado</a>
+                <a className={navigationColors.fado}>fado</a>
               </Link>
               <a className="spacer">&nbsp;</a>
-              <a id="email">goncacosta at gmail dot com</a>
+              <a id="email" className={navigationColors.email}>
+                goncacosta at gmail dot com
+              </a>
             </div>
           </div>
           <div className="cell">

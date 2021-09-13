@@ -298,136 +298,104 @@ html:-moz-full-screen {
 /* Home */
 /********/
 
-.mainColor1 {
-  background: rgb(56, 117, 60);
+.main_color1 {
   background: rgba(56, 117, 60, 0.15);
 }
-.mainColor2 {
-  background: rgb(95, 133, 63);
+.main_color2 {
   background: rgba(95, 133, 63, 0.15);
 }
-.mainColor3 {
-  background: rgb(50, 50, 104);
+.main_color3 {
   background: rgba(50, 50, 104, 0.15);
 }
-.mainColor4 {
-  background: rgb(47, 70, 98);
+.main_color4 {
   background: rgba(47, 70, 98, 0.15);
 }
-.mainColor5 {
-  background: rgb(149, 77, 71);
+.main_color5 {
   background: rgba(149, 77, 71, 0.15);
 }
-.mainColor6 {
-  background: rgb(149, 113, 71);
+.main_color6 {
   background: rgba(149, 113, 71, 0.15);
 }
-.mainColor7 {
-  background: rgb(44, 83, 92);
+.main_color7 {
   background: rgba(44, 83, 92, 0.15);
 }
-.mainColor8 {
-  background: rgb(85, 47, 99);
+.main_color8 {
   background: rgba(85, 47, 99, 0.15);
 }
-.mainColor9 {
-  background: rgb(17, 17, 17);
+.main_color9 {
   background: rgba(17, 17, 17, 0.15);
 }
 
-.mainColor1:hover {
-  background: rgb(56, 117, 60);
+.main_color1:hover {
   background: rgba(56, 117, 60, 0.3);
 }
-.mainColor2:hover {
-  background: rgb(95, 133, 63);
+.main_color2:hover {
   background: rgba(95, 133, 63, 0.3);
 }
-.mainColor3:hover {
-  background: rgb(50, 50, 104);
+.main_color3:hover {
   background: rgba(50, 50, 104, 0.3);
 }
-.mainColor4:hover {
-  background: rgb(47, 70, 98);
+.main_color4:hover {
   background: rgba(47, 70, 98, 0.3);
 }
-.mainColor5:hover {
-  background: rgb(149, 77, 71);
+.main_color5:hover {
   background: rgba(149, 77, 71, 0.3);
 }
-.mainColor6:hover {
-  background: rgb(149, 113, 71);
+.main_color6:hover {
   background: rgba(149, 113, 71, 0.3);
 }
-.mainColor7:hover {
-  background: rgb(44, 83, 92);
+.main_color7:hover {
   background: rgba(44, 83, 92, 0.3);
 }
-.mainColor8:hover {
-  background: rgb(85, 47, 99);
+.main_color8:hover {
   background: rgba(85, 47, 99, 0.3);
 }
-.mainColor9:hover {
-  background: rgb(17, 17, 17);
+.main_color9:hover {
   background: rgba(17, 17, 17, 0.3);
 }
 
-.secondaryColor1 {
-  background: rgb(130, 135, 131);
+.secondary_color1 {
   background: rgba(130, 135, 131, 0.05);
 }
-.secondaryColor2 {
-  background: rgb(172, 181, 172);
+.secondary_color2 {
   background: rgba(172, 181, 172, 0.05);
 }
-.secondaryColor3 {
-  background: rgb(109, 111, 113);
+.secondary_color3 {
   background: rgba(109, 111, 113, 0.05);
 }
-.secondaryColor4 {
-  background: rgb(143, 146, 150);
+.secondary_color4 {
   background: rgba(143, 146, 150, 0.05);
 }
-.secondaryColor5 {
-  background: rgb(167, 168, 161);
+.secondary_color5 {
   background: rgba(167, 168, 161, 0.05);
 }
 
-.secondaryColor1:hover {
-  background: rgb(130, 135, 131);
+.secondary_color1:hover {
   background: rgba(130, 135, 131, 0.3);
 }
-.secondaryColor2:hover {
-  background: rgb(172, 181, 172);
+.secondary_color2:hover {
   background: rgba(172, 181, 172, 0.3);
 }
-.secondaryColor3:hover {
-  background: rgb(109, 111, 113);
+.secondary_color3:hover {
   background: rgba(109, 111, 113, 0.3);
 }
-.secondaryColor4:hover {
-  background: rgb(143, 146, 150);
+.secondary_color4:hover {
   background: rgba(143, 146, 150, 0.3);
 }
-.secondaryColor5:hover {
-  background: rgb(167, 168, 161);
+.secondary_color5:hover {
   background: rgba(167, 168, 161, 0.3);
 }
 
-.secondaryColor11 {
-  background: rgb(130, 135, 131);
+.secondary_color11 {
   background: rgba(130, 135, 131, 0.05);
 }
-.secondaryColor12 {
-  background: rgb(172, 181, 172);
+.secondary_color12 {
   background: rgba(172, 181, 172, 0.05);
 }
-.secondaryColor13 {
-  background: rgb(143, 146, 150);
+.secondary_color13 {
   background: rgba(143, 146, 150, 0.2);
 }
-.secondaryColor14 {
-  background: rgb(167, 168, 161);
+.secondary_color14 {
   background: rgba(167, 168, 161, 0.2);
 }
 

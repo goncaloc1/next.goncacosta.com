@@ -207,7 +207,7 @@ export default function Sopra() {
         }
 
         .header {
-          width: 225px;
+          width: 260px;
           height: 600px;
           margin: 0 100px 0 25px;
         }

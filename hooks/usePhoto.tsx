@@ -60,7 +60,7 @@ export function PhotoProvider({ children }: { children: ReactNode }) {
             alt="cache"
             src={cachedPhoto.src}
             priority={true}
-            quality={100}
+            quality={70}
           />
         </div>
       )}

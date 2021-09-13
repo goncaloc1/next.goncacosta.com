@@ -32,7 +32,6 @@ a {
   text-decoration: none;
 }
 
-/* TODO double check this */
 div#__next {
   height: 100%;
 }
@@ -42,7 +41,7 @@ div#__next {
   overflow: hidden;
 }
 
-#content .mCSB_container  /* hack: replace .mCSB_container {height:auto;} */ {
+#content .mCSB_container {
   height: 100%;
 }
 
@@ -93,8 +92,8 @@ div#__next {
   padding: 0;
   line-height: 12pt;
   display: table;
-  width: 250px;
-  height: 600px;
+  width: 300px;
+  height: 750px;
   margin: 0 120px 0 100px;
 }
 
@@ -106,17 +105,18 @@ div#__next {
 .title {
   display: table-row;
   font-style: italic;
+  height: 70px;
 }
 
 .title_left {
   float: left;
-  font-size: 1.25em;
+  font-size: 1.35em;
   margin: 0 0 0 30px;
 }
 
 .title_right {
   float: right;
-  font-size: 1.2em;
+  font-size: 1.35em;
 }
 
 .box,
@@ -405,7 +405,7 @@ html:-moz-full-screen {
 
 .linksWrapper a {
   display: block;
-  padding: 7px 60px 7px 10px;
+  padding: 7px 60px 9px 10px;
   margin: 0 0 1px 0;
 
   float: left;
@@ -431,7 +431,7 @@ html:-moz-full-screen {
   width: 150px;
 }
 #paperbag {
-  width: 100px;
+  width: 120px;
 }
 
 #email {
@@ -455,7 +455,6 @@ html:-moz-full-screen {
 }
 
 #main_img_desc {
-  font-size: 0.5em;
   font-variant: normal;
   font-style: italic;
   margin: 5px 10px 0 0;

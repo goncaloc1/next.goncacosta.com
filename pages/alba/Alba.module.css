@@ -1,7 +1,11 @@
 #description {
   text-align: right;
   line-height: 1.5em;
-  font-size: 1.25em;
+  font-size: 1.45em;
+}
+
+.box_width {
+  width: 750px;
 }
 
 .box_text_wrapper_1,
@@ -10,32 +14,32 @@
 .box_text_wrapper_4,
 .box_text_wrapper_5 {
   display: table;
-  height: 600px;
-  margin: 0 40px 0 0;
+  height: 750px;
+  margin: 0 80px 0 0;
   text-align: right;
 }
 
 .box_text_wrapper_1 {
-  width: 650px;
+  width: 690px;
 }
 .box_text_wrapper_2 {
-  width: 470px;
+  width: 510px;
 }
 .box_text_wrapper_3 {
-  width: 330px;
+  width: 370px;
 }
 .box_text_wrapper_4 {
-  width: 360px;
+  width: 400px;
 }
 .box_text_wrapper_5 {
-  width: 560px;
+  width: 600px;
 }
 
 .box_text {
   display: table-cell;
-  font-size: 1.23em;
-  line-height: 1.2em;
-  padding: 0 0 10px;
+  font-size: 1.3em;
+  line-height: 1.35em;
+  padding: 0 0 20px;
   vertical-align: bottom;
-  word-spacing: 0.1em;
+  word-spacing: 0.2em;
 }

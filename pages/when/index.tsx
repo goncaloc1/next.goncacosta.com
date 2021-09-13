@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./When.module.css";
 
 import photoz from "/public/images/when/z.jpg";
 import whenZoomIn from "/public/images/when/when_zoom_in.png";
@@ -77,26 +76,26 @@ export default function When() {
           </div>
 
           <div className="cell">
-            <div className="boxDistantXX" style={{ marginLeft: "600px" }}>
+            <div
+              className="boxDistantXX w_full"
+              style={{ marginLeft: "600px" }}
+            >
               <Image
                 alt="portrait z"
                 src={photoz}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={643}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
                 alt="when text"
                 src={whenZoomIn}
                 layout="fixed"
                 priority={true}
-                quality={100}
+                quality={70}
                 width={750}
                 height={558}
               />
@@ -104,270 +103,203 @@ export default function When() {
           </div>
 
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
                 alt="portrait a"
                 src={photoa}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={646}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
                 alt="portrait b"
                 src={photob}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={645}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
                 alt="portrait c"
                 src={photoc}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={642}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_d}
                 alt="portrait d"
                 src={photod}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={642}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_e}
                 alt="portrait e"
                 src={photoe}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={644}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_f}
                 alt="portrait f"
                 src={photof}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={639}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_g}
                 alt="portrait g"
                 src={photog}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={641}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_g1}
                 alt="portrait g1"
                 src={photog1}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={638}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_g2}
                 alt="portrait g2"
                 src={photog2}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={644}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_h}
                 alt="portrait h"
                 src={photoh}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={646}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_i}
                 alt="portrait i"
                 src={photoi}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={639}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_j}
                 alt="portrait j"
                 src={photoj}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={640}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_k}
                 alt="portrait k"
                 src={photok}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={639}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_l}
                 alt="portrait l"
                 src={photol}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={641}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_m}
                 alt="portrait m"
                 src={photom}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={642}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_n}
                 alt="portrait n"
                 src={photon}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={642}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_o}
                 alt="portrait o"
                 src={photoo}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={644}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_p}
                 alt="portrait p"
                 src={photop}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={641}
+                quality={70}
               />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
+            <div className="boxDistantXX w_full">
               <Image
-                id={styles.photo_q}
                 alt="portrait q"
                 src={photoq}
-                layout="fixed"
                 priority={true}
-                quality={100}
-                width={640}
-                height={645}
+                quality={70}
               />
             </div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .w_full {
+          width: 750px;
+        }
+      `}</style>
     </>
   );
 }

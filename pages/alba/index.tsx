@@ -84,55 +84,23 @@ export default function Alba() {
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo a"
-                src={photoa}
-                layout="fixed"
-                width={598}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo a" src={photoa} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo b"
-                src={photob}
-                layout="fixed"
-                width={599}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo b" src={photob} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo c"
-                src={photoc}
-                layout="fixed"
-                width={599}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo c" src={photoc} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistant">
-              <Image
-                alt="photo d"
-                src={photod}
-                layout="fixed"
-                width={598}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo d" src={photod} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
@@ -199,42 +167,18 @@ export default function Alba() {
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo e"
-                src={photoe}
-                layout="fixed"
-                width={601}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo e" src={photoe} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo f"
-                src={photof}
-                layout="fixed"
-                width={604}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo f" src={photof} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantX">
-              <Image
-                alt="photo g"
-                src={photog}
-                layout="fixed"
-                width={605}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistantX`}>
+              <Image alt="photo g" src={photog} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
@@ -270,55 +214,23 @@ export default function Alba() {
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantX">
-              <Image
-                alt="photo h"
-                src={photoh}
-                layout="fixed"
-                width={604}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistantX`}>
+              <Image alt="photo h" src={photoh} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo i"
-                src={photoi}
-                layout="fixed"
-                width={598}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo i" src={photoi} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo j"
-                src={photoj}
-                layout="fixed"
-                width={598}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo j" src={photoj} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantX">
-              <Image
-                alt="photo k"
-                src={photok}
-                layout="fixed"
-                width={598}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistantX`}>
+              <Image alt="photo k" src={photok} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
@@ -344,94 +256,38 @@ export default function Alba() {
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo l"
-                src={photol}
-                layout="fixed"
-                width={607}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo l" src={photol} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo m"
-                src={photom}
-                layout="fixed"
-                width={600}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo m" src={photom} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo n"
-                src={photon}
-                layout="fixed"
-                width={597}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo n" src={photon} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo o"
-                src={photoo}
-                layout="fixed"
-                width={601}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo o" src={photoo} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo p "
-                src={photop}
-                layout="fixed"
-                width={599}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo p " src={photop} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo q"
-                src={photoq}
-                layout="fixed"
-                width={601}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo q" src={photoq} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantX">
-              <Image
-                alt="photo r"
-                src={photor}
-                layout="fixed"
-                width={596}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistantX`}>
+              <Image alt="photo r" src={photor} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
@@ -468,68 +324,28 @@ export default function Alba() {
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo s"
-                src={photos}
-                layout="fixed"
-                width={600}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo s" src={photos} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo t"
-                src={photot}
-                layout="fixed"
-                width={604}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo t" src={photot} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistant">
-              <Image
-                alt="photo u"
-                src={photou}
-                layout="fixed"
-                width={607}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo u" src={photou} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo v"
-                src={photov}
-                layout="fixed"
-                width={600}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo v" src={photov} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistant">
-              <Image
-                alt="photo w"
-                src={photow}
-                layout="fixed"
-                width={596}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo w" src={photow} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
@@ -559,29 +375,13 @@ export default function Alba() {
             </div>
           </div>
           <div className="cell">
-            <div className="box">
-              <Image
-                alt="photo x"
-                src={photox}
-                layout="fixed"
-                width={599}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistant`}>
+              <Image alt="photo x" src={photox} quality={70} priority={true} />
             </div>
           </div>
           <div className="cell">
-            <div className="boxDistantXX">
-              <Image
-                alt="photo y"
-                src={photoy}
-                layout="fixed"
-                width={599}
-                height={600}
-                quality={100}
-                priority={true}
-              />
+            <div className={`${styles.box_width} boxDistantXX`}>
+              <Image alt="photo y" src={photoy} quality={70} priority={true} />
             </div>
           </div>
         </div>

@@ -9,9 +9,27 @@
   width: 100%;
 }
 
+.my_cycle_slideshow .slide,
+.my_cycle_slideshow .slideS,
+.my_cycle_slideshow .slideL {
+  position: relative;
+}
+
+.my_cycle_slideshow .slide {
+  width: 750px;
+}
+
+.my_cycle_slideshow .slideS {
+  width: 604px;
+}
+
+.my_cycle_slideshow .slideL {
+  width: 940px;
+}
+
 .my_cycle_slideshow > div {
   position: absolute;
-  right: 10%;
+  right: 8%;
   transition: opacity 1000ms ease-in-out;
   -moz-transition: opacity 1000ms ease-in-out;
   -webkit-transition: opacity 1000ms ease-in-out;
@@ -26,31 +44,31 @@
 }
 
 .my_cycle_slideshow {
-  height: 600px;
-  margin: auto 10% auto auto;
+  height: 750px;
 }
 
-.my_cycle_slideshow > div {
+.my_cycle_slideshow > div div {
   width: 100%;
   text-align: right;
+  font-size: 9pt;
 }
 
 /* Center vertically */
-.my_cycle_slideshow > div div {
+.my_cycle_slideshow > div div div {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 600px;
+  height: 750px;
 }
 
 /* main title */
-.my_cycle_slideshow > div .main_title {
-  width: 600px;
+.my_cycle_slideshow > div div .main_title {
+  width: 750px;
   text-align: center;
   float: right;
 }
 
-.my_cycle_slideshow > div .main_title p {
+.my_cycle_slideshow > div div .main_title p {
   font-variant: small-caps;
   font-size: 2em;
   font-style: normal;
@@ -59,24 +77,24 @@
 }
 
 /* texts */
-.my_cycle_slideshow > div p {
+.my_cycle_slideshow > div div p {
   font-family: georgia, serif;
-  line-height: 1.6em;
+  line-height: 1.5em;
   font-size: 1.3em;
   font-style: italic;
   letter-spacing: 0.04em;
 }
-.my_cycle_slideshow > div div p.author {
+.my_cycle_slideshow > div div div p.author {
   font-variant: small-caps;
   padding-top: 3px;
 }
 
 /* last slide, info */
-.my_cycle_slideshow > div div.last p {
+.my_cycle_slideshow > div div div.last p {
   font-style: normal;
 }
 
-.my_cycle_slideshow > div div.last p.title {
+.my_cycle_slideshow > div div div.last p.title {
   display: block;
   font-variant: small-caps;
   font-size: 1.9em;
@@ -85,10 +103,10 @@
   margin-top: 400px;
 }
 
-.my_cycle_slideshow > div div.last p.date {
+.my_cycle_slideshow > div div div.last p.date {
   padding-bottom: 50px;
 }
 
-.my_cycle_slideshow > div div.last p.bibliography {
+.my_cycle_slideshow > div div div.last p.bibliography {
   font-size: 1.1em;
 }

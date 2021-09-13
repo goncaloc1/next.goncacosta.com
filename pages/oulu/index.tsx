@@ -147,7 +147,7 @@ export default function Oulu() {
         }
 
         .header {
-          width: 200px;
+          width: 230px;
           height: 600px;
           margin: 0 120px 0 50px;
         }

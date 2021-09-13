@@ -140,9 +140,9 @@ export default function Fado() {
         }
 
         .header {
-          width: 200px;
+          width: 230px;
           height: 550px;
-          margin: 0 100px 0 50px;
+          margin: 0 130px 0 50px;
         }
       `}</style>
     </>

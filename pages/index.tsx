@@ -104,14 +104,14 @@ export default function Home() {
                     <div
                       style={{
                         position: "relative",
-                        maxWidth: "600px",
+                        maxWidth: "750px",
                       }}
                     >
                       <Image
                         alt="&nbsp"
                         src={photo.src}
                         priority={true}
-                        quality={100}
+                        quality={70}
                         onLoadingComplete={() => setIsPhotoLoaded(true)}
                       />
                     </div>
@@ -133,20 +133,11 @@ export default function Home() {
       <style jsx>{`
         div {
           color: #444;
-          font-size: 11pt;
           font-family: "Dosis", sans-serif;
-          letter-spacing: 0.05em;
-          line-height: 1.1em;
+          font-size: 14pt;
+          letter-spacing: 0.03em;
+          line-height: 1em;
           font-variant: small-caps;
-        }
-
-        /* Chrome hack (affects Safari) */
-        @media screen and (-webkit-min-device-pixel-ratio: 0) {
-          div {
-            font-size: 12.5pt;
-            letter-spacing: 0.06em;
-            line-height: 1em;
-          }
         }
 
         .wrapper > div:first-child {

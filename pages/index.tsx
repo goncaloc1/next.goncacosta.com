@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigationColors } from "../hooks/useNavigationColors";
 import { usePhoto, Photo } from "../hooks/usePhoto";
+import { IconsCache } from "../components/IconsCache";
 
 export default function Home() {
   const navigationColors = useNavigationColors();
@@ -49,13 +50,7 @@ export default function Home() {
         />
       </Head>
 
-      {/* TODO encapsulate cache in a component */}
-      <div style={{ visibility: "hidden", height: 0 }}>
-        <div className="mCSB_buttonLeft"></div>
-        <div id="navigation_menu" style={{ margin: 0 }}>
-          <a href="#" id="back" />
-        </div>
-      </div>
+      <IconsCache />
 
       <div id="content">
         <div className="wrapper">

@@ -15,16 +15,76 @@
   position: relative;
 }
 
-.my_cycle_slideshow .slide {
-  width: 750px;
-}
-
-.my_cycle_slideshow .slideS {
-  width: 604px;
-}
-
+.my_cycle_slideshow .slide,
+.my_cycle_slideshow .slideS,
 .my_cycle_slideshow .slideL {
-  width: 940px;
+  width: 280px;
+}
+
+/* TODO images size is correct but it doesn't play
+well with the back/next buttons */
+.my_cycle_slideshow > div .slideS div,
+.my_cycle_slideshow > div .slideL div {
+  height: auto;
+}
+
+.my_cycle_slideshow > div div {
+  font-size: 4pt;
+}
+
+.my_cycle_slideshow,
+.my_cycle_slideshow > div div div {
+  height: 280px;
+}
+
+@media (min-width: 640px) {
+  /* TODO */
+}
+
+@media (min-width: 1024px) {
+  .my_cycle_slideshow .slide {
+    width: 650px;
+  }
+
+  .my_cycle_slideshow .slideS {
+    width: 524px;
+  }
+
+  .my_cycle_slideshow .slideL {
+    width: 815px;
+  }
+
+  .my_cycle_slideshow > div div {
+    font-size: 8pt;
+  }
+
+  .my_cycle_slideshow,
+  .my_cycle_slideshow > div div div {
+    height: 650px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .my_cycle_slideshow .slide {
+    width: 750px;
+  }
+
+  .my_cycle_slideshow .slideS {
+    width: 604px;
+  }
+
+  .my_cycle_slideshow .slideL {
+    width: 940px;
+  }
+
+  .my_cycle_slideshow > div div {
+    font-size: 9pt;
+  }
+
+  .my_cycle_slideshow,
+  .my_cycle_slideshow > div div div {
+    height: 750px;
+  }
 }
 
 .my_cycle_slideshow > div {
@@ -43,29 +103,18 @@
   opacity: 1;
 }
 
-.my_cycle_slideshow {
-  height: 750px;
-}
-
 .my_cycle_slideshow > div div {
-  width: 100%;
   text-align: right;
-  font-size: 9pt;
 }
 
-/* Center vertically */
 .my_cycle_slideshow > div div div {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 750px;
 }
 
-/* main title */
 .my_cycle_slideshow > div div .main_title {
-  width: 750px;
   text-align: center;
-  float: right;
 }
 
 .my_cycle_slideshow > div div .main_title p {
@@ -76,7 +125,6 @@
   margin: 0;
 }
 
-/* texts */
 .my_cycle_slideshow > div div p {
   font-family: georgia, serif;
   line-height: 1.5em;
@@ -90,6 +138,11 @@
 }
 
 /* last slide, info */
+.my_cycle_slideshow > div div div.last {
+  justify-content: flex-end;
+  margin-top: -5%;
+}
+
 .my_cycle_slideshow > div div div.last p {
   font-style: normal;
 }
@@ -100,7 +153,6 @@
   font-size: 1.9em;
   padding-bottom: 15px;
   letter-spacing: 0.09em;
-  margin-top: 400px;
 }
 
 .my_cycle_slideshow > div div div.last p.date {

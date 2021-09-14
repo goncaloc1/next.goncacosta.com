@@ -43,7 +43,7 @@ export default function When() {
 
       <div id="content" className="horizontal_scroll">
         <div className="wrapper">
-          <div id="firstCell" className="cell">
+          <div className="cell">
             <ul id="navigation_menu">
               <li>
                 <Link href="/">
@@ -76,10 +76,8 @@ export default function When() {
           </div>
 
           <div className="cell">
-            <div
-              className="boxDistantXX w_full"
-              style={{ marginLeft: "600px" }}
-            >
+            {/* TODO center horizontally instead of using margin-left */}
+            <div className="boxDistantXX w_full first_image">
               <Image
                 alt="portrait z"
                 src={photoz}
@@ -93,11 +91,8 @@ export default function When() {
               <Image
                 alt="when text"
                 src={whenZoomIn}
-                layout="fixed"
                 priority={true}
-                quality={70}
-                width={750}
-                height={558}
+                quality={60}
               />
             </div>
           </div>
@@ -296,8 +291,38 @@ export default function When() {
       </div>
 
       <style jsx>{`
+        .first_image {
+          margin-left: 20px;
+        }
+
         .w_full {
-          width: 750px;
+          width: 300px;
+        }
+
+        @media only screen and (min-width: 400px) {
+          .w_full {
+            width: 370px;
+          }
+        }
+
+        @media only screen and (min-width: 1080px) {
+          .first_image {
+            margin-left: 250px;
+          }
+
+          .w_full {
+            width: 650px;
+          }
+        }
+
+        @media only screen and (min-width: 1440px) {
+          .first_image {
+            margin-left: 580px;
+          }
+
+          .w_full {
+            width: 750px;
+          }
         }
       `}</style>
     </>

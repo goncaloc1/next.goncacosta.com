@@ -104,7 +104,7 @@ export default function Home() {
                     <div
                       style={{
                         position: "relative",
-                        maxWidth: "750px",
+                        maxWidth: "650px",
                       }}
                     >
                       <Image

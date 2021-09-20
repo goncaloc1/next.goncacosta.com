@@ -39,6 +39,7 @@ export default function When() {
           name="description"
           content="When was the last time someone wrote you a love letter? - Gonçalo Costa, 2009-10"
         />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
 
       <div id="content" className="horizontal_scroll">
@@ -299,13 +300,13 @@ export default function When() {
           width: 300px;
         }
 
-        @media only screen and (min-width: 400px) {
+        @media (min-width: 640px) {
           .w_full {
             width: 370px;
           }
         }
 
-        @media only screen and (min-width: 1080px) {
+        @media (min-width: 1024px) {
           .first_image {
             margin-left: 250px;
           }
@@ -315,7 +316,7 @@ export default function When() {
           }
         }
 
-        @media only screen and (min-width: 1440px) {
+        @media (min-width: 1536px) {
           .first_image {
             margin-left: 580px;
           }

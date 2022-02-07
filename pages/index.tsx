@@ -45,6 +45,10 @@ export default function Home() {
         <meta name="description" content="Gonçalo Costa : gallery" />
         <link rel="icon" href="/favicon.ico" />
         <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'none'; script-src 'self' 'unsafe-eval'; connect-src 'self' https://vitals.vercel-insights.com/v1/vitals; prefetch-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; upgrade-insecure-requests; block-all-mixed-content; form-action 'none';"
+        />
+        <meta
           name="google-site-verification"
           content="fN_MpKv7865Tw0sNWRxzcL1U8oAG_fnFnZW1M2W0Zqs"
         />

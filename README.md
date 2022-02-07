@@ -10,6 +10,7 @@ The original version of `goncacosta.com` website was written in vanilla javacrip
 ## TODO
 
 - Work on responsiveness, mobile compatibility still suffering;
+- Improve CSP default-src 'unsafe-eval' and respective cause (cache photo);
 - Smother first page loading / images fade in;
 - Increase images buffer in "Reminiscencia" & create component;
 - Smooth horizontal scrolling;

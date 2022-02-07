@@ -29,6 +29,10 @@ export function PhotoProvider({ children }: { children: ReactNode }) {
   const refreshCache = useCallback(async (): Promise<Photo> => {
     const metadata = getRandomPhotoMetadata();
 
+    /**
+     * TODO Might need to revisit this as default-src had to be set with 'unsafe-eval'.
+     * no.no.no.
+     */
     const src = (
       await import(`/public/images/${metadata.path}${metadata.filename}`)
     ).default;

@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 const randomFromInterval = (from: number, to: number): number => {
   return Math.floor(Math.random() * (to - from + 1) + from);
 };
@@ -35,7 +33,7 @@ type MainColors = typeof MAIN_COLORS[number];
 
 type SecondaryColors = typeof SECONDARY_COLORS[number];
 
-type NavigationColors = {
+export type NavigationColors = {
   goncalocosta: SecondaryColors;
   email: SecondaryColors;
   gallery: SecondaryColors;
@@ -49,7 +47,7 @@ type NavigationColors = {
   fado: SecondaryColors;
 };
 
-const getNavigationColors = (): NavigationColors => {
+export const getNavigationColors = (): NavigationColors => {
   const navigationColors: NavigationColors = {
     goncalocosta: SECONDARY_COLORS[randomFromInterval(maxIdxSC - 3, maxIdxSC)],
     email: SECONDARY_COLORS[randomFromInterval(maxIdxSC - 3, maxIdxSC)],
@@ -80,23 +78,6 @@ const getNavigationColors = (): NavigationColors => {
         ? MAIN_COLORS[randomFromInterval(0, maxIdxMC)]
         : SECONDARY_COLORS[randomFromInterval(0, maxIdxSC - 4)];
   });
-
-  return navigationColors;
-};
-
-export const useNavigationColors = () => {
-  /**
-   * We would get a 'Warning: Prop `className` did not match. Server:
-   * "jsx-3668079319 secondary_color12" Client: "jsx-3668079319 secondary_color13"'
-   * if not setting `navigationColors` as null for first value. A bit odd
-   * because `useMemo` wouldn't work either.
-   */
-  const [navigationColors, setNavigationColors] =
-    useState<NavigationColors | null>(null);
-
-  useEffect(() => {
-    setNavigationColors(getNavigationColors());
-  }, []);
 
   return navigationColors;
 };

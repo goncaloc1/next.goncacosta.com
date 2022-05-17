@@ -2,13 +2,22 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigationColors } from "../hooks/useNavigationColors";
+import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
 import { usePhoto, Photo } from "../hooks/usePhoto";
 import { IconsCache } from "../components/IconsCache";
+import { GetServerSideProps, NextPage } from "next";
 
-export default function Home() {
-  const navigationColors = useNavigationColors();
 
+export const getServerSideProps: GetServerSideProps = async () => {
+  const navigationColors = getNavigationColors();
+  return { props: { navigationColors } }
+}
+
+type HomeProps = {
+  navigationColors: NavigationColors;
+}
+
+const Home: NextPage<HomeProps> = ({ navigationColors }) => {
   const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
   const [photo, setPhoto] = useState<Photo | null>(null);
 
@@ -35,8 +44,6 @@ export default function Home() {
 
     loadPhoto();
   }, []);
-
-  if (!navigationColors) return <></>;
 
   return (
     <>
@@ -151,3 +158,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;

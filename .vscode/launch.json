@@ -1,0 +1,11 @@
+{
+  "version": "0.3.0",
+  "configurations": [
+    {
+      "name": "PRD Next.js: debug server-side",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "yarn next dev"
+    }
+  ]
+}

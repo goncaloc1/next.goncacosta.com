@@ -5,13 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
 import { usePhoto, Photo } from "../hooks/usePhoto";
 import { IconsCache } from "../components/IconsCache";
-import { GetServerSideProps, NextPage } from "next";
-
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const navigationColors = getNavigationColors();
-  return { props: { navigationColors } }
-}
+import { NextPage } from "next";
 
 type HomeProps = {
   navigationColors: NavigationColors;
@@ -327,6 +321,11 @@ const Home: NextPage<HomeProps> = ({ navigationColors }) => {
       `}</style>
     </>
   );
+}
+
+Home.getInitialProps = async () => {
+  const navigationColors = getNavigationColors();
+  return { navigationColors };
 }
 
 export default Home;

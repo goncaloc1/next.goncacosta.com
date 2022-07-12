@@ -9,7 +9,7 @@ import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
 
 import Image from "next/image";
 
-const StateContext = createContext<(() => PhotoMetadata | null) | undefined>(
+const StateContext = createContext<(() => PhotoMetadata) | undefined>(
   undefined
 );
 
@@ -22,6 +22,7 @@ export function PhotoProvider({ children }: { children: ReactNode }) {
   const [cachedPhoto, setCachedPhoto] = useState<PhotoMetadata | null>(null);
 
   const refreshCache = useCallback((): PhotoMetadata  => {
+
     const photoMetadata = getRandomPhotoMetadata();
 
     setCachedPhoto(photoMetadata);
@@ -32,8 +33,8 @@ export function PhotoProvider({ children }: { children: ReactNode }) {
   /**
    * Gets current cached photo - if it exists - and prepares future cached photo.
    */
-  const getRandomPhoto = useCallback((): PhotoMetadata | null => {
-    const photo = cachedPhoto;
+  const getRandomPhoto = useCallback((): PhotoMetadata => {
+    const photo = cachedPhoto ?? getRandomPhotoMetadata();
 
     refreshCache();
 

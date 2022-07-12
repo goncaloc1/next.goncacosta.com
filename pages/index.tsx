@@ -1,9 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
-import { usePhoto, Photo } from "../hooks/usePhoto";
 import { IconsCache } from "../components/IconsCache";
 import { NextPage } from "next";
 import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
@@ -15,35 +14,6 @@ type HomeProps = {
 
 const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
   const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
-
-  console.log(photoMetadata);
-
-
-  //const [photo, setPhoto] = useState<Photo | null>(null);
-
-  //const getRandomPhoto = usePhoto();
-
-  //const getRandomPhotoRef = useRef<() => Promise<Photo>>();
-
-  /**
-   * We really want to only run getRandomPhoto once hence useRef.
-   * Lint would ask getRandomPhoto to be in the list of dependencies
-   * which actually we do not need (even if getRandomPhoto instance changes).
-   */
-  // useEffect(() => {
-  //   getRandomPhotoRef.current = getRandomPhoto;
-  // });
-
-  // useEffect(() => {
-  //   const loadPhoto = async () => {
-  //     const result = await getRandomPhotoRef.current!();
-
-  //     setIsPhotoLoaded(false);
-  //     setPhoto(result);
-  //   };
-
-  //   loadPhoto();
-  // }, []);
 
   return (
     <>
@@ -323,14 +293,7 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
 
 Home.getInitialProps = async () => {
   const navigationColors = getNavigationColors();
-
   const photoMetadata = getRandomPhotoMetadata();
-
-  // TODO get second random photo to be cached
-  // when on main page and navigating one level down (to alba for instance)
-  // and navigating back, main page photo will take its time to load.
-  // (alba page photos still loading presumably)
-  // this will also give us immediate photo display of course.
 
   return { navigationColors, photoMetadata };
 }

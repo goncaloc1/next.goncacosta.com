@@ -6,20 +6,21 @@ import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
 import { usePhoto } from "../hooks/usePhoto";
 import { IconsCache } from "../components/IconsCache";
 import { NextPage } from "next";
-import { PhotoMetadata } from "../lib/randomPhoto";
+import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
 
 type HomeProps = {
   navigationColors: NavigationColors;
+  photoMetadata: PhotoMetadata | null;
 }
 
-const Home: NextPage<HomeProps> = ({ navigationColors }) => {
+const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
   const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
 
-  const [photo, setPhoto] = useState<PhotoMetadata | null>(null);
+  const [photo, setPhoto] = useState<PhotoMetadata | null>(photoMetadata);
 
   const getRandomPhoto = usePhoto();
 
-  const getRandomPhotoRef = useRef<() => PhotoMetadata>();
+  const getRandomPhotoRef = useRef<() => PhotoMetadata | null>();
 
   /**
    * We really want to only run getRandomPhoto once hence useRef.
@@ -33,9 +34,11 @@ const Home: NextPage<HomeProps> = ({ navigationColors }) => {
   useEffect(() => {
     const result = getRandomPhotoRef.current!();
 
-    setIsPhotoLoaded(false);
-    setPhoto(result);
-  }, []);
+    if (photo === null && result) {
+      setIsPhotoLoaded(false);
+      setPhoto(result);
+    }
+  }, [photo]);
 
   return (
     <>
@@ -315,10 +318,12 @@ const Home: NextPage<HomeProps> = ({ navigationColors }) => {
   );
 }
 
-Home.getInitialProps = async () => {
+Home.getInitialProps = async ({ req }) => {
+  const isServerSide = req != null;
   const navigationColors = getNavigationColors();
+  const photoMetadata = isServerSide ? getRandomPhotoMetadata() : null;
 
-  return { navigationColors };
+  return { navigationColors, photoMetadata };
 }
 
 export default Home;

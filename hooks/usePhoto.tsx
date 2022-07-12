@@ -9,12 +9,7 @@ import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
 
 import Image from "next/image";
 
-export type Photo = {
-  metadata: PhotoMetadata;
-  src: StaticImageData;
-};
-
-const StateContext = createContext<(() => Promise<Photo>) | undefined>(
+const StateContext = createContext<(() => PhotoMetadata) | undefined>(
   undefined
 );
 
@@ -24,29 +19,22 @@ const StateContext = createContext<(() => Promise<Photo>) | undefined>(
  * entry image immediately available.
  */
 export function PhotoProvider({ children }: { children: ReactNode }) {
-  const [cachedPhoto, setCachedPhoto] = useState<Photo | null>(null);
+  const [cachedPhoto, setCachedPhoto] = useState<PhotoMetadata | null>(null);
 
-  const refreshCache = useCallback(async (): Promise<Photo> => {
-    const metadata = getRandomPhotoMetadata();
+  const refreshCache = useCallback((): PhotoMetadata  => {
 
-    /**
-     * TODO Might need to revisit this as default-src had to be set with 'unsafe-eval'.
-     * no.no.no.
-     */
-    const src = (
-      await import(`/public/images/${metadata.path}${metadata.filename}`)
-    ).default;
+    const photoMetadata = getRandomPhotoMetadata();
 
-    setCachedPhoto({ metadata, src });
+    setCachedPhoto(photoMetadata);
 
-    return { metadata, src };
+    return photoMetadata;
   }, []);
 
   /**
-   * Gets cached photo - if it exists - and prepares next cached photo.
+   * Gets current cached photo - if it exists - and prepares future cached photo.
    */
-  const getRandomPhoto = useCallback(async (): Promise<Photo> => {
-    const photo = cachedPhoto ?? (await refreshCache());
+  const getRandomPhoto = useCallback((): PhotoMetadata => {
+    const photo = cachedPhoto ?? getRandomPhotoMetadata();
 
     refreshCache();
 
@@ -62,7 +50,7 @@ export function PhotoProvider({ children }: { children: ReactNode }) {
         <div style={{ display: "none" }}>
           <Image
             alt="cache"
-            src={cachedPhoto.src}
+            src={cachedPhoto.source}
             priority={true}
             quality={70}
           />

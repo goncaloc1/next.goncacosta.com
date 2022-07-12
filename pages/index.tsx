@@ -3,47 +3,39 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
-import { usePhoto, Photo } from "../hooks/usePhoto";
+import { usePhoto } from "../hooks/usePhoto";
 import { IconsCache } from "../components/IconsCache";
 import { NextPage } from "next";
-import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
+import { PhotoMetadata } from "../lib/randomPhoto";
 
 type HomeProps = {
   navigationColors: NavigationColors;
-  photoMetadata: PhotoMetadata;
 }
 
-const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
+const Home: NextPage<HomeProps> = ({ navigationColors }) => {
   const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
 
-  console.log(photoMetadata);
+  const [photo, setPhoto] = useState<PhotoMetadata | null>(null);
 
+  const getRandomPhoto = usePhoto();
 
-  //const [photo, setPhoto] = useState<Photo | null>(null);
-
-  //const getRandomPhoto = usePhoto();
-
-  //const getRandomPhotoRef = useRef<() => Promise<Photo>>();
+  const getRandomPhotoRef = useRef<() => PhotoMetadata>();
 
   /**
    * We really want to only run getRandomPhoto once hence useRef.
    * Lint would ask getRandomPhoto to be in the list of dependencies
    * which actually we do not need (even if getRandomPhoto instance changes).
    */
-  // useEffect(() => {
-  //   getRandomPhotoRef.current = getRandomPhoto;
-  // });
+  useEffect(() => {
+    getRandomPhotoRef.current = getRandomPhoto;
+  });
 
-  // useEffect(() => {
-  //   const loadPhoto = async () => {
-  //     const result = await getRandomPhotoRef.current!();
+  useEffect(() => {
+    const result = getRandomPhotoRef.current!();
 
-  //     setIsPhotoLoaded(false);
-  //     setPhoto(result);
-  //   };
-
-  //   loadPhoto();
-  // }, []);
+    setIsPhotoLoaded(false);
+    setPhoto(result);
+  }, []);
 
   return (
     <>
@@ -105,25 +97,27 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
                 isPhotoLoaded ? { visibility: "visible", opacity: "1" } : {}
               }
             >
-              <Link href={photoMetadata.path as string}>
-                <a style={{ float: "right" }}>
-                  <Image
-                    alt="&nbsp"
-                    src={photoMetadata.source}
-                    priority={true}
-                    quality={70}
-                    onLoadingComplete={() => setIsPhotoLoaded(true)}
-                    width={photoMetadata.source.width*photoMetadata.proportion!}
-                    height={photoMetadata.source.height*photoMetadata.proportion!}
-                  />
-                  <p id="main_img_desc">
-                    in&nbsp;
-                    <span id="main_img_project">
-                      {photoMetadata.title as string}
-                    </span>
-                  </p>
-                </a>
-              </Link>
+              {photo && (
+                <Link href={photo.path as string}>
+                  <a style={{ float: "right" }}>
+                    <Image
+                      alt="&nbsp"
+                      src={photo.source}
+                      priority={true}
+                      quality={70}
+                      onLoadingComplete={() => setIsPhotoLoaded(true)}
+                      width={photo.source.width*photo.proportion!}
+                      height={photo.source.height*photo.proportion!}
+                    />
+                    <p id="main_img_desc">
+                      in&nbsp;
+                      <span id="main_img_project">
+                        {photo.title as string}
+                      </span>
+                    </p>
+                  </a>
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -324,15 +318,7 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
 Home.getInitialProps = async () => {
   const navigationColors = getNavigationColors();
 
-  const photoMetadata = getRandomPhotoMetadata();
-
-  // TODO get second random photo to be cached
-  // when on main page and navigating one level down (to alba for instance)
-  // and navigating back, main page photo will take its time to load.
-  // (alba page photos still loading presumably)
-  // this will also give us immediate photo display of course.
-
-  return { navigationColors, photoMetadata };
+  return { navigationColors };
 }
 
 export default Home;

@@ -1,3 +1,6 @@
+/**
+ * In local environment add 'unsafe-eval' in `script-src`
+ */
 const ContentSecurityPolicy = `
   default-src 'none';
   script-src 'self';

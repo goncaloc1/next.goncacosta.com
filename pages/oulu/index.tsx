@@ -20,7 +20,7 @@ export default function Oulu() {
           <div className="cell">
             <ul id="navigation_menu">
               <li>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a id="back">
                     <span>back</span>
                   </a>
@@ -37,7 +37,7 @@ export default function Oulu() {
                 </a>
               </li>
               <li>
-                <Link href="/oulu/book">
+                <Link legacyBehavior href="/oulu/book">
                   <a id="read_book">
                     <span>book</span>
                   </a>

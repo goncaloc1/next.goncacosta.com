@@ -10,7 +10,7 @@ import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
 type HomeProps = {
   navigationColors: NavigationColors;
   photoMetadata: PhotoMetadata;
-}
+};
 
 const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
   const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
@@ -36,30 +36,30 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
               <a className={navigationColors.goncalocosta}>gonçalo costa</a>
               <a className="spacer">&nbsp;</a>
               <a className={navigationColors.gallery}>gallery</a>
-              <Link href="/reminiscencia">
+              <Link legacyBehavior href="/reminiscencia">
                 <a className={navigationColors.reminiscencia}>reminiscencia</a>
               </Link>
-              <Link href="/alba">
+              <Link legacyBehavior href="/alba">
                 <a className={navigationColors.alba}>alba</a>
               </Link>
-              <Link href="/when">
+              <Link legacyBehavior href="/when">
                 <a id="when" className={navigationColors.when}>
                   when was the last time someone wrote you a love letter?
                 </a>
               </Link>
-              <Link href="/paperbag">
+              <Link legacyBehavior href="/paperbag">
                 <a id="paperbag" className={navigationColors.paperbag}>
                   it's a paper bag to scream, it's a bag of affections
                 </a>
               </Link>
               <a className={navigationColors.archive}>archive</a>
-              <Link href="/oulu">
+              <Link legacyBehavior href="/oulu">
                 <a className={navigationColors.oulu}>oulu</a>
               </Link>
-              <Link href="/sopra">
+              <Link legacyBehavior href="/sopra">
                 <a className={navigationColors.sopra}>sopra</a>
               </Link>
-              <Link href="/fado">
+              <Link legacyBehavior href="/fado">
                 <a className={navigationColors.fado}>fado</a>
               </Link>
               <a className="spacer">&nbsp;</a>
@@ -75,7 +75,7 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
                 isPhotoLoaded ? { visibility: "visible", opacity: "1" } : {}
               }
             >
-              <Link href={photoMetadata.path as string}>
+              <Link legacyBehavior href={photoMetadata.path as string}>
                 <a style={{ float: "right" }}>
                   <Image
                     alt="&nbsp"
@@ -83,8 +83,12 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
                     priority={true}
                     quality={70}
                     onLoadingComplete={() => setIsPhotoLoaded(true)}
-                    width={photoMetadata.source.width*photoMetadata.proportion!}
-                    height={photoMetadata.source.height*photoMetadata.proportion!}
+                    width={
+                      photoMetadata.source.width * photoMetadata.proportion!
+                    }
+                    height={
+                      photoMetadata.source.height * photoMetadata.proportion!
+                    }
                   />
                   <p id="main_img_desc">
                     in&nbsp;
@@ -289,13 +293,13 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
       `}</style>
     </>
   );
-}
+};
 
 Home.getInitialProps = async () => {
   const navigationColors = getNavigationColors();
   const photoMetadata = getRandomPhotoMetadata();
 
   return { navigationColors, photoMetadata };
-}
+};
 
 export default Home;

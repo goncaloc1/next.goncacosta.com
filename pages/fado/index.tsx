@@ -20,7 +20,7 @@ export default function Fado() {
           <div className="cell">
             <ul id="navigation_menu">
               <li>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a id="back">
                     <span>back</span>
                   </a>

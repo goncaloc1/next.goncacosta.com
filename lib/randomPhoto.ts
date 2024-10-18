@@ -61,9 +61,9 @@ import fado_proven0004 from "/public/images/fado/proven0004.jpg";
 import fado_pro0018 from "/public/images/fado/pro0018.jpg";
 import fado_prov0012 from "/public/images/fado/prov0012.jpg";
 import fado_35_2 from "/public/images/fado/35(2).jpg";
+import { StaticImageData } from "next/image";
 
-
-const photos: PhotoMetadata[]  = [
+const photos: PhotoMetadata[] = [
   { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_a },
   { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_b },
   { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_c },
@@ -97,94 +97,94 @@ const photos: PhotoMetadata[]  = [
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_a
+    source: when_a,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_b
+    source: when_b,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_c
+    source: when_c,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_d
+    source: when_d,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_e
+    source: when_e,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_f
+    source: when_f,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_i
+    source: when_i,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_k
+    source: when_k,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_l
+    source: when_l,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_n
+    source: when_n,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_o
+    source: when_o,
   },
   {
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_z
+    source: when_z,
   },
   {
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_1
+    source: paperbag_1,
   },
   {
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_5
+    source: paperbag_5,
   },
   {
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_7
+    source: paperbag_7,
   },
   {
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_6
+    source: paperbag_6,
   },
   {
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_i
+    source: paperbag_i,
   },
   { path: "/oulu", title: "oulu", source: oulu_q },
   { path: "/oulu", title: "oulu", source: oulu_99 },
   { path: "/fado", title: "fado", source: fado_proven0004 },
   { path: "/fado", title: "fado", source: fado_pro0018 },
   { path: "/fado", title: "fado", source: fado_prov0012 },
-  { path: "/fado", title: "fado", source: fado_35_2 }
+  { path: "/fado", title: "fado", source: fado_35_2 },
 ];
 
 const randomFromInterval = (from: number, to: number) => {
@@ -193,8 +193,8 @@ const randomFromInterval = (from: number, to: number) => {
 
 const calcProportion = (height: number): number => {
   const targetHeight = 650;
-  return height > targetHeight ? (targetHeight / height) : 1;
-}
+  return height > targetHeight ? targetHeight / height : 1;
+};
 
 export const getRandomPhotoMetadata = (): PhotoMetadata => {
   const idx = randomFromInterval(0, photos.length - 1);

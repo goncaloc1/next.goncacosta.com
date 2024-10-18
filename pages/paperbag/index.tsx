@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import styles from "./Paperbag.module.css";
 
@@ -37,7 +37,7 @@ export default function Paperbag() {
           <div className="cell">
             <ul id="navigation_menu">
               <li>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a id="back">
                     <span>back</span>
                   </a>

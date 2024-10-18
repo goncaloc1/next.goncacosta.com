@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import photoz from "/public/images/when/z.jpg";
 import whenZoomIn from "/public/images/when/when_zoom_in.png";
@@ -47,7 +47,7 @@ export default function When() {
           <div className="cell">
             <ul id="navigation_menu">
               <li>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a id="back">
                     <span>back</span>
                   </a>

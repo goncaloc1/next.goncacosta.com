@@ -2,7 +2,7 @@
 
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./Reminiscencia.module.css";
 
 import photou from "/public/images/reminiscencia/u.jpg";
@@ -408,7 +408,7 @@ export default function Reminiscencia() {
           <div className="cell">
             <ul id="navigation_menu">
               <li>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a id="back">
                     <span>back</span>
                   </a>

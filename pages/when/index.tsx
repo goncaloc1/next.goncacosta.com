@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import photoz from "/public/images/when/z.jpg";
 import whenZoomIn from "/public/images/when/when_zoom_in.png";
@@ -41,7 +41,6 @@ export default function When() {
         />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
-
       <div id="content" className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
@@ -83,7 +82,10 @@ export default function When() {
                 alt="portrait z"
                 src={photoz}
                 priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -92,8 +94,10 @@ export default function When() {
               <Image
                 alt="when text"
                 src={whenZoomIn}
-                priority={true}
-                quality={60}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -103,8 +107,10 @@ export default function When() {
               <Image
                 alt="portrait a"
                 src={photoa}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -113,8 +119,10 @@ export default function When() {
               <Image
                 alt="portrait b"
                 src={photob}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -123,8 +131,10 @@ export default function When() {
               <Image
                 alt="portrait c"
                 src={photoc}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -133,8 +143,10 @@ export default function When() {
               <Image
                 alt="portrait d"
                 src={photod}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -143,8 +155,10 @@ export default function When() {
               <Image
                 alt="portrait e"
                 src={photoe}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -153,8 +167,10 @@ export default function When() {
               <Image
                 alt="portrait f"
                 src={photof}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -163,8 +179,10 @@ export default function When() {
               <Image
                 alt="portrait g"
                 src={photog}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -173,8 +191,10 @@ export default function When() {
               <Image
                 alt="portrait g1"
                 src={photog1}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -183,8 +203,10 @@ export default function When() {
               <Image
                 alt="portrait g2"
                 src={photog2}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -193,8 +215,10 @@ export default function When() {
               <Image
                 alt="portrait h"
                 src={photoh}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -203,8 +227,10 @@ export default function When() {
               <Image
                 alt="portrait i"
                 src={photoi}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -213,8 +239,10 @@ export default function When() {
               <Image
                 alt="portrait j"
                 src={photoj}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -223,8 +251,10 @@ export default function When() {
               <Image
                 alt="portrait k"
                 src={photok}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -233,8 +263,10 @@ export default function When() {
               <Image
                 alt="portrait l"
                 src={photol}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -243,8 +275,10 @@ export default function When() {
               <Image
                 alt="portrait m"
                 src={photom}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -253,8 +287,10 @@ export default function When() {
               <Image
                 alt="portrait n"
                 src={photon}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -263,8 +299,10 @@ export default function When() {
               <Image
                 alt="portrait o"
                 src={photoo}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -273,8 +311,10 @@ export default function When() {
               <Image
                 alt="portrait p"
                 src={photop}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
@@ -283,14 +323,15 @@ export default function When() {
               <Image
                 alt="portrait q"
                 src={photoq}
-                priority={true}
-                quality={70}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </div>
         </div>
       </div>
-
       <style jsx>{`
         .first_image {
           margin-left: 20px;

@@ -2,7 +2,7 @@
 
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./Reminiscencia.module.css";
 
 import photou from "/public/images/reminiscencia/u.jpg";
@@ -32,7 +32,15 @@ import { useFullScreen } from "../../hooks/useFullScreen";
 
 const slides: any = [
   <div className={styles.slide}>
-    <Image src={photou} alt="photo u" quality={70} priority={true} />
+    <Image
+      src={photou}
+      alt="photo u"
+      priority={true}
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
     <div className={styles.main_title}>
@@ -40,10 +48,24 @@ const slides: any = [
     </div>
   </div>,
   <div className={styles.slide}>
-    <Image src={photoa} alt="photo a" quality={70} priority={true} />
+    <Image
+      src={photoa}
+      alt="photo a"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photob} alt="photo b" quality={70} priority={true} />
+    <Image
+      src={photob}
+      alt="photo b"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
     <div>
@@ -55,31 +77,94 @@ const slides: any = [
     </div>
   </div>,
   <div className={styles.slide}>
-    <Image src={photoc} alt="photo c" quality={70} priority={true} />
+    <Image
+      src={photoc}
+      alt="photo c"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photod} alt="photo d" quality={70} priority={true} />
+    <Image
+      src={photod}
+      alt="photo d"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photoe} alt="photo e" quality={70} priority={true} />
+    <Image
+      src={photoe}
+      alt="photo e"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photof} alt="photo f" quality={70} priority={true} />
+    <Image
+      src={photof}
+      alt="photo f"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photog} alt="photo g" quality={70} priority={true} />
+    <Image
+      src={photog}
+      alt="photo g"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slideL}>
-    <Image src={photot} alt="photo t" quality={70} priority={true} />
+    <Image
+      src={photot}
+      alt="photo t"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photoh} alt="photo h" quality={70} priority={true} />
+    <Image
+      src={photoh}
+      alt="photo h"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photoi} alt="photo i" quality={70} priority={true} />
+    <Image
+      src={photoi}
+      alt="photo i"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photoj} alt="photo j" quality={70} priority={true} />
+    <Image
+      src={photoj}
+      alt="photo j"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
     <div>
@@ -143,16 +228,44 @@ const slides: any = [
     </div>
   </div>,
   <div className={styles.slide}>
-    <Image src={photok} alt="photo k" quality={70} priority={true} />
+    <Image
+      src={photok}
+      alt="photo k"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photol} alt="photo l" quality={70} priority={true} />
+    <Image
+      src={photol}
+      alt="photo l"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slideS}>
-    <Image src={photom} alt="photo m" quality={70} priority={true} />
+    <Image
+      src={photom}
+      alt="photo m"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photon} alt="photo n" quality={70} priority={true} />
+    <Image
+      src={photon}
+      alt="photo n"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
     <div>
@@ -184,19 +297,54 @@ const slides: any = [
     </div>
   </div>,
   <div className={styles.slideL}>
-    <Image src={photoo} alt="photo o" quality={70} priority={true} />
+    <Image
+      src={photoo}
+      alt="photo o"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photop} alt="photo p" quality={70} priority={true} />
+    <Image
+      src={photop}
+      alt="photo p"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photoq} alt="photo q" quality={70} priority={true} />
+    <Image
+      src={photoq}
+      alt="photo q"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slideL}>
-    <Image src={photos} alt="photo s" quality={70} priority={true} />
+    <Image
+      src={photos}
+      alt="photo s"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
-    <Image src={photor} alt="photo r" quality={70} priority={true} />
+    <Image
+      src={photor}
+      alt="photo r"
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
+    />
   </div>,
   <div className={styles.slide}>
     <div className={styles.last}>

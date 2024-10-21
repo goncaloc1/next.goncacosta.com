@@ -81,8 +81,7 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
                     alt="&nbsp"
                     src={photoMetadata.source}
                     priority={true}
-                    quality={70}
-                    onLoadingComplete={() => setIsPhotoLoaded(true)}
+                    onLoad={() => setIsPhotoLoaded(true)}
                     width={
                       photoMetadata.source.width * photoMetadata.proportion!
                     }

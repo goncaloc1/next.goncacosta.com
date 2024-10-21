@@ -94,6 +94,7 @@ export default function When() {
               <Image
                 alt="when text"
                 src={whenZoomIn}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -107,6 +108,7 @@ export default function When() {
               <Image
                 alt="portrait a"
                 src={photoa}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -119,6 +121,7 @@ export default function When() {
               <Image
                 alt="portrait b"
                 src={photob}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -131,6 +134,7 @@ export default function When() {
               <Image
                 alt="portrait c"
                 src={photoc}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -143,6 +147,7 @@ export default function When() {
               <Image
                 alt="portrait d"
                 src={photod}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -155,6 +160,7 @@ export default function When() {
               <Image
                 alt="portrait e"
                 src={photoe}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -167,6 +173,7 @@ export default function When() {
               <Image
                 alt="portrait f"
                 src={photof}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -179,6 +186,7 @@ export default function When() {
               <Image
                 alt="portrait g"
                 src={photog}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -191,6 +199,7 @@ export default function When() {
               <Image
                 alt="portrait g1"
                 src={photog1}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -203,6 +212,7 @@ export default function When() {
               <Image
                 alt="portrait g2"
                 src={photog2}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -215,6 +225,7 @@ export default function When() {
               <Image
                 alt="portrait h"
                 src={photoh}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -227,6 +238,7 @@ export default function When() {
               <Image
                 alt="portrait i"
                 src={photoi}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -239,6 +251,7 @@ export default function When() {
               <Image
                 alt="portrait j"
                 src={photoj}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -251,6 +264,7 @@ export default function When() {
               <Image
                 alt="portrait k"
                 src={photok}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -263,6 +277,7 @@ export default function When() {
               <Image
                 alt="portrait l"
                 src={photol}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -275,6 +290,7 @@ export default function When() {
               <Image
                 alt="portrait m"
                 src={photom}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -287,6 +303,7 @@ export default function When() {
               <Image
                 alt="portrait n"
                 src={photon}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -299,6 +316,7 @@ export default function When() {
               <Image
                 alt="portrait o"
                 src={photoo}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -311,6 +329,7 @@ export default function When() {
               <Image
                 alt="portrait p"
                 src={photop}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -323,6 +342,7 @@ export default function When() {
               <Image
                 alt="portrait q"
                 src={photoq}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",

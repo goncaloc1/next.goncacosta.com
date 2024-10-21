@@ -101,6 +101,7 @@ export default function Alba() {
               <Image
                 alt="photo b"
                 src={photob}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -113,6 +114,7 @@ export default function Alba() {
               <Image
                 alt="photo c"
                 src={photoc}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -125,6 +127,7 @@ export default function Alba() {
               <Image
                 alt="photo d"
                 src={photod}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -200,6 +203,7 @@ export default function Alba() {
               <Image
                 alt="photo e"
                 src={photoe}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -212,6 +216,7 @@ export default function Alba() {
               <Image
                 alt="photo f"
                 src={photof}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -224,6 +229,7 @@ export default function Alba() {
               <Image
                 alt="photo g"
                 src={photog}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -268,6 +274,7 @@ export default function Alba() {
               <Image
                 alt="photo h"
                 src={photoh}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -280,6 +287,7 @@ export default function Alba() {
               <Image
                 alt="photo i"
                 src={photoi}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -292,6 +300,7 @@ export default function Alba() {
               <Image
                 alt="photo j"
                 src={photoj}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -304,6 +313,7 @@ export default function Alba() {
               <Image
                 alt="photo k"
                 src={photok}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -338,6 +348,7 @@ export default function Alba() {
               <Image
                 alt="photo l"
                 src={photol}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -350,6 +361,7 @@ export default function Alba() {
               <Image
                 alt="photo m"
                 src={photom}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -362,6 +374,7 @@ export default function Alba() {
               <Image
                 alt="photo n"
                 src={photon}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -374,6 +387,7 @@ export default function Alba() {
               <Image
                 alt="photo o"
                 src={photoo}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -386,6 +400,7 @@ export default function Alba() {
               <Image
                 alt="photo p "
                 src={photop}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -398,6 +413,7 @@ export default function Alba() {
               <Image
                 alt="photo q"
                 src={photoq}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -410,6 +426,7 @@ export default function Alba() {
               <Image
                 alt="photo r"
                 src={photor}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -455,6 +472,7 @@ export default function Alba() {
               <Image
                 alt="photo s"
                 src={photos}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -467,6 +485,7 @@ export default function Alba() {
               <Image
                 alt="photo t"
                 src={photot}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -479,6 +498,7 @@ export default function Alba() {
               <Image
                 alt="photo u"
                 src={photou}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -491,6 +511,7 @@ export default function Alba() {
               <Image
                 alt="photo v"
                 src={photov}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -503,6 +524,7 @@ export default function Alba() {
               <Image
                 alt="photo w"
                 src={photow}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -541,6 +563,7 @@ export default function Alba() {
               <Image
                 alt="photo x"
                 src={photox}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -553,6 +576,7 @@ export default function Alba() {
               <Image
                 alt="photo y"
                 src={photoy}
+                priority={true}
                 style={{
                   maxWidth: "100%",
                   height: "auto",

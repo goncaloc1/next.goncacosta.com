@@ -85,7 +85,7 @@ export default function Paperbag() {
                 alt="photo"
                 id={styles.photo_5}
                 src={photo5}
-                priority={true}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -99,7 +99,7 @@ export default function Paperbag() {
                 alt="photo"
                 id={styles.photo_7}
                 src={photo7}
-                priority={true}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -113,7 +113,7 @@ export default function Paperbag() {
                 alt="photo"
                 id={styles.photo_f}
                 src={photof}
-                priority={true}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -127,7 +127,7 @@ export default function Paperbag() {
                 alt="photo"
                 id={styles.photo_g}
                 src={photog}
-                priority={true}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -141,7 +141,7 @@ export default function Paperbag() {
                 alt="photo"
                 id={styles.photo_h}
                 src={photoh}
-                priority={true}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -155,7 +155,7 @@ export default function Paperbag() {
                 alt="photo"
                 id={styles.photo_6}
                 src={photo6}
-                priority={true}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -169,7 +169,7 @@ export default function Paperbag() {
                 alt="photo"
                 id={styles.photo_e}
                 src={photoe}
-                priority={true}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -183,7 +183,7 @@ export default function Paperbag() {
                 alt="photo"
                 id={styles.photo_a}
                 src={photoa}
-                priority={true}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -197,7 +197,7 @@ export default function Paperbag() {
                 alt="photo"
                 id={styles.photo_i}
                 src={photoi}
-                priority={true}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",

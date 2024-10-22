@@ -51,7 +51,7 @@ const slides: any = [
     <Image
       src={photoa}
       alt="photo a"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -62,7 +62,7 @@ const slides: any = [
     <Image
       src={photob}
       alt="photo b"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -82,7 +82,7 @@ const slides: any = [
     <Image
       src={photoc}
       alt="photo c"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -93,7 +93,7 @@ const slides: any = [
     <Image
       src={photod}
       alt="photo d"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -104,7 +104,7 @@ const slides: any = [
     <Image
       src={photoe}
       alt="photo e"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -115,7 +115,7 @@ const slides: any = [
     <Image
       src={photof}
       alt="photo f"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -126,7 +126,7 @@ const slides: any = [
     <Image
       src={photog}
       alt="photo g"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -137,7 +137,7 @@ const slides: any = [
     <Image
       src={photot}
       alt="photo t"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -148,7 +148,7 @@ const slides: any = [
     <Image
       src={photoh}
       alt="photo h"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -159,7 +159,7 @@ const slides: any = [
     <Image
       src={photoi}
       alt="photo i"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -170,7 +170,7 @@ const slides: any = [
     <Image
       src={photoj}
       alt="photo j"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -242,7 +242,7 @@ const slides: any = [
     <Image
       src={photok}
       alt="photo k"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -253,7 +253,7 @@ const slides: any = [
     <Image
       src={photol}
       alt="photo l"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -264,7 +264,7 @@ const slides: any = [
     <Image
       src={photom}
       alt="photo m"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -275,7 +275,7 @@ const slides: any = [
     <Image
       src={photon}
       alt="photo n"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -315,7 +315,7 @@ const slides: any = [
     <Image
       src={photoo}
       alt="photo o"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -326,7 +326,7 @@ const slides: any = [
     <Image
       src={photop}
       alt="photo p"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -337,7 +337,7 @@ const slides: any = [
     <Image
       src={photoq}
       alt="photo q"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -348,7 +348,7 @@ const slides: any = [
     <Image
       src={photos}
       alt="photo s"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",
@@ -359,7 +359,7 @@ const slides: any = [
     <Image
       src={photor}
       alt="photo r"
-      priority={true}
+      loading={"eager"}
       style={{
         maxWidth: "100%",
         height: "auto",

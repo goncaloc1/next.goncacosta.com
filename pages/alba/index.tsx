@@ -31,13 +31,10 @@ import photoy from "/public/images/alba/y.jpg";
 
 import { useWheel } from "../../hooks/useWheel";
 import { useFullScreen } from "../../hooks/useFullScreen";
-import { useState } from "react";
 
 export default function Alba() {
   useWheel();
   useFullScreen();
-
-  const [isImagesCacheEnabled, setIsImagesCacheEnabled] = useState(false);
 
   return (
     <>
@@ -91,7 +88,6 @@ export default function Alba() {
               <Image
                 alt="photo a"
                 src={photoa}
-                onLoad={() => setIsImagesCacheEnabled(true)}
                 priority={true}
                 style={{
                   maxWidth: "100%",
@@ -105,7 +101,7 @@ export default function Alba() {
               <Image
                 alt="photo b"
                 src={photob}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -118,7 +114,7 @@ export default function Alba() {
               <Image
                 alt="photo c"
                 src={photoc}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -131,7 +127,7 @@ export default function Alba() {
               <Image
                 alt="photo d"
                 src={photod}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -207,7 +203,7 @@ export default function Alba() {
               <Image
                 alt="photo e"
                 src={photoe}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -220,7 +216,7 @@ export default function Alba() {
               <Image
                 alt="photo f"
                 src={photof}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -233,7 +229,7 @@ export default function Alba() {
               <Image
                 alt="photo g"
                 src={photog}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -278,7 +274,7 @@ export default function Alba() {
               <Image
                 alt="photo h"
                 src={photoh}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -291,7 +287,7 @@ export default function Alba() {
               <Image
                 alt="photo i"
                 src={photoi}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -304,7 +300,7 @@ export default function Alba() {
               <Image
                 alt="photo j"
                 src={photoj}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -317,7 +313,7 @@ export default function Alba() {
               <Image
                 alt="photo k"
                 src={photok}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -352,7 +348,7 @@ export default function Alba() {
               <Image
                 alt="photo l"
                 src={photol}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -365,7 +361,7 @@ export default function Alba() {
               <Image
                 alt="photo m"
                 src={photom}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -378,7 +374,7 @@ export default function Alba() {
               <Image
                 alt="photo n"
                 src={photon}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -391,7 +387,7 @@ export default function Alba() {
               <Image
                 alt="photo o"
                 src={photoo}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -404,7 +400,7 @@ export default function Alba() {
               <Image
                 alt="photo p "
                 src={photop}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -417,7 +413,7 @@ export default function Alba() {
               <Image
                 alt="photo q"
                 src={photoq}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -430,7 +426,7 @@ export default function Alba() {
               <Image
                 alt="photo r"
                 src={photor}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -476,7 +472,7 @@ export default function Alba() {
               <Image
                 alt="photo s"
                 src={photos}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -489,7 +485,7 @@ export default function Alba() {
               <Image
                 alt="photo t"
                 src={photot}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -502,7 +498,7 @@ export default function Alba() {
               <Image
                 alt="photo u"
                 src={photou}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -515,7 +511,7 @@ export default function Alba() {
               <Image
                 alt="photo v"
                 src={photov}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -528,7 +524,7 @@ export default function Alba() {
               <Image
                 alt="photo w"
                 src={photow}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -567,7 +563,7 @@ export default function Alba() {
               <Image
                 alt="photo x"
                 src={photox}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -580,7 +576,7 @@ export default function Alba() {
               <Image
                 alt="photo y"
                 src={photoy}
-                priority={isImagesCacheEnabled}
+                loading={"eager"}
                 style={{
                   maxWidth: "100%",
                   height: "auto",

@@ -5,9 +5,8 @@ const ContentSecurityPolicy = `
   default-src 'none';
   script-src 'self';
   connect-src 'self' https://vitals.vercel-insights.com/v1/vitals;
-  prefetch-src 'self';
-  style-src 'self' 'unsafe-inline';
-  font-src data:;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
   img-src 'self' data:;
   upgrade-insecure-requests;
   block-all-mixed-content;

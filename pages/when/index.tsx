@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 
 import photoz from "/public/images/when/z.jpg";
 import whenZoomIn from "/public/images/when/when_zoom_in.png";
@@ -26,6 +25,7 @@ import photoq from "/public/images/when/q.jpg";
 
 import { useWheel } from "../../hooks/useWheel";
 import { useFullScreen } from "../../hooks/useFullScreen";
+import Photo from "../../components/photo";
 
 export default function When() {
   useWheel();
@@ -78,276 +78,108 @@ export default function When() {
           <div className="cell">
             {/* TODO center horizontally instead of using margin-left */}
             <div className="boxDistantXX w_full first_image">
-              <Image
-                alt="portrait z"
-                src={photoz}
-                priority={true}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoz} priority={true} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="when text"
-                src={whenZoomIn}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={whenZoomIn} />
             </div>
           </div>
 
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait a"
-                src={photoa}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoa} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait b"
-                src={photob}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photob} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait c"
-                src={photoc}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoc} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait d"
-                src={photod}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photod} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait e"
-                src={photoe}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoe} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait f"
-                src={photof}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photof} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait g"
-                src={photog}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photog} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait g1"
-                src={photog1}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photog1} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait g2"
-                src={photog2}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photog2} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait h"
-                src={photoh}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoh} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait i"
-                src={photoi}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoi} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait j"
-                src={photoj}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoj} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait k"
-                src={photok}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photok} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait l"
-                src={photol}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photol} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait m"
-                src={photom}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photom} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait n"
-                src={photon}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photon} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait o"
-                src={photoo}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoo} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait p"
-                src={photop}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photop} />
             </div>
           </div>
           <div className="cell">
             <div className="boxDistantXX w_full">
-              <Image
-                alt="portrait q"
-                src={photoq}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoq} />
             </div>
           </div>
         </div>

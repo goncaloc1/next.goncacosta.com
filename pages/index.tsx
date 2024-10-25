@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
-import { IconsCache } from "../components/IconsCache";
+import { IconsCache } from "../components/icons-cache";
 import { NextPage } from "next";
 import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
 

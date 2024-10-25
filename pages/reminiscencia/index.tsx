@@ -2,7 +2,6 @@
 
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./Reminiscencia.module.css";
 
 import photou from "/public/images/reminiscencia/u.jpg";
@@ -29,18 +28,11 @@ import photor from "/public/images/reminiscencia/r.jpg";
 
 import { useState } from "react";
 import { useFullScreen } from "../../hooks/useFullScreen";
+import Photo from "../../components/photo";
 
 const slides: any = [
   <div className={styles.slide}>
-    <Image
-      src={photou}
-      alt="photo u"
-      priority={true}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photou} priority={true} />
   </div>,
   <div className={styles.slide}>
     <div className={styles.main_title}>
@@ -48,26 +40,10 @@ const slides: any = [
     </div>
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photoa}
-      alt="photo a"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photoa} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photob}
-      alt="photo b"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photob} />
   </div>,
   <div className={styles.slide}>
     <div>
@@ -79,103 +55,31 @@ const slides: any = [
     </div>
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photoc}
-      alt="photo c"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photoc} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photod}
-      alt="photo d"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photod} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photoe}
-      alt="photo e"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photoe} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photof}
-      alt="photo f"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photof} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photog}
-      alt="photo g"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photog} />
   </div>,
   <div className={styles.slideL}>
-    <Image
-      src={photot}
-      alt="photo t"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photot} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photoh}
-      alt="photo h"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photoh} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photoi}
-      alt="photo i"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photoi} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photoj}
-      alt="photo j"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photoj} />
   </div>,
   <div className={styles.slide}>
     <div>
@@ -197,18 +101,18 @@ const slides: any = [
       <p>
         if I recall something, so example, if today I look back on this morning,
       </p>
-      <p>then I get an image of what I saw this morning. But if tonight, I’m</p>
+      <p>then I get an Photo of what I saw this morning. But if tonight, I’m</p>
       <p>
         thinking back on this morning, then I’m really recalling not the first
       </p>
-      <p>image, but the first image in memory. So that every time I recall</p>
+      <p>Photo, but the first Photo in memory. So that every time I recall</p>
       <p>
         something, I’m not recalling it really, I’m recalling the last time I
       </p>
       <p>
         recalled it. So that really,” he said, “I have no memories whatever, I
       </p>
-      <p>have no images whatever, about my childhood, about my youth. And</p>
+      <p>have no Photos whatever, about my childhood, about my youth. And</p>
       <p>
         then he illustrated that, with a pile of coins. He piled one coin on top
         of
@@ -217,7 +121,7 @@ const slides: any = [
         the other and said, “Well, now this first coin, the bottom coin, this
       </p>
       <p>
-        would be the first image, for example, of the house of my childhood.
+        would be the first Photo, for example, of the house of my childhood.
       </p>
       <p>
         Now this second would be a memory I had of that house when I went to
@@ -227,60 +131,28 @@ const slides: any = [
       </p>
       <p>every memory there’s a slight distortion, I don’t suppose that my</p>
       <p>
-        memory of today ties in with the first images I had,” so that, he said,
+        memory of today ties in with the first Photos I had,” so that, he said,
         “I
       </p>
       <p>
         try not to think of things in the past because if I do I’ll be thinking
         back
       </p>
-      <p>on those memories and not on the actual images themselves.”</p>
+      <p>on those memories and not on the actual Photos themselves.”</p>
       <p className={styles.author}>Jorge Luis Borges</p>
     </div>
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photok}
-      alt="photo k"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photok} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photol}
-      alt="photo l"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photol} />
   </div>,
   <div className={styles.slideS}>
-    <Image
-      src={photom}
-      alt="photo m"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photom} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photon}
-      alt="photo n"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photon} />
   </div>,
   <div className={styles.slide}>
     <div>
@@ -312,59 +184,19 @@ const slides: any = [
     </div>
   </div>,
   <div className={styles.slideL}>
-    <Image
-      src={photoo}
-      alt="photo o"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photoo} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photop}
-      alt="photo p"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photop} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photoq}
-      alt="photo q"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photoq} />
   </div>,
   <div className={styles.slideL}>
-    <Image
-      src={photos}
-      alt="photo s"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photos} />
   </div>,
   <div className={styles.slide}>
-    <Image
-      src={photor}
-      alt="photo r"
-      loading={"eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
-    />
+    <Photo src={photor} />
   </div>,
   <div className={styles.slide}>
     <div className={styles.last}>

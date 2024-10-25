@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./Alba.module.css";
 
 import photoa from "/public/images/alba/a.jpg";
@@ -29,6 +28,7 @@ import photow from "/public/images/alba/w.jpg";
 import photox from "/public/images/alba/x.jpg";
 import photoy from "/public/images/alba/y.jpg";
 
+import Photo from "../../components/photo";
 import { useWheel } from "../../hooks/useWheel";
 import { useFullScreen } from "../../hooks/useFullScreen";
 
@@ -85,54 +85,22 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo a"
-                src={photoa}
-                priority={true}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoa} priority={true} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo b"
-                src={photob}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photob} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo c"
-                src={photoc}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoc} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo d"
-                src={photod}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photod} />
             </div>
           </div>
           <div className="cell">
@@ -200,41 +168,17 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo e"
-                src={photoe}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoe} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo f"
-                src={photof}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photof} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistantX`}>
-              <Image
-                alt="photo g"
-                src={photog}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photog} />
             </div>
           </div>
           <div className="cell">
@@ -271,54 +215,22 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistantX`}>
-              <Image
-                alt="photo h"
-                src={photoh}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoh} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo i"
-                src={photoi}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoi} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo j"
-                src={photoj}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoj} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistantX`}>
-              <Image
-                alt="photo k"
-                src={photok}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photok} />
             </div>
           </div>
           <div className="cell">
@@ -345,93 +257,37 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo l"
-                src={photol}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photol} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo m"
-                src={photom}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photom} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo n"
-                src={photon}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photon} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo o"
-                src={photoo}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoo} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo p "
-                src={photop}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photop} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo q"
-                src={photoq}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoq} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistantX`}>
-              <Image
-                alt="photo r"
-                src={photor}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photor} />
             </div>
           </div>
           <div className="cell">
@@ -469,67 +325,27 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo s"
-                src={photos}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photos} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo t"
-                src={photot}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photot} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo u"
-                src={photou}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photou} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo v"
-                src={photov}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photov} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo w"
-                src={photow}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photow} />
             </div>
           </div>
           <div className="cell">
@@ -560,28 +376,12 @@ export default function Alba() {
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistant`}>
-              <Image
-                alt="photo x"
-                src={photox}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photox} />
             </div>
           </div>
           <div className="cell">
             <div className={`${styles.box_width} boxDistantXX`}>
-              <Image
-                alt="photo y"
-                src={photoy}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo src={photoy} />
             </div>
           </div>
         </div>

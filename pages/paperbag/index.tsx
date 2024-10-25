@@ -17,6 +17,7 @@ import photoi from "/public/images/paperbag/i.jpg";
 
 import { useWheel } from "../../hooks/useWheel";
 import { useFullScreen } from "../../hooks/useFullScreen";
+import Photo from "../../components/photo";
 
 export default function Paperbag() {
   useWheel();
@@ -67,142 +68,52 @@ export default function Paperbag() {
           </div>
           <div className="cell">
             <div className={styles.boxNarrow}>
-              <Image
-                alt="photo"
-                id={styles.photo_1}
-                src={photo1}
-                priority={true}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo id={styles.photo_1} src={photo1} priority={true} />
             </div>
           </div>
           <div className="cell">
             <div className={styles.boxDistantX}>
-              <Image
-                alt="photo"
-                id={styles.photo_5}
-                src={photo5}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo id={styles.photo_5} src={photo5} />
             </div>
           </div>
           <div className="cell">
             <div className={styles.boxDistantX}>
-              <Image
-                alt="photo"
-                id={styles.photo_7}
-                src={photo7}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo id={styles.photo_7} src={photo7} />
             </div>
           </div>
           <div className={styles.cell_bottom}>
             <div className={styles.boxNarrow}>
-              <Image
-                alt="photo"
-                id={styles.photo_f}
-                src={photof}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo id={styles.photo_f} src={photof} />
             </div>
           </div>
           <div className={styles.cell_bottom}>
             <div className={styles.boxDistantX}>
-              <Image
-                alt="photo"
-                id={styles.photo_g}
-                src={photog}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo id={styles.photo_g} src={photog} />
             </div>
           </div>
           <div className="cell">
             <div id={styles.photo_h_box} className={styles.boxDistantXX}>
-              <Image
-                alt="photo"
-                id={styles.photo_h}
-                src={photoh}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo id={styles.photo_h} src={photoh} />
             </div>
           </div>
           <div className="cell">
             <div className={styles.boxDistantXXX}>
-              <Image
-                alt="photo"
-                id={styles.photo_6}
-                src={photo6}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo id={styles.photo_6} src={photo6} />
             </div>
           </div>
           <div className="cell">
             <div className={styles.boxNarrow}>
-              <Image
-                alt="photo"
-                id={styles.photo_e}
-                src={photoe}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo id={styles.photo_e} src={photoe} />
             </div>
           </div>
           <div className="cell">
             <div className={styles.boxDistantXX}>
-              <Image
-                alt="photo"
-                id={styles.photo_a}
-                src={photoa}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo id={styles.photo_a} src={photoa} />
             </div>
           </div>
           <div className="cell">
             <div className={styles.boxDistantX}>
-              <Image
-                alt="photo"
-                id={styles.photo_i}
-                src={photoi}
-                loading={"eager"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              <Photo id={styles.photo_i} src={photoi} />
             </div>
           </div>
         </div>

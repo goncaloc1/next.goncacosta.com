@@ -1,10 +1,3 @@
-export type PhotoMetadata = {
-  path: string;
-  title: string;
-  source: StaticImageData;
-  proportion?: number;
-};
-
 /**
  * These import do not actually download the images, only the metadata.
  */
@@ -62,6 +55,13 @@ import fado_pro0018 from "/public/images/fado/pro0018.jpg";
 import fado_prov0012 from "/public/images/fado/prov0012.jpg";
 import fado_35_2 from "/public/images/fado/35(2).jpg";
 import { StaticImageData } from "next/image";
+
+export type PhotoMetadata = {
+  path: string;
+  title: string;
+  source: StaticImageData;
+  proportion?: number;
+};
 
 const photos: PhotoMetadata[] = [
   { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_a },
@@ -187,7 +187,7 @@ const photos: PhotoMetadata[] = [
   { path: "/fado", title: "fado", source: fado_35_2 },
 ];
 
-const randomFromInterval = (from: number, to: number) => {
+const random = (from: number, to: number) => {
   return Math.floor(Math.random() * (to - from + 1) + from);
 };
 
@@ -197,7 +197,7 @@ const calcProportion = (height: number): number => {
 };
 
 export const getRandomPhotoMetadata = (): PhotoMetadata => {
-  const idx = randomFromInterval(0, photos.length - 1);
+  const idx = random(0, photos.length - 1);
   const photo = photos[idx];
 
   photo.proportion = calcProportion(photo.source.height);

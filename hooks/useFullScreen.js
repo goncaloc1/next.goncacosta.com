@@ -1,22 +1,19 @@
 import { useEffect } from "react";
 
-/*  ----------
 
-    Check if running from smartphone or tablet.
-
-    ---------- */
+/**
+ * Check if running from smartphone or tablet
+ */
 const isMobile = () => {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
     navigator.userAgent
   );
 };
 
-/*
-    Native FullScreen JavaScript API with F11 key integration
-    -------------
-    Assumes Mozilla naming conventions instead of W3C for now
-    */
-
+/**
+ * Native FullScreen JavaScript API with F11 key integration
+ * Assumes Mozilla naming conventions instead of W3C for now
+ */
 function initFullScreenAPI() {
   var fullScreenAPI = {
     supportsFullScreen: false,
@@ -153,14 +150,13 @@ function initFullScreenAPI() {
     };
   }
 
-  /*
-      Integrate fullcreen and exit_fullscreen buttons
-      -------------
-      Notes:
-      .IE does not support native fullscreen API
-      .F11 key independent of native fullscreen API logic
-      .Tested with Firefox 16.0.2; Safari 5.1.7; IE9.0; IE8; Chrome 22.0;
-      */
+  /**
+   * Integrate fullcreen and exit_fullscreen buttons
+   * Notes:
+   * .IE does not support native fullscreen API
+   * .F11 key independent of native fullscreen API logic
+   * .Tested with Firefox 16.0.2; Safari 5.1.7; IE9.0; IE8; Chrome 22.0;
+   */
   fullScreenAPI.setupFullScreenButtons = function () {
     // User could have refreshed the browser while in fullscreen F11 mode.
     var fullscreenModeF11 = fullScreenAPI.isFullScreenF11();
@@ -281,6 +277,6 @@ function initFullScreenAPI() {
 export const useFullScreen = () => {
   useEffect(() => {
     initFullScreenAPI();
-    fullScreenAPI.setupFullScreenButtons();
+    window.fullScreenAPI.setupFullScreenButtons();
   }, []);
 };

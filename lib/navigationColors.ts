@@ -1,7 +1,3 @@
-const randomFromInterval = (from: number, to: number): number => {
-  return Math.floor(Math.random() * (to - from + 1) + from);
-};
-
 const MAIN_COLORS = [
   "main_color1",
   "main_color2",
@@ -29,9 +25,13 @@ const SECONDARY_COLORS = [
 const maxIdxMC = MAIN_COLORS.length - 1;
 const maxIdxSC = SECONDARY_COLORS.length - 1;
 
-type MainColors = typeof MAIN_COLORS[number];
+type MainColors = (typeof MAIN_COLORS)[number];
 
-type SecondaryColors = typeof SECONDARY_COLORS[number];
+type SecondaryColors = (typeof SECONDARY_COLORS)[number];
+
+const random = (from: number, to: number): number => {
+  return Math.floor(Math.random() * (to - from + 1) + from);
+};
 
 export type NavigationColors = {
   goncalocosta: SecondaryColors;
@@ -49,17 +49,17 @@ export type NavigationColors = {
 
 export const getNavigationColors = (): NavigationColors => {
   const navigationColors: NavigationColors = {
-    goncalocosta: SECONDARY_COLORS[randomFromInterval(maxIdxSC - 3, maxIdxSC)],
-    email: SECONDARY_COLORS[randomFromInterval(maxIdxSC - 3, maxIdxSC)],
-    gallery: SECONDARY_COLORS[randomFromInterval(maxIdxSC - 3, maxIdxSC)],
-    archive: SECONDARY_COLORS[randomFromInterval(maxIdxSC - 3, maxIdxSC)],
-    reminiscencia: "secondary_color1", // temporary
-    alba: "secondary_color1", // temporary
-    when: "secondary_color1", // temporary
-    paperbag: "secondary_color1", // temporary
-    sopra: SECONDARY_COLORS[randomFromInterval(0, maxIdxSC - 4)],
-    oulu: SECONDARY_COLORS[randomFromInterval(0, maxIdxSC - 4)],
-    fado: SECONDARY_COLORS[randomFromInterval(0, maxIdxSC - 4)],
+    goncalocosta: SECONDARY_COLORS[random(maxIdxSC - 3, maxIdxSC)],
+    email: SECONDARY_COLORS[random(maxIdxSC - 3, maxIdxSC)],
+    gallery: SECONDARY_COLORS[random(maxIdxSC - 3, maxIdxSC)],
+    archive: SECONDARY_COLORS[random(maxIdxSC - 3, maxIdxSC)],
+    reminiscencia: "secondary_color1",
+    alba: "secondary_color1",
+    when: "secondary_color1",
+    paperbag: "secondary_color1",
+    sopra: SECONDARY_COLORS[random(0, maxIdxSC - 4)],
+    oulu: SECONDARY_COLORS[random(0, maxIdxSC - 4)],
+    fado: SECONDARY_COLORS[random(0, maxIdxSC - 4)],
   };
 
   // Only one of the following buttons will have a main color
@@ -70,13 +70,13 @@ export const getNavigationColors = (): NavigationColors => {
     "paperbag",
   ] as const;
 
-  const mainColorButtonIdx = randomFromInterval(0, mainColorButtons.length - 1);
+  const mainColorButtonIdx = random(0, mainColorButtons.length - 1);
 
   mainColorButtons.forEach((button, idx) => {
     navigationColors[button] =
       idx === mainColorButtonIdx
-        ? MAIN_COLORS[randomFromInterval(0, maxIdxMC)]
-        : SECONDARY_COLORS[randomFromInterval(0, maxIdxSC - 4)];
+        ? MAIN_COLORS[random(0, maxIdxMC)]
+        : SECONDARY_COLORS[random(0, maxIdxSC - 4)];
   });
 
   return navigationColors;

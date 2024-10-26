@@ -1,14 +1,5 @@
 import { useEffect } from "react";
-
-
-/**
- * Check if running from smartphone or tablet
- */
-const isMobile = () => {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
-};
+import { isMobile } from "../lib/helpers";
 
 /**
  * Native FullScreen JavaScript API with F11 key integration

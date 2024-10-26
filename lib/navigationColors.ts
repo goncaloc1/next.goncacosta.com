@@ -1,3 +1,5 @@
+import { random } from "./helpers";
+
 const MAIN_COLORS = [
   "main_color1",
   "main_color2",
@@ -28,10 +30,6 @@ const maxIdxSC = SECONDARY_COLORS.length - 1;
 type MainColors = (typeof MAIN_COLORS)[number];
 
 type SecondaryColors = (typeof SECONDARY_COLORS)[number];
-
-const random = (from: number, to: number): number => {
-  return Math.floor(Math.random() * (to - from + 1) + from);
-};
 
 export type NavigationColors = {
   goncalocosta: SecondaryColors;

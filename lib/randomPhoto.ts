@@ -55,6 +55,7 @@ import fado_pro0018 from "/public/images/fado/pro0018.jpg";
 import fado_prov0012 from "/public/images/fado/prov0012.jpg";
 import fado_35_2 from "/public/images/fado/35(2).jpg";
 import { StaticImageData } from "next/image";
+import { random } from "./helpers";
 
 export type PhotoMetadata = {
   path: string;
@@ -187,12 +188,8 @@ const photos: PhotoMetadata[] = [
   { path: "/fado", title: "fado", source: fado_35_2 },
 ];
 
-const random = (from: number, to: number) => {
-  return Math.floor(Math.random() * (to - from + 1) + from);
-};
-
 const calcProportion = (height: number): number => {
-  const targetHeight = 650;
+  const targetHeight = 800;
   return height > targetHeight ? targetHeight / height : 1;
 };
 

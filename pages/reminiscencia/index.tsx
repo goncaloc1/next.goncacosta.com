@@ -461,7 +461,7 @@ export default function Reminiscencia() {
 
       <style jsx>{`
         .slideshow_buttons {
-          margin: 0 8% 0 0;
+          margin: 0 3% 0 0;
           margin-top: 5px;
           padding: 0 10px 0 0;
         }

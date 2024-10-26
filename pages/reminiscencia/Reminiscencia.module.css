@@ -18,11 +18,19 @@
 .my_cycle_slideshow .slide,
 .my_cycle_slideshow .slideS,
 .my_cycle_slideshow .slideL {
-  width: 280px;
+  width: 390px;
 }
 
-/* TODO images size is correct but it doesn't play
-well with the back/next buttons */
+.my_cycle_slideshow,
+.my_cycle_slideshow > div div div {
+  height: 390px;
+}
+
+.my_cycle_slideshow .slideS {
+  width: 315px;
+}
+
+/* TODO images size is correct but it doesn't play well with the back/next buttons */
 .my_cycle_slideshow > div .slideS div,
 .my_cycle_slideshow > div .slideL div {
   height: auto;
@@ -32,64 +40,59 @@ well with the back/next buttons */
   font-size: 4pt;
 }
 
-.my_cycle_slideshow,
-.my_cycle_slideshow > div div div {
-  height: 280px;
-}
-
 @media (min-width: 640px) {
   /* TODO */
 }
 
 @media (min-width: 1024px) {
   .my_cycle_slideshow .slide {
-    width: 650px;
+    width: 800px;
+  }
+
+  .my_cycle_slideshow,
+  .my_cycle_slideshow > div div div {
+    height: 800px;
   }
 
   .my_cycle_slideshow .slideS {
-    width: 524px;
+    width: 645px;
   }
 
   .my_cycle_slideshow .slideL {
-    width: 815px;
+    width: 990px;
   }
 
   .my_cycle_slideshow > div div {
     font-size: 8pt;
   }
-
-  .my_cycle_slideshow,
-  .my_cycle_slideshow > div div div {
-    height: 650px;
-  }
 }
 
 @media (min-width: 1536px) {
   .my_cycle_slideshow .slide {
-    width: 750px;
+    width: 890px;
+  }
+
+  .my_cycle_slideshow,
+  .my_cycle_slideshow > div div div {
+    height: 890px;
   }
 
   .my_cycle_slideshow .slideS {
-    width: 604px;
+    width: 715px;
   }
 
   .my_cycle_slideshow .slideL {
-    width: 940px;
+    width: 1110px;
   }
 
   .my_cycle_slideshow > div div {
     font-size: 9pt;
   }
-
-  .my_cycle_slideshow,
-  .my_cycle_slideshow > div div div {
-    height: 750px;
-  }
 }
 
 .my_cycle_slideshow > div {
   position: absolute;
-  right: 8%;
+  right: 3%;
   transition: opacity 1000ms ease-in-out;
   -moz-transition: opacity 1000ms ease-in-out;
   -webkit-transition: opacity 1000ms ease-in-out;

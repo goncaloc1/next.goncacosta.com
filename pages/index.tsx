@@ -269,6 +269,12 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
           -webkit-transition: opacity 1s ease-in-out;
         }
 
+        @media (max-width: 820px) {
+          #main_img_wrapper {
+            display: none;
+          }
+        }
+
         #main_img_desc {
           font-variant: normal;
           font-style: italic;

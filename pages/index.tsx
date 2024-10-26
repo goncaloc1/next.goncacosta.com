@@ -260,7 +260,7 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
         }
 
         #main_img_wrapper {
-          margin: 0 10% 0 0;
+          margin: 0 5% 0 0;
           text-align: right;
           visibility: hidden;
           opacity: 0;

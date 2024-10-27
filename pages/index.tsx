@@ -1,11 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
 import { IconsCache } from "../components/icons-cache";
 import { NextPage } from "next";
 import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
 import Menu from "../components/menu";
+import MainImage from "../components/main-image";
 
 type HomeProps = {
   navigationColors: NavigationColors;
@@ -13,8 +12,6 @@ type HomeProps = {
 };
 
 const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
-  const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
-
   return (
     <>
       <IconsCache />
@@ -25,35 +22,7 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
             <Menu navigationColors={navigationColors} />
           </div>
           <div className="cell">
-            <div
-              id="main_img_wrapper"
-              style={
-                isPhotoLoaded ? { visibility: "visible", opacity: "1" } : {}
-              }
-            >
-              <Link legacyBehavior href={photoMetadata.path as string}>
-                <a style={{ float: "right" }}>
-                  <Image
-                    alt="&nbsp"
-                    src={photoMetadata.source}
-                    priority={true}
-                    onLoad={() => setIsPhotoLoaded(true)}
-                    width={
-                      photoMetadata.source.width * photoMetadata.proportion!
-                    }
-                    height={
-                      photoMetadata.source.height * photoMetadata.proportion!
-                    }
-                  />
-                  <p id="main_img_desc">
-                    in&nbsp;
-                    <span id="main_img_project">
-                      {photoMetadata.title as string}
-                    </span>
-                  </p>
-                </a>
-              </Link>
-            </div>
+            <MainImage photoMetadata={photoMetadata} />
           </div>
         </div>
       </div>
@@ -75,36 +44,6 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
 
         .wrapper {
           width: 100%;
-        }
-
-        #main_img_wrapper {
-          margin: 0 0 0 150px;
-        }
-
-        #main_img_wrapper {
-          margin: 0 5% 0 0;
-          text-align: right;
-          visibility: hidden;
-          opacity: 0;
-          transition: opacity 1s ease-in-out;
-          -moz-transition: opacity 1s ease-in-out;
-          -webkit-transition: opacity 1s ease-in-out;
-        }
-
-        @media (max-width: 820px) {
-          #main_img_wrapper {
-            display: none;
-          }
-        }
-
-        #main_img_desc {
-          font-variant: normal;
-          font-style: italic;
-          margin: 5px 10px 0 0;
-        }
-
-        #main_img_project {
-          text-transform: uppercase;
         }
       `}</style>
     </>

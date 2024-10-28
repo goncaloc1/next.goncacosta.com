@@ -1,17 +1,27 @@
 import React from "react";
 import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
 import { IconsCache } from "../components/icons-cache";
-import { NextPage } from "next";
 import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
 import Menu from "../components/menu";
 import MainImage from "../components/main-image";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 type HomeProps = {
   navigationColors: NavigationColors;
   photoMetadata: PhotoMetadata;
 };
 
-const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
+export const getServerSideProps = (async () => {
+  const navigationColors = getNavigationColors();
+  const photoMetadata = getRandomPhotoMetadata();
+
+  return { props: { navigationColors, photoMetadata } };
+}) satisfies GetServerSideProps<HomeProps>;
+
+const Home = ({
+  navigationColors,
+  photoMetadata,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <>
       <IconsCache />
@@ -48,13 +58,6 @@ const Home: NextPage<HomeProps> = ({ navigationColors, photoMetadata }) => {
       `}</style>
     </>
   );
-};
-
-Home.getInitialProps = async () => {
-  const navigationColors = getNavigationColors();
-  const photoMetadata = getRandomPhotoMetadata();
-
-  return { navigationColors, photoMetadata };
 };
 
 export default Home;

@@ -43,7 +43,7 @@ export default function Alba() {
         <meta name="description" content="Alba - Gonçalo Costa, 2011" />
       </Head>
 
-      <div id="content" className="horizontal_scroll">
+      <main className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
             <ul id="navigation_menu">
@@ -385,7 +385,7 @@ export default function Alba() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }

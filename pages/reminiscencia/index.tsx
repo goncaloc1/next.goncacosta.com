@@ -403,7 +403,7 @@ export default function Reminiscencia() {
         />
       </Head>
 
-      <div id="content">
+      <main>
         <div className={`wrapper ${styles.wrapper}`}>
           <div className="cell">
             <ul id="navigation_menu">
@@ -457,7 +457,7 @@ export default function Reminiscencia() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
       <style jsx>{`
         .slideshow_buttons {

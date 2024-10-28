@@ -26,17 +26,17 @@ div#__next {
   height: 100%;
 }
 
-#content {
+main {
   height: 100%;
   overflow: hidden;
 }
 
-#content .mCSB_container {
+main .mCSB_container {
   height: 100%;
 }
 
 /* HORIZONTAL SCROLL */
-#content.horizontal_scroll {
+main.horizontal_scroll {
   overflow-x: scroll;
 }
 

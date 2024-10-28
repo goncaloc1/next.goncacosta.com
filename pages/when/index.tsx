@@ -41,7 +41,7 @@ export default function When() {
         />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
-      <div id="content" className="horizontal_scroll">
+      <main className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
             <ul id="navigation_menu">
@@ -183,7 +183,8 @@ export default function When() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
+
       <style jsx>{`
         .first_image {
           margin-left: 20px;

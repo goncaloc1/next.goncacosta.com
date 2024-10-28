@@ -32,7 +32,7 @@ export default function Paperbag() {
           content="It's a paper bag to scream, It's a bag of affections - Gonçalo Costa, 2008"
         />
       </Head>
-      <div id="content" className="horizontal_scroll">
+      <main className="horizontal_scroll">
         <div className="wrapper" style={{ width: "max-content" }}>
           <div className="cell">
             <ul id="navigation_menu">
@@ -117,7 +117,7 @@ export default function Paperbag() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }

@@ -2,9 +2,7 @@ import { useEffect } from "react";
 
 export const useWheel = () => {
   useEffect(() => {
-    const scrollContainer = document.querySelector(
-      "#content.horizontal_scroll"
-    );
+    const scrollContainer = document.querySelector("main.horizontal_scroll");
 
     if (scrollContainer) {
       scrollContainer.addEventListener("wheel", (evt) => {

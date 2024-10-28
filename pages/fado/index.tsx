@@ -15,7 +15,7 @@ export default function Fado() {
         <meta name="description" content="Fado - Gonçalo Costa, 2010" />
       </Head>
 
-      <div id="content" className="horizontal_scroll">
+      <main className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
             <ul id="navigation_menu">
@@ -113,7 +113,7 @@ export default function Fado() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
       <style jsx>{`
         .boxDistant {

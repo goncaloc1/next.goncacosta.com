@@ -15,7 +15,7 @@ export default function Sopra() {
         <meta name="description" content="Sopra - Gonçalo Costa, 2010-11" />
       </Head>
 
-      <div id="content" className="horizontal_scroll">
+      <main className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
             <ul id="navigation_menu">
@@ -183,7 +183,7 @@ export default function Sopra() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
       <style jsx>{`
         .boxNarrow,

@@ -15,7 +15,7 @@ export default function Oulu() {
         <meta name="description" content="Oulu - Gonçalo Costa, 2005-10" />
       </Head>
 
-      <div id="content" className="horizontal_scroll">
+      <main className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
             <ul id="navigation_menu">
@@ -125,7 +125,7 @@ export default function Oulu() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
       <style jsx>{`
         .hboxNarrow,

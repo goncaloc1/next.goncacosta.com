@@ -8,7 +8,7 @@ type MenuProps = {
 
 const Menu = ({ navigationColors }: MenuProps) => (
   <>
-    <div className="linksWrapper">
+    <nav>
       <a className={navigationColors.goncalocosta}>gonçalo costa</a>
       <a className="spacer">&nbsp;</a>
       <a className={navigationColors.gallery}>gallery</a>
@@ -42,16 +42,52 @@ const Menu = ({ navigationColors }: MenuProps) => (
       <a id="email" className={navigationColors.email}>
         goncacosta at gmail dot com
       </a>
-    </div>
+    </nav>
 
     <style jsx>{`
-      div {
+      nav {
         color: #444;
         font-family: "Dosis", sans-serif;
         font-size: 14pt;
         letter-spacing: 0.03em;
         line-height: 1em;
         font-variant: small-caps;
+      }
+
+      nav .spacer {
+        background-color: #fff;
+      }
+
+      nav a {
+        display: block;
+        padding: 7px 60px 9px 10px;
+        margin: 0 0 1px 0;
+
+        float: left;
+        clear: left;
+
+        -moz-border-radius: 0 3px 3px 0;
+        -webkit-border-radius: 0 3px 3px 0;
+        -khtml-border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
+      }
+
+      nav a:link,
+      nav a:visited,
+      nav a:active {
+        color: #444;
+      }
+
+      #when {
+        width: 150px;
+      }
+
+      #paperbag {
+        width: 120px;
+      }
+
+      #email {
+        font-size: 0.9em;
       }
 
       .main_color1 {
@@ -153,41 +189,6 @@ const Menu = ({ navigationColors }: MenuProps) => (
       }
       .secondary_color14 {
         background: rgba(167, 168, 161, 0.2);
-      }
-
-      .linksWrapper .spacer {
-        background-color: #fff;
-      }
-
-      .linksWrapper a {
-        display: block;
-        padding: 7px 60px 9px 10px;
-        margin: 0 0 1px 0;
-
-        float: left;
-        clear: left;
-
-        -moz-border-radius: 0 3px 3px 0;
-        -webkit-border-radius: 0 3px 3px 0;
-        -khtml-border-radius: 0 3px 3px 0;
-        border-radius: 0 3px 3px 0;
-      }
-
-      .linksWrapper a:link,
-      .linksWrapper a:visited,
-      .linksWrapper a:active {
-        color: #444;
-      }
-
-      #when {
-        width: 150px;
-      }
-      #paperbag {
-        width: 120px;
-      }
-
-      #email {
-        font-size: 0.9em;
       }
     `}</style>
   </>

@@ -26,7 +26,7 @@ const Home = ({
     <>
       <IconsCache />
 
-      <div id="content">
+      <main>
         <div className="wrapper">
           <div className="cell">
             <Menu navigationColors={navigationColors} />
@@ -35,7 +35,7 @@ const Home = ({
             <MainImage photoMetadata={photoMetadata} />
           </div>
         </div>
-      </div>
+      </main>
 
       <style jsx>{`
         @font-face {

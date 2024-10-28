@@ -12,8 +12,7 @@ const MainImage = ({ photoMetadata }: MainImageProps) => {
 
   return (
     <>
-      <div
-        id="main-img-wrapper"
+      <section
         style={isPhotoLoaded ? { visibility: "visible", opacity: "1" } : {}}
       >
         <Link legacyBehavior href={photoMetadata.path as string}>
@@ -32,14 +31,11 @@ const MainImage = ({ photoMetadata }: MainImageProps) => {
             </p>
           </a>
         </Link>
-      </div>
-      <style jsx>{`
-        #main-img-wrapper {
-          margin: 0 0 0 150px;
-        }
+      </section>
 
-        #main-img-wrapper {
-          margin: 0 5% 0 0;
+      <style jsx>{`
+        section {
+          margin: 0 5% 0 150px;
           text-align: right;
           visibility: hidden;
           opacity: 0;
@@ -49,7 +45,7 @@ const MainImage = ({ photoMetadata }: MainImageProps) => {
         }
 
         @media (max-width: 820px) {
-          #main-img-wrapper {
+          section {
             display: none;
           }
         }

@@ -2,11 +2,11 @@ import React from "react";
 import Link from "next/link";
 import { NavigationColors } from "../lib/navigationColors";
 
-type MenuProps = {
+type MainMenuProps = {
   navigationColors: NavigationColors;
 };
 
-const Menu = ({ navigationColors }: MenuProps) => (
+const MainMenu = ({ navigationColors }: MainMenuProps) => (
   <>
     <nav>
       <a className={navigationColors.goncalocosta}>gonçalo costa</a>
@@ -194,4 +194,4 @@ const Menu = ({ navigationColors }: MenuProps) => (
   </>
 );
 
-export default Menu;
+export default MainMenu;

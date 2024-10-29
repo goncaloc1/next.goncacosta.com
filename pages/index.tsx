@@ -2,7 +2,7 @@ import React from "react";
 import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
 import { IconsCache } from "../components/icons-cache";
 import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
-import Menu from "../components/menu";
+import MainMenu from "../components/main-menu";
 import MainImage from "../components/main-image";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
@@ -29,7 +29,7 @@ const Home = ({
       <main>
         <div className="wrapper">
           <div className="cell">
-            <Menu navigationColors={navigationColors} />
+            <MainMenu navigationColors={navigationColors} />
           </div>
           <div className="cell">
             <MainImage photoMetadata={photoMetadata} />

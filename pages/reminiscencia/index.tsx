@@ -30,7 +30,7 @@ import { useState } from "react";
 import { useFullScreen } from "../../hooks/useFullScreen";
 import Photo from "../../components/photo";
 
-const slides: any = [
+const slides = [
   <div className={styles.slide}>
     <Photo src={photou} priority={true} />
   </div>,

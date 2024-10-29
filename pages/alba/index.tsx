@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import styles from "./Alba.module.css";
 
 import photoa from "/public/images/alba/a.jpg";
@@ -31,6 +30,7 @@ import photoy from "/public/images/alba/y.jpg";
 import Photo from "../../components/photo";
 import { useWheel } from "../../hooks/useWheel";
 import { useFullScreen } from "../../hooks/useFullScreen";
+import NavigationMenu from "../../components/navigation-menu";
 
 export default function Alba() {
   useWheel();
@@ -46,25 +46,7 @@ export default function Alba() {
       <main className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
-            <ul id="navigation_menu">
-              <li>
-                <Link legacyBehavior href="/">
-                  <a id="back">
-                    <span>back</span>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <a id="fullscreen">
-                  <span>fullscreen</span>
-                </a>
-              </li>
-              <li>
-                <a id="exit_fullscreen">
-                  <span>exit fullscreen</span>
-                </a>
-              </li>
-            </ul>
+            <NavigationMenu />
           </div>
           <div className="cell">
             <div className="header">

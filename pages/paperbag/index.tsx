@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 
 import styles from "./Paperbag.module.css";
 
@@ -18,6 +16,7 @@ import photoi from "/public/images/paperbag/i.jpg";
 import { useWheel } from "../../hooks/useWheel";
 import { useFullScreen } from "../../hooks/useFullScreen";
 import Photo from "../../components/photo";
+import NavigationMenu from "../../components/navigation-menu";
 
 export default function Paperbag() {
   useWheel();
@@ -35,25 +34,7 @@ export default function Paperbag() {
       <main className="horizontal_scroll">
         <div className="wrapper" style={{ width: "max-content" }}>
           <div className="cell">
-            <ul id="navigation_menu">
-              <li>
-                <Link legacyBehavior href="/">
-                  <a id="back">
-                    <span>back</span>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <a id="fullscreen">
-                  <span>fullscreen</span>
-                </a>
-              </li>
-              <li>
-                <a id="exit_fullscreen">
-                  <span>exit fullscreen</span>
-                </a>
-              </li>
-            </ul>
+            <NavigationMenu />
           </div>
           <div className="cell">
             <div className={`header ${styles.header}`}>

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 
 import photoz from "/public/images/when/z.jpg";
 import whenZoomIn from "/public/images/when/when_zoom_in.png";
@@ -26,6 +25,7 @@ import photoq from "/public/images/when/q.jpg";
 import { useWheel } from "../../hooks/useWheel";
 import { useFullScreen } from "../../hooks/useFullScreen";
 import Photo from "../../components/photo";
+import NavigationMenu from "../../components/navigation-menu";
 
 export default function When() {
   useWheel();
@@ -44,35 +44,11 @@ export default function When() {
       <main className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
-            <ul id="navigation_menu">
-              <li>
-                <Link legacyBehavior href="/">
-                  <a id="back">
-                    <span>back</span>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <a id="fullscreen">
-                  <span>fullscreen</span>
-                </a>
-              </li>
-              <li>
-                <a id="exit_fullscreen">
-                  <span>exit fullscreen</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  id="read_book"
-                  href="https://issuu.com/goncacosta/docs/when?mode=window&viewMode=doublePage"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>book</span>
-                </a>
-              </li>
-            </ul>
+            <NavigationMenu
+              bookUrl={
+                "https://issuu.com/goncacosta/docs/when?mode=window&viewMode=doublePage"
+              }
+            />
           </div>
 
           <div className="cell">

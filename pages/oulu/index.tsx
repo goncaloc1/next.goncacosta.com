@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Link from "next/link";
 
 import { useWheel } from "../../hooks/useWheel";
 import { useFullScreen } from "../../hooks/useFullScreen";
+import NavigationMenu from "../../components/navigation-menu";
 
 export default function Oulu() {
   useWheel();
@@ -18,32 +18,7 @@ export default function Oulu() {
       <main className="horizontal_scroll">
         <div className="wrapper">
           <div className="cell">
-            <ul id="navigation_menu">
-              <li>
-                <Link legacyBehavior href="/">
-                  <a id="back">
-                    <span>back</span>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <a id="fullscreen">
-                  <span>fullscreen</span>
-                </a>
-              </li>
-              <li>
-                <a id="exit_fullscreen">
-                  <span>exit fullscreen</span>
-                </a>
-              </li>
-              <li>
-                <Link legacyBehavior href="/oulu/book">
-                  <a id="read_book">
-                    <span>book</span>
-                  </a>
-                </Link>
-              </li>
-            </ul>
+            <NavigationMenu bookHref={"/oulu/book"} />
           </div>
           <div className="cell">
             <div className="header">

@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-key*/
 
 import Head from "next/head";
-import Link from "next/link";
 import styles from "./Reminiscencia.module.css";
 
 import photou from "/public/images/reminiscencia/u.jpg";
@@ -29,6 +28,7 @@ import photor from "/public/images/reminiscencia/r.jpg";
 import { useState } from "react";
 import { useFullScreen } from "../../hooks/useFullScreen";
 import Photo from "../../components/photo";
+import NavigationMenu from "../../components/navigation-menu";
 
 const slides = [
   <div className={styles.slide}>
@@ -406,35 +406,11 @@ export default function Reminiscencia() {
       <main>
         <div className={`wrapper ${styles.wrapper}`}>
           <div className="cell">
-            <ul id="navigation_menu">
-              <li>
-                <Link legacyBehavior href="/">
-                  <a id="back">
-                    <span>back</span>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <a id="fullscreen">
-                  <span>fullscreen</span>
-                </a>
-              </li>
-              <li>
-                <a id="exit_fullscreen">
-                  <span>exit fullscreen</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  id="read_book"
-                  href="https://issuu.com/goncacosta/docs/reminiscencia?mode=window&viewMode=doublePage"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>book</span>
-                </a>
-              </li>
-            </ul>
+            <NavigationMenu
+              bookUrl={
+                "https://issuu.com/goncacosta/docs/reminiscencia?mode=window&viewMode=doublePage"
+              }
+            />
           </div>
 
           <div className="cell">

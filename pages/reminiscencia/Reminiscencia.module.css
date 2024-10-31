@@ -9,16 +9,18 @@
   width: 100%;
 }
 
-.my_cycle_slideshow .slide,
-.my_cycle_slideshow .slideS,
-.my_cycle_slideshow .slideL {
+.slide,
+.slideS,
+.slideL {
   position: relative;
 }
-
-.my_cycle_slideshow .slide,
-.my_cycle_slideshow .slideS,
-.my_cycle_slideshow .slideL {
+.slide,
+.slideL {
   width: 390px;
+}
+
+.slideS {
+  width: 315px;
 }
 
 .my_cycle_slideshow,
@@ -26,13 +28,8 @@
   height: 390px;
 }
 
-.my_cycle_slideshow .slideS {
-  width: 315px;
-}
-
-/* TODO images size is correct but it doesn't play well with the back/next buttons */
-.my_cycle_slideshow > div .slideS div,
-.my_cycle_slideshow > div .slideL div {
+.slideS div,
+.slideL div {
   height: auto;
 }
 
@@ -45,7 +42,7 @@
 }
 
 @media (min-width: 1024px) {
-  .my_cycle_slideshow .slide {
+  .slide {
     width: 800px;
   }
 
@@ -54,11 +51,11 @@
     height: 800px;
   }
 
-  .my_cycle_slideshow .slideS {
+  .slideS {
     width: 645px;
   }
 
-  .my_cycle_slideshow .slideL {
+  .slideL {
     width: 990px;
   }
 
@@ -68,7 +65,7 @@
 }
 
 @media (min-width: 1536px) {
-  .my_cycle_slideshow .slide {
+  .slide {
     width: 890px;
   }
 
@@ -77,11 +74,11 @@
     height: 890px;
   }
 
-  .my_cycle_slideshow .slideS {
+  .slideS {
     width: 715px;
   }
 
-  .my_cycle_slideshow .slideL {
+  .slideL {
     width: 1110px;
   }
 
@@ -98,11 +95,11 @@
   -webkit-transition: opacity 1000ms ease-in-out;
 }
 
-.my_cycle_slideshow .transition_hide {
+.transition_hide {
   opacity: 0;
 }
 
-.my_cycle_slideshow .transition_show {
+.transition_show {
   opacity: 1;
 }
 

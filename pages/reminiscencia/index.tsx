@@ -26,26 +26,20 @@ import photos from "/public/images/reminiscencia/s.jpg";
 import photor from "/public/images/reminiscencia/r.jpg";
 
 import { useFullScreen } from "../../hooks/useFullScreen";
-import Photo from "../../components/photo";
 import NavigationMenu from "../../components/navigation-menu";
 import Carousel from "../../components/carousel/carousel";
+import CarouselSlide from "../../components/carousel/carousel-slide";
 
 const slides = [
-  <div className={styles.slide}>
-    <Photo src={photou} priority={true} />
-  </div>,
-  <div className={styles.slide}>
+  <CarouselSlide photoSrc={photou} photoPriority={true} />,
+  <CarouselSlide>
     <div className={styles.main_title}>
       <p>Reminiscencia</p>
     </div>
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photoa} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photob} />
-  </div>,
-  <div className={styles.slide}>
+  </CarouselSlide>,
+  <CarouselSlide photoSrc={photoa} />,
+  <CarouselSlide photoSrc={photob} />,
+  <CarouselSlide>
     <div>
       <p>
         For a long time, life deals with the still-tender memory of childhood
@@ -53,35 +47,17 @@ const slides = [
       <p>like a mother who lays her newborn on her breast without waking it.</p>
       <p className={styles.author}>Walter Benjamin</p>
     </div>
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photoc} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photod} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photoe} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photof} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photog} />
-  </div>,
-  <div className={styles.slideL}>
-    <Photo src={photot} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photoh} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photoi} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photoj} />
-  </div>,
-  <div className={styles.slide}>
+  </CarouselSlide>,
+  <CarouselSlide photoSrc={photoc} />,
+  <CarouselSlide photoSrc={photod} />,
+  <CarouselSlide photoSrc={photoe} />,
+  <CarouselSlide photoSrc={photof} />,
+  <CarouselSlide photoSrc={photog} />,
+  <CarouselSlide photoSrc={photot} className={styles.slideL} />,
+  <CarouselSlide photoSrc={photoh} />,
+  <CarouselSlide photoSrc={photoi} />,
+  <CarouselSlide photoSrc={photoj} />,
+  <CarouselSlide>
     <div>
       <p>I remember my father said to me something about memory, a</p>
       <p>
@@ -141,20 +117,12 @@ const slides = [
       <p>on those memories and not on the actual Photos themselves.”</p>
       <p className={styles.author}>Jorge Luis Borges</p>
     </div>
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photok} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photol} />
-  </div>,
-  <div className={styles.slideS}>
-    <Photo src={photom} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photon} />
-  </div>,
-  <div className={styles.slide}>
+  </CarouselSlide>,
+  <CarouselSlide photoSrc={photok} />,
+  <CarouselSlide photoSrc={photol} />,
+  <CarouselSlide photoSrc={photom} className={styles.slideS} />,
+  <CarouselSlide photoSrc={photon} />,
+  <CarouselSlide>
     <div>
       <p>
         Because we don’t know when we will die, we get to think of life as an
@@ -182,23 +150,13 @@ const slides = [
       <p>rise? Perhaps 20. And yet it all seems limitless.</p>
       <p className={styles.author}>Paul Bowles</p>
     </div>
-  </div>,
-  <div className={styles.slideL}>
-    <Photo src={photoo} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photop} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photoq} />
-  </div>,
-  <div className={styles.slideL}>
-    <Photo src={photos} />
-  </div>,
-  <div className={styles.slide}>
-    <Photo src={photor} />
-  </div>,
-  <div className={styles.slide}>
+  </CarouselSlide>,
+  <CarouselSlide photoSrc={photoo} className={styles.slideL} />,
+  <CarouselSlide photoSrc={photop} />,
+  <CarouselSlide photoSrc={photoq} />,
+  <CarouselSlide photoSrc={photos} className={styles.slideL} />,
+  <CarouselSlide photoSrc={photor} />,
+  <CarouselSlide>
     <div className={styles.last}>
       <p className={styles.title}>Reminiscencia</p>
       <p className={styles.author}>Gonçalo Costa</p>
@@ -215,7 +173,7 @@ const slides = [
         Bowles, Paul (2004). <i>The Sheltering Sky.</i> Penguin classics.
       </p>
     </div>
-  </div>,
+  </CarouselSlide>,
 ];
 
 export default function Reminiscencia() {

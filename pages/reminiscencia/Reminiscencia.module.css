@@ -1,14 +1,3 @@
-.wrapper {
-  width: 100%;
-}
-.wrapper > div:first-child {
-  width: 40px;
-}
-
-.slideshow_wrapper {
-  width: 100%;
-}
-
 .slide,
 .slideS,
 .slideL {
@@ -23,22 +12,42 @@
   width: 315px;
 }
 
-.my_cycle_slideshow,
-.my_cycle_slideshow > div div div {
-  height: 390px;
-}
-
 .slideS div,
 .slideL div {
   height: auto;
 }
 
-.my_cycle_slideshow > div div {
-  font-size: 4pt;
+@media (max-width: 768px) {
+  .my_cycle_slideshow,
+  .my_cycle_slideshow > div div div {
+    height: 390px;
+  }
+  .my_cycle_slideshow > div div {
+    font-size: 4pt;
+  }
 }
 
-@media (min-width: 640px) {
-  /* TODO */
+@media (min-width: 768px) {
+  .slide {
+    width: 720px;
+  }
+
+  .my_cycle_slideshow,
+  .my_cycle_slideshow > div div div {
+    height: 720px;
+  }
+
+  .slideS {
+    width: 580px;
+  }
+
+  .slideL {
+    width: 720px;
+  }
+
+  .my_cycle_slideshow > div div {
+    font-size: 8pt;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -102,6 +111,8 @@
 .transition_show {
   opacity: 1;
 }
+
+/* ------------ */
 
 .my_cycle_slideshow > div div {
   text-align: right;

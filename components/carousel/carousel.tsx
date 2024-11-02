@@ -183,7 +183,7 @@ const Carousel = ({ slides }: CarouselProps) => {
 
   return (
     <>
-      <div className={styles.slideshow_wrapper}>
+      <div>
         <div className={styles.my_cycle_slideshow}>
           <div className={placeholderXStyle}>{slides[placeholderXIndex]}</div>
           <div className={placeholderYStyle}>{slides[placeholderYIndex]}</div>

@@ -33,7 +33,7 @@ export default function Paperbag() {
       </Head>
       <main className="horizontal_scroll">
         <div className="wrapper" style={{ width: "max-content" }}>
-          <div className="cell">
+          <div className="cell align-top">
             <NavigationMenu />
           </div>
           <div className="cell">

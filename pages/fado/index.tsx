@@ -17,7 +17,7 @@ export default function Fado() {
 
       <main className="horizontal_scroll">
         <div className="wrapper">
-          <div className="cell">
+          <div className="cell align-top">
             <NavigationMenu />
           </div>
           <div className="cell">

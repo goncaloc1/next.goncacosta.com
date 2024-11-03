@@ -17,7 +17,7 @@ export default function Oulu() {
 
       <main className="horizontal_scroll">
         <div className="wrapper">
-          <div className="cell">
+          <div className="cell align-top">
             <NavigationMenu bookHref={"/oulu/book"} />
           </div>
           <div className="cell">

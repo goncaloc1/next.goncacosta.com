@@ -43,7 +43,7 @@ export default function When() {
       </Head>
       <main className="horizontal_scroll">
         <div className="wrapper">
-          <div className="cell">
+          <div className="cell align-top">
             <NavigationMenu
               bookUrl={
                 "https://issuu.com/goncacosta/docs/when?mode=window&viewMode=doublePage"

@@ -190,8 +190,8 @@ export default function Reminiscencia() {
       </Head>
 
       <main>
-        <div className="wrapper">
-          <div className="cell navigation-wrapper">
+        <div className="wrapper w-full">
+          <div className="cell navigation-wrapper align-top">
             <NavigationMenu
               bookUrl={
                 "https://issuu.com/goncacosta/docs/reminiscencia?mode=window&viewMode=doublePage"
@@ -206,10 +206,6 @@ export default function Reminiscencia() {
       </main>
 
       <style jsx>{`
-        main .wrapper {
-          width: 100%;
-        }
-
         .navigation-wrapper {
           width: 40px;
         }

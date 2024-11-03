@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 // TODO remove specific styles from here
 import styles from "../../pages/reminiscencia/Reminiscencia.module.css";
@@ -6,7 +6,7 @@ import styles from "../../pages/reminiscencia/Reminiscencia.module.css";
 type Placeholder = "placeholderX" | "placeholderY" | "placeholderZ";
 
 type CarouselProps = {
-  slides: JSX.Element[];
+  slides: ReactNode[];
 };
 
 const Carousel = ({ slides }: CarouselProps) => {
@@ -185,9 +185,15 @@ const Carousel = ({ slides }: CarouselProps) => {
     <>
       <div>
         <div className={styles.my_cycle_slideshow}>
-          <div className={placeholderXStyle}>{slides[placeholderXIndex]}</div>
-          <div className={placeholderYStyle}>{slides[placeholderYIndex]}</div>
-          <div className={placeholderZStyle}>{slides[placeholderZIndex]}</div>
+          <div className={`${styles.slide_placeholder} ${placeholderXStyle}`}>
+            {slides[placeholderXIndex]}
+          </div>
+          <div className={`${styles.slide_placeholder} ${placeholderYStyle}`}>
+            {slides[placeholderYIndex]}
+          </div>
+          <div className={`${styles.slide_placeholder} ${placeholderZStyle}`}>
+            {slides[placeholderZIndex]}
+          </div>
         </div>
         <div className="slideshow_buttons">
           <a className="mCSB_buttonRight" onClick={nextSlide}></a>

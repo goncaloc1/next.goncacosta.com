@@ -3,6 +3,7 @@
 .slideL {
   position: relative;
 }
+
 .slide,
 .slideL {
   width: 390px;
@@ -96,7 +97,7 @@
   }
 }
 
-.my_cycle_slideshow > div {
+.slide_placeholder {
   position: absolute;
   right: 3%;
   transition: opacity 1000ms ease-in-out;

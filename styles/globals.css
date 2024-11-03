@@ -68,10 +68,6 @@ main.horizontal_scroll {
   float: left;
 }
 
-.wrapper > div:first-child {
-  vertical-align: top;
-}
-
 .cell {
   display: table-cell;
   vertical-align: middle;
@@ -161,4 +157,17 @@ main.horizontal_scroll {
 .hboxDistantXX,
 .vboxDistantXX {
   margin: 0 600px 0 0px;
+}
+
+/* Utility Classes */
+.w-full {
+  width: 100%;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.align-middle {
+  vertical-align: middle;
 }

@@ -74,7 +74,7 @@ const NavigationMenu = ({
         }
 
         ul a {
-          background-image: url(./icons.png);
+          background-image: url(/icons.png);
           background-repeat: no-repeat;
           height: 20px;
           width: 20px;

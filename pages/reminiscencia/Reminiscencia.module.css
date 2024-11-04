@@ -115,21 +115,18 @@
 
 /* ------------ */
 
-.my_cycle_slideshow > div div {
-  text-align: right;
-}
-
-.my_cycle_slideshow > div div div {
+.text_wrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  text-align: right;
 }
 
-.my_cycle_slideshow > div div .main_title {
+.text_wrapper.main_title {
   text-align: center;
 }
 
-.my_cycle_slideshow > div div .main_title p {
+.text_wrapper.main_title p {
   font-variant: small-caps;
   font-size: 2em;
   font-style: normal;
@@ -137,29 +134,29 @@
   margin: 0;
 }
 
-.my_cycle_slideshow > div div p {
+.text_wrapper p {
   font-family: georgia, serif;
   line-height: 1.5em;
   font-size: 1.3em;
   font-style: italic;
   letter-spacing: 0.04em;
 }
-.my_cycle_slideshow > div div div p.author {
+.text_wrapper p.author {
   font-variant: small-caps;
   padding-top: 3px;
 }
 
 /* last slide, info */
-.my_cycle_slideshow > div div div.last {
+.text_wrapper.last {
   justify-content: flex-end;
   margin-top: -5%;
 }
 
-.my_cycle_slideshow > div div div.last p {
+.text_wrapper.last p {
   font-style: normal;
 }
 
-.my_cycle_slideshow > div div div.last p.title {
+.text_wrapper.last p.title {
   display: block;
   font-variant: small-caps;
   font-size: 1.9em;
@@ -167,10 +164,10 @@
   letter-spacing: 0.09em;
 }
 
-.my_cycle_slideshow > div div div.last p.date {
+.text_wrapper.last p.date {
   padding-bottom: 50px;
 }
 
-.my_cycle_slideshow > div div div.last p.bibliography {
+.text_wrapper.last p.bibliography {
   font-size: 1.1em;
 }

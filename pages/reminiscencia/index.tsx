@@ -33,14 +33,14 @@ import CarouselSlide from "../../components/carousel/carousel-slide";
 const slides = [
   <CarouselSlide photoSrc={photou} photoPriority={true} />,
   <CarouselSlide>
-    <div className={styles.main_title}>
+    <div className={`${styles.text_wrapper} ${styles.main_title}`}>
       <p>Reminiscencia</p>
     </div>
   </CarouselSlide>,
   <CarouselSlide photoSrc={photoa} />,
   <CarouselSlide photoSrc={photob} />,
   <CarouselSlide>
-    <div>
+    <div className={styles.text_wrapper}>
       <p>
         For a long time, life deals with the still-tender memory of childhood
       </p>
@@ -58,7 +58,7 @@ const slides = [
   <CarouselSlide photoSrc={photoi} />,
   <CarouselSlide photoSrc={photoj} />,
   <CarouselSlide>
-    <div>
+    <div className={styles.text_wrapper}>
       <p>I remember my father said to me something about memory, a</p>
       <p>
         very saddening thing. He said, “I thought I could recall my childhood
@@ -123,7 +123,7 @@ const slides = [
   <CarouselSlide photoSrc={photom} className={styles.slideS} />,
   <CarouselSlide photoSrc={photon} />,
   <CarouselSlide>
-    <div>
+    <div className={styles.text_wrapper}>
       <p>
         Because we don’t know when we will die, we get to think of life as an
       </p>
@@ -157,7 +157,7 @@ const slides = [
   <CarouselSlide photoSrc={photos} className={styles.slideL} />,
   <CarouselSlide photoSrc={photor} />,
   <CarouselSlide>
-    <div className={styles.last}>
+    <div className={`${styles.text_wrapper} ${styles.last}`}>
       <p className={styles.title}>Reminiscencia</p>
       <p className={styles.author}>Gonçalo Costa</p>
       <p className={styles.date}>2011-2012</p>

@@ -28,18 +28,26 @@ import photor from "/public/images/reminiscencia/r.jpg";
 import { useFullScreen } from "../../hooks/useFullScreen";
 import NavigationMenu from "../../components/navigation-menu";
 import Carousel from "../../components/carousel/carousel";
-import CarouselSlide from "../../components/carousel/carousel-slide";
+import CarouselSlide, {
+  CarouselSlideProps,
+} from "../../components/carousel/carousel-slide";
+
+const defaultSlideClassName = styles.slide;
+
+const Slide = (props: CarouselSlideProps) => (
+  <CarouselSlide {...{ className: defaultSlideClassName, ...props }} />
+);
 
 const slides = [
-  <CarouselSlide photoSrc={photou} photoPriority={true} />,
-  <CarouselSlide>
+  <Slide photoSrc={photou} photoPriority={true} />,
+  <Slide>
     <div className={`${styles.text_wrapper} ${styles.main_title}`}>
       <p>Reminiscencia</p>
     </div>
-  </CarouselSlide>,
-  <CarouselSlide photoSrc={photoa} />,
-  <CarouselSlide photoSrc={photob} />,
-  <CarouselSlide>
+  </Slide>,
+  <Slide photoSrc={photoa} />,
+  <Slide photoSrc={photob} />,
+  <Slide>
     <div className={styles.text_wrapper}>
       <p>
         For a long time, life deals with the still-tender memory of childhood
@@ -47,17 +55,17 @@ const slides = [
       <p>like a mother who lays her newborn on her breast without waking it.</p>
       <p className={styles.author}>Walter Benjamin</p>
     </div>
-  </CarouselSlide>,
-  <CarouselSlide photoSrc={photoc} />,
-  <CarouselSlide photoSrc={photod} />,
-  <CarouselSlide photoSrc={photoe} />,
-  <CarouselSlide photoSrc={photof} />,
-  <CarouselSlide photoSrc={photog} />,
-  <CarouselSlide photoSrc={photot} className={styles.slideL} />,
-  <CarouselSlide photoSrc={photoh} />,
-  <CarouselSlide photoSrc={photoi} />,
-  <CarouselSlide photoSrc={photoj} />,
-  <CarouselSlide>
+  </Slide>,
+  <Slide photoSrc={photoc} />,
+  <Slide photoSrc={photod} />,
+  <Slide photoSrc={photoe} />,
+  <Slide photoSrc={photof} />,
+  <Slide photoSrc={photog} />,
+  <Slide photoSrc={photot} className={styles.slideL} />,
+  <Slide photoSrc={photoh} />,
+  <Slide photoSrc={photoi} />,
+  <Slide photoSrc={photoj} />,
+  <Slide>
     <div className={styles.text_wrapper}>
       <p>I remember my father said to me something about memory, a</p>
       <p>
@@ -117,12 +125,12 @@ const slides = [
       <p>on those memories and not on the actual Photos themselves.”</p>
       <p className={styles.author}>Jorge Luis Borges</p>
     </div>
-  </CarouselSlide>,
-  <CarouselSlide photoSrc={photok} />,
-  <CarouselSlide photoSrc={photol} />,
-  <CarouselSlide photoSrc={photom} className={styles.slideS} />,
-  <CarouselSlide photoSrc={photon} />,
-  <CarouselSlide>
+  </Slide>,
+  <Slide photoSrc={photok} />,
+  <Slide photoSrc={photol} />,
+  <Slide photoSrc={photom} className={styles.slideS} />,
+  <Slide photoSrc={photon} />,
+  <Slide>
     <div className={styles.text_wrapper}>
       <p>
         Because we don’t know when we will die, we get to think of life as an
@@ -150,13 +158,13 @@ const slides = [
       <p>rise? Perhaps 20. And yet it all seems limitless.</p>
       <p className={styles.author}>Paul Bowles</p>
     </div>
-  </CarouselSlide>,
-  <CarouselSlide photoSrc={photoo} className={styles.slideL} />,
-  <CarouselSlide photoSrc={photop} />,
-  <CarouselSlide photoSrc={photoq} />,
-  <CarouselSlide photoSrc={photos} className={styles.slideL} />,
-  <CarouselSlide photoSrc={photor} />,
-  <CarouselSlide>
+  </Slide>,
+  <Slide photoSrc={photoo} className={styles.slideL} />,
+  <Slide photoSrc={photop} />,
+  <Slide photoSrc={photoq} />,
+  <Slide photoSrc={photos} className={styles.slideL} />,
+  <Slide photoSrc={photor} />,
+  <Slide>
     <div className={`${styles.text_wrapper} ${styles.last}`}>
       <p className={styles.title}>Reminiscencia</p>
       <p className={styles.author}>Gonçalo Costa</p>
@@ -173,7 +181,7 @@ const slides = [
         Bowles, Paul (2004). <i>The Sheltering Sky.</i> Penguin classics.
       </p>
     </div>
-  </CarouselSlide>,
+  </Slide>,
 ];
 
 export default function Reminiscencia() {
@@ -200,7 +208,10 @@ export default function Reminiscencia() {
           </div>
 
           <div className="cell">
-            <Carousel slides={slides} />
+            <Carousel
+              slides={slides}
+              defaultSlideClassName={defaultSlideClassName}
+            />
           </div>
         </div>
       </main>

@@ -1,15 +1,15 @@
 import { ReactNode, useState } from "react";
 
-// TODO remove specific styles from here
-import styles from "../../pages/reminiscencia/Reminiscencia.module.css";
+import styles from "./Carousel.module.css";
 
 type Placeholder = "placeholderX" | "placeholderY" | "placeholderZ";
 
 type CarouselProps = {
   slides: ReactNode[];
+  defaultSlideClassName: string;
 };
 
-const Carousel = ({ slides }: CarouselProps) => {
+const Carousel = ({ slides, defaultSlideClassName }: CarouselProps) => {
   /**
    * We have three placeholders to deal with the active image and
    * cache / buffer images. The idea is that previous/next operations
@@ -184,7 +184,9 @@ const Carousel = ({ slides }: CarouselProps) => {
   return (
     <>
       <div>
-        <div className={styles.my_cycle_slideshow}>
+        <div
+          className={`${styles.my_cycle_slideshow} ${defaultSlideClassName}`}
+        >
           <div className={`${styles.slide_placeholder} ${placeholderXStyle}`}>
             {slides[placeholderXIndex]}
           </div>
@@ -195,79 +197,11 @@ const Carousel = ({ slides }: CarouselProps) => {
             {slides[placeholderZIndex]}
           </div>
         </div>
-        <div className="slideshow_buttons">
-          <a className="mCSB_buttonRight" onClick={nextSlide}></a>
-          <a className="mCSB_buttonLeft" onClick={previousSlide}></a>
+        <div className={styles.slideshow_buttons}>
+          <a className={styles.mCSB_buttonRight} onClick={nextSlide}></a>
+          <a className={styles.mCSB_buttonLeft} onClick={previousSlide}></a>
         </div>
       </div>
-
-      <style jsx>{`
-        .slideshow_buttons {
-          margin: 0 3% 0 0;
-          margin-top: 5px;
-          padding: 0 10px 0 0;
-        }
-
-        .mCSB_buttonRight,
-        .mCSB_buttonLeft {
-          display: block;
-          position: relative;
-          width: 20px;
-          height: 17px;
-          overflow: hidden;
-          margin: 0 auto;
-          cursor: pointer;
-          float: right;
-        }
-
-        .mCSB_buttonUp,
-        .mCSB_buttonDown,
-        .mCSB_buttonLeft,
-        .mCSB_buttonRight {
-          background-image: url(./icons.png);
-          background-repeat: no-repeat;
-          opacity: 0.3;
-          filter: "alpha(opacity=30)";
-        }
-        .mCSB_buttonUp {
-          background-position: 0 0;
-          /*
-	          sprites locations are 0 0/-16px 0/-32px 0/-48px 0 (light) and -80px 0/-96px 0/-112px 0/-128px 0 (dark)
-	        */
-        }
-        .mCSB_buttonDown {
-          background-position: 0 -20px;
-          /*
-	        sprites locations are 0 -20px/-16px -20px/-32px -20px/-48px -20px (light) and -80px -20px/-96px -20px/-112px -20px/-128px -20px (dark)
-	        */
-        }
-        .mCSB_buttonLeft {
-          background-position: -100px -40px;
-          /*
-	        sprites locations are 0 -40px/-20px -40px/-40px -40px/-60px -40px (light) and -80px -40px/-100px -40px/-120px -40px/-140px -40px (dark)
-	        */
-        }
-        .mCSB_buttonRight {
-          background-position: -100px -56px;
-          /*
-	        sprites locations are 0 -56px/-20px -56px/-40px -56px/-60px -56px (light) and -80px -56px/-100px -56px/-120px -56px/-140px -56px (dark)
-	        */
-        }
-        .mCSB_buttonUp:hover,
-        .mCSB_buttonDown:hover,
-        .mCSB_buttonLeft:hover,
-        .mCSB_buttonRight:hover {
-          opacity: 0.2;
-          filter: "alpha(opacity=20)";
-        }
-        .mCSB_buttonUp:active,
-        .mCSB_buttonDown:active,
-        .mCSB_buttonLeft:active,
-        .mCSB_buttonRight:active {
-          opacity: 0.15;
-          filter: "alpha(opacity=15)";
-        }
-      `}</style>
     </>
   );
 };

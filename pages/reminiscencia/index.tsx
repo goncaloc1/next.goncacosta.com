@@ -211,6 +211,7 @@ export default function Reminiscencia() {
             <Carousel
               slides={slides}
               defaultSlideClassName={defaultSlideClassName}
+              transitionEnabled={true}
             />
           </div>
         </div>

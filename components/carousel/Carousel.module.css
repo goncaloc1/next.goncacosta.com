@@ -5,9 +5,9 @@ div.my_cycle_slideshow {
 .slide_placeholder {
   position: absolute;
   right: 3%;
-  transition: opacity 1000ms ease-in-out;
-  -moz-transition: opacity 1000ms ease-in-out;
-  -webkit-transition: opacity 1000ms ease-in-out;
+  transition: opacity 650ms ease-in-out;
+  -moz-transition: opacity 650ms ease-in-out;
+  -webkit-transition: opacity 650ms ease-in-out;
 }
 
 .transition_hide {

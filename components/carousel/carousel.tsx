@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useMemo, useState } from "react";
+import { ReactNode, useState } from "react";
 
 import styles from "./Carousel.module.css";
 
@@ -7,6 +7,37 @@ enum Placeholder {
   Y = "placeholderY",
   Z = "placeholderZ",
 }
+
+const slideConfig = {
+  next: {
+    placeholderX: {
+      upcomingPlaceholder: Placeholder.Y,
+      cachePlaceholder: Placeholder.Z,
+    },
+    placeholderY: {
+      upcomingPlaceholder: Placeholder.Z,
+      cachePlaceholder: Placeholder.X,
+    },
+    placeholderZ: {
+      upcomingPlaceholder: Placeholder.X,
+      cachePlaceholder: Placeholder.Y,
+    },
+  },
+  previous: {
+    placeholderX: {
+      upcomingPlaceholder: Placeholder.Z,
+      cachePlaceholder: Placeholder.Y,
+    },
+    placeholderY: {
+      upcomingPlaceholder: Placeholder.X,
+      cachePlaceholder: Placeholder.Z,
+    },
+    placeholderZ: {
+      upcomingPlaceholder: Placeholder.Y,
+      cachePlaceholder: Placeholder.X,
+    },
+  },
+};
 
 type SlidePlaceholderProps = {
   children: ReactNode;
@@ -57,102 +88,69 @@ const Carousel = ({
     styles.transition_hide
   );
 
-  const [currentPlaceholder, setCurrentPlaceholder] = useState<Placeholder>(
-    Placeholder.X
-  );
+  const [currentPlaceholder, setCurrentPlaceholder] = useState<{
+    name: Placeholder;
+    idx: number;
+  }>({ name: Placeholder.X, idx: 0 });
 
-  const activeIdx = useMemo((): number => {
-    switch (currentPlaceholder) {
-      case Placeholder.X:
-        return placeholderXIdx;
-      case Placeholder.Y:
-        return placeholderYIdx;
-      case Placeholder.Z:
-        return placeholderZIdx;
+  const moveSlide = (
+    direction: "next" | "previous",
+    isCacheinRange: boolean,
+    upcomingIdx: number,
+    cacheIdx: number
+  ) => {
+    const map = {
+      placeholderX: {
+        setStyle: setPlaceholderXStyle,
+        setIndex: setPlaceholderXIdx,
+      },
+      placeholderY: {
+        setStyle: setPlaceholderYStyle,
+        setIndex: setPlaceholderYIdx,
+      },
+      placeholderZ: {
+        setStyle: setPlaceholderZStyle,
+        setIndex: setPlaceholderZIdx,
+      },
+    };
 
-      default:
-        throw Error(`Unknown placeholder '${currentPlaceholder}'`);
-    }
-  }, [currentPlaceholder, placeholderXIdx, placeholderYIdx, placeholderZIdx]);
+    const cfg = slideConfig[direction][currentPlaceholder.name];
+
+    map[currentPlaceholder.name].setStyle(styles.transition_hide);
+    map[cfg.upcomingPlaceholder].setStyle(styles.transition_show);
+
+    setCurrentPlaceholder({
+      name: cfg.upcomingPlaceholder,
+      idx: upcomingIdx,
+    });
+
+    isCacheinRange && map[cfg.cachePlaceholder].setIndex(cacheIdx);
+  };
 
   const nextSlide = () => {
-    const isLastIdxActive = activeIdx === slides.length - 1;
+    const isLastIdxVisible = currentPlaceholder.idx === slides.length - 1;
 
-    if (isLastIdxActive) {
+    if (isLastIdxVisible) {
       return;
     }
 
-    const nextCacheIdx = activeIdx + 2;
-    const isNextCacheInRange = nextCacheIdx <= slides.length - 1;
+    const cacheIdx = currentPlaceholder.idx + 2;
+    const isCacheInRange = cacheIdx <= slides.length - 1;
 
-    switch (currentPlaceholder) {
-      case Placeholder.X: {
-        setPlaceholderXStyle(styles.transition_hide);
-        setPlaceholderYStyle(styles.transition_show);
-        isNextCacheInRange && setPlaceholderZIdx(nextCacheIdx);
-
-        setCurrentPlaceholder(Placeholder.Y);
-        break;
-      }
-      case Placeholder.Y: {
-        setPlaceholderYStyle(styles.transition_hide);
-        setPlaceholderZStyle(styles.transition_show);
-        isNextCacheInRange && setPlaceholderXIdx(nextCacheIdx);
-
-        setCurrentPlaceholder(Placeholder.Z);
-        break;
-      }
-      case Placeholder.Z: {
-        setPlaceholderZStyle(styles.transition_hide);
-        setPlaceholderXStyle(styles.transition_show);
-        isNextCacheInRange && setPlaceholderYIdx(nextCacheIdx);
-
-        setCurrentPlaceholder(Placeholder.X);
-        break;
-      }
-      default:
-        throw Error(`Unknown placeholder '${currentPlaceholder}'`);
-    }
+    moveSlide("next", isCacheInRange, currentPlaceholder.idx + 1, cacheIdx);
   };
 
   const previousSlide = () => {
-    const isFirstIdxActive = activeIdx === 0;
+    const isFirstIdxVisible = currentPlaceholder.idx === 0;
 
-    if (isFirstIdxActive) {
+    if (isFirstIdxVisible) {
       return;
     }
 
-    const previousCacheIdx = activeIdx - 2;
-    const isPreviousCacheInRange = previousCacheIdx >= 0;
+    const cacheIdx = currentPlaceholder.idx - 2;
+    const isCacheInRange = cacheIdx >= 0;
 
-    switch (currentPlaceholder) {
-      case Placeholder.X: {
-        setPlaceholderXStyle(styles.transition_hide);
-        setPlaceholderZStyle(styles.transition_show);
-        isPreviousCacheInRange && setPlaceholderYIdx(previousCacheIdx);
-
-        setCurrentPlaceholder(Placeholder.Z);
-        break;
-      }
-      case Placeholder.Y: {
-        setPlaceholderYStyle(styles.transition_hide);
-        setPlaceholderXStyle(styles.transition_show);
-        isPreviousCacheInRange && setPlaceholderZIdx(previousCacheIdx);
-
-        setCurrentPlaceholder(Placeholder.X);
-        break;
-      }
-      case Placeholder.Z: {
-        setPlaceholderZStyle(styles.transition_hide);
-        setPlaceholderYStyle(styles.transition_show);
-        isPreviousCacheInRange && setPlaceholderXIdx(previousCacheIdx);
-
-        setCurrentPlaceholder(Placeholder.Y);
-        break;
-      }
-      default:
-        throw Error(`Unknown placeholder '${currentPlaceholder}'`);
-    }
+    moveSlide("previous", isCacheInRange, currentPlaceholder.idx - 1, cacheIdx);
   };
 
   return (

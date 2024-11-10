@@ -5,6 +5,7 @@ import styles from "./Carousel.module.css";
 type CarouselProps = {
   slides: ReactNode[];
   defaultSlideClassName: string;
+  transitionEnabled?: boolean;
 };
 
 enum Placeholder {
@@ -13,7 +14,11 @@ enum Placeholder {
   Z = "placeholderZ",
 }
 
-const Carousel = ({ slides, defaultSlideClassName }: CarouselProps) => {
+const Carousel = ({
+  slides,
+  defaultSlideClassName,
+  transitionEnabled,
+}: CarouselProps) => {
   /**
    * We have three placeholders to deal with the active image and cache / buffer images. The idea is that
    * previous/next operations will rotate the active image in placeholders and therefore eliminate loading times.
@@ -187,13 +192,25 @@ const Carousel = ({ slides, defaultSlideClassName }: CarouselProps) => {
         <div
           className={`${styles.my_cycle_slideshow} ${defaultSlideClassName}`}
         >
-          <div className={`${styles.slide_placeholder} ${placeholderXStyle}`}>
+          <div
+            className={`${styles.slide_placeholder} ${
+              transitionEnabled ? styles.slide_transition : ""
+            } ${placeholderXStyle}`}
+          >
             {slides[placeholderXIdx]}
           </div>
-          <div className={`${styles.slide_placeholder} ${placeholderYStyle}`}>
+          <div
+            className={`${styles.slide_placeholder} ${
+              transitionEnabled ? styles.slide_transition : ""
+            } ${placeholderYStyle}`}
+          >
             {slides[placeholderYIdx]}
           </div>
-          <div className={`${styles.slide_placeholder} ${placeholderZStyle}`}>
+          <div
+            className={`${styles.slide_placeholder} ${
+              transitionEnabled ? styles.slide_transition : ""
+            } ${placeholderZStyle}`}
+          >
             {slides[placeholderZIdx]}
           </div>
         </div>

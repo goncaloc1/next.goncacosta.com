@@ -75,50 +75,21 @@ const Carousel = ({
     }
   }, [currentPlaceholder, placeholderXIdx, placeholderYIdx, placeholderZIdx]);
 
-  const isLastIdxActive = useMemo(
-    (): boolean => activeIdx === slides.length - 1,
-    [activeIdx, slides.length]
-  );
+  const nextSlide = () => {
+    const isLastIdxActive = activeIdx === slides.length - 1;
 
-  const isFirstIdxActive = useMemo((): boolean => activeIdx === 0, [activeIdx]);
-
-  /**
-   * Check if next image can be cached. If index is out of range returns without doing anything
-   */
-  const prepareNextViewPlaceholderCache = useCallback(() => {
-    const nextCacheIdx = activeIdx + 2;
-    const isNextCacheOutOfRange = nextCacheIdx > slides.length - 1;
-
-    if (isNextCacheOutOfRange) {
-      return;
-    }
-
-    switch (currentPlaceholder) {
-      case Placeholder.X:
-        setPlaceholderZIdx(nextCacheIdx);
-        break;
-      case Placeholder.Y:
-        setPlaceholderXIdx(nextCacheIdx);
-        break;
-      case Placeholder.Z:
-        setPlaceholderYIdx(nextCacheIdx);
-        break;
-      default:
-        throw Error(`Unknown placeholder '${currentPlaceholder}'`);
-    }
-  }, [activeIdx, currentPlaceholder, slides.length]);
-
-  const nextSlide = useCallback(() => {
     if (isLastIdxActive) {
       return;
     }
 
-    prepareNextViewPlaceholderCache();
+    const nextCacheIdx = activeIdx + 2;
+    const isNextCacheInRange = nextCacheIdx <= slides.length - 1;
 
     switch (currentPlaceholder) {
       case Placeholder.X: {
         setPlaceholderXStyle(styles.transition_hide);
         setPlaceholderYStyle(styles.transition_show);
+        isNextCacheInRange && setPlaceholderZIdx(nextCacheIdx);
 
         setCurrentPlaceholder(Placeholder.Y);
         break;
@@ -126,6 +97,7 @@ const Carousel = ({
       case Placeholder.Y: {
         setPlaceholderYStyle(styles.transition_hide);
         setPlaceholderZStyle(styles.transition_show);
+        isNextCacheInRange && setPlaceholderXIdx(nextCacheIdx);
 
         setCurrentPlaceholder(Placeholder.Z);
         break;
@@ -133,6 +105,7 @@ const Carousel = ({
       case Placeholder.Z: {
         setPlaceholderZStyle(styles.transition_hide);
         setPlaceholderXStyle(styles.transition_show);
+        isNextCacheInRange && setPlaceholderYIdx(nextCacheIdx);
 
         setCurrentPlaceholder(Placeholder.X);
         break;
@@ -140,45 +113,23 @@ const Carousel = ({
       default:
         throw Error(`Unknown placeholder '${currentPlaceholder}'`);
     }
-  }, [isLastIdxActive, prepareNextViewPlaceholderCache, currentPlaceholder]);
+  };
 
-  /**
-   * Check if previous image can be cached. If index is out of range returns without doing anything
-   */
-  const preparePreviousViewPlaceholderCache = useCallback(() => {
-    const previousCacheIdx = activeIdx - 2;
-    const isPreviousCacheOutOfRange = previousCacheIdx < 0;
+  const previousSlide = () => {
+    const isFirstIdxActive = activeIdx === 0;
 
-    if (isPreviousCacheOutOfRange) {
-      return;
-    }
-
-    switch (currentPlaceholder) {
-      case Placeholder.X:
-        setPlaceholderYIdx(previousCacheIdx);
-        break;
-      case Placeholder.Y:
-        setPlaceholderZIdx(previousCacheIdx);
-        break;
-      case Placeholder.Z:
-        setPlaceholderXIdx(previousCacheIdx);
-        break;
-      default:
-        throw Error(`Unknown placeholder '${currentPlaceholder}'`);
-    }
-  }, [activeIdx, currentPlaceholder]);
-
-  const previousSlide = useCallback(() => {
     if (isFirstIdxActive) {
       return;
     }
 
-    preparePreviousViewPlaceholderCache();
+    const previousCacheIdx = activeIdx - 2;
+    const isPreviousCacheInRange = previousCacheIdx >= 0;
 
     switch (currentPlaceholder) {
       case Placeholder.X: {
         setPlaceholderXStyle(styles.transition_hide);
         setPlaceholderZStyle(styles.transition_show);
+        isPreviousCacheInRange && setPlaceholderYIdx(previousCacheIdx);
 
         setCurrentPlaceholder(Placeholder.Z);
         break;
@@ -186,6 +137,7 @@ const Carousel = ({
       case Placeholder.Y: {
         setPlaceholderYStyle(styles.transition_hide);
         setPlaceholderXStyle(styles.transition_show);
+        isPreviousCacheInRange && setPlaceholderZIdx(previousCacheIdx);
 
         setCurrentPlaceholder(Placeholder.X);
         break;
@@ -193,6 +145,7 @@ const Carousel = ({
       case Placeholder.Z: {
         setPlaceholderZStyle(styles.transition_hide);
         setPlaceholderYStyle(styles.transition_show);
+        isPreviousCacheInRange && setPlaceholderXIdx(previousCacheIdx);
 
         setCurrentPlaceholder(Placeholder.Y);
         break;
@@ -200,11 +153,7 @@ const Carousel = ({
       default:
         throw Error(`Unknown placeholder '${currentPlaceholder}'`);
     }
-  }, [
-    isFirstIdxActive,
-    preparePreviousViewPlaceholderCache,
-    currentPlaceholder,
-  ]);
+  };
 
   return (
     <>

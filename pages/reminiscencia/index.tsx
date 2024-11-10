@@ -199,7 +199,7 @@ export default function Reminiscencia() {
 
       <main>
         <div className="wrapper w-full">
-          <div className="cell navigation-wrapper align-top">
+          <div className={`${styles.navigation_wrapper} cell align-top`}>
             <NavigationMenu
               bookUrl={
                 "https://issuu.com/goncacosta/docs/reminiscencia?mode=window&viewMode=doublePage"
@@ -216,12 +216,6 @@ export default function Reminiscencia() {
           </div>
         </div>
       </main>
-
-      <style jsx>{`
-        .navigation-wrapper {
-          width: 40px;
-        }
-      `}</style>
     </>
   );
 }

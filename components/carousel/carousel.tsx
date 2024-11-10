@@ -2,17 +2,37 @@ import { ReactNode, useCallback, useMemo, useState } from "react";
 
 import styles from "./Carousel.module.css";
 
-type CarouselProps = {
-  slides: ReactNode[];
-  defaultSlideClassName: string;
-  transitionEnabled?: boolean;
-};
-
 enum Placeholder {
   X = "placeholderX",
   Y = "placeholderY",
   Z = "placeholderZ",
 }
+
+type SlidePlaceholderProps = {
+  children: ReactNode;
+  className: string;
+  transitionEnabled?: boolean;
+};
+
+const SlidePlaceholder = ({
+  children,
+  className,
+  transitionEnabled,
+}: SlidePlaceholderProps) => (
+  <div
+    className={`${styles.slide_placeholder} ${
+      transitionEnabled ? styles.slide_transition : ""
+    } ${className}`}
+  >
+    {children}
+  </div>
+);
+
+type CarouselProps = {
+  slides: ReactNode[];
+  defaultSlideClassName: string;
+  transitionEnabled?: boolean;
+};
 
 const Carousel = ({
   slides,
@@ -192,27 +212,24 @@ const Carousel = ({
         <div
           className={`${styles.my_cycle_slideshow} ${defaultSlideClassName}`}
         >
-          <div
-            className={`${styles.slide_placeholder} ${
-              transitionEnabled ? styles.slide_transition : ""
-            } ${placeholderXStyle}`}
+          <SlidePlaceholder
+            className={placeholderXStyle}
+            transitionEnabled={transitionEnabled}
           >
             {slides[placeholderXIdx]}
-          </div>
-          <div
-            className={`${styles.slide_placeholder} ${
-              transitionEnabled ? styles.slide_transition : ""
-            } ${placeholderYStyle}`}
+          </SlidePlaceholder>
+          <SlidePlaceholder
+            className={placeholderYStyle}
+            transitionEnabled={transitionEnabled}
           >
             {slides[placeholderYIdx]}
-          </div>
-          <div
-            className={`${styles.slide_placeholder} ${
-              transitionEnabled ? styles.slide_transition : ""
-            } ${placeholderZStyle}`}
+          </SlidePlaceholder>
+          <SlidePlaceholder
+            className={placeholderZStyle}
+            transitionEnabled={transitionEnabled}
           >
             {slides[placeholderZIdx]}
-          </div>
+          </SlidePlaceholder>
         </div>
         <div className={styles.slideshow_buttons}>
           <a className={styles.mCSB_buttonRight} onClick={nextSlide}></a>

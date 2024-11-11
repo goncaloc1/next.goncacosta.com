@@ -1,6 +1,5 @@
 import React from "react";
 import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
-import { IconsCache } from "../components/icons-cache";
 import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
 import MainMenu from "../components/main-menu";
 import MainImage from "../components/main-image";
@@ -24,8 +23,6 @@ const Home = ({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <>
-      <IconsCache />
-
       <main>
         <div className="wrapper w-full">
           <div className="cell align-middle">

@@ -1,12 +1,10 @@
 import Head from "next/head";
 
 import { useWheel } from "../../hooks/useWheel";
-import { useFullScreen } from "../../hooks/useFullScreen";
 import NavigationMenu from "../../components/navigation-menu";
 
 export default function Oulu() {
   useWheel();
-  useFullScreen();
 
   return (
     <>

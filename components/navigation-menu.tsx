@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useFullScreen } from "../hooks/useFullScreen";
 
 type NavigationMenuProps = {
   bookUrl?: string;
@@ -11,6 +12,8 @@ const NavigationMenu = ({
   bookHref,
   backHref,
 }: NavigationMenuProps) => {
+  useFullScreen();
+
   return (
     <>
       <ul>

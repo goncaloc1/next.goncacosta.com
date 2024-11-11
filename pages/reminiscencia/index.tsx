@@ -25,7 +25,6 @@ import photoq from "/public/images/reminiscencia/q.jpg";
 import photos from "/public/images/reminiscencia/s.jpg";
 import photor from "/public/images/reminiscencia/r.jpg";
 
-import { useFullScreen } from "../../hooks/useFullScreen";
 import NavigationMenu from "../../components/navigation-menu";
 import Carousel from "../../components/carousel/carousel";
 import CarouselSlide, {
@@ -185,8 +184,6 @@ const slides = [
 ];
 
 export default function Reminiscencia() {
-  useFullScreen();
-
   return (
     <>
       <Head>

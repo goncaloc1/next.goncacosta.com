@@ -29,12 +29,10 @@ import photoy from "/public/images/alba/y.jpg";
 
 import Photo from "../../components/photo";
 import { useWheel } from "../../hooks/useWheel";
-import { useFullScreen } from "../../hooks/useFullScreen";
 import NavigationMenu from "../../components/navigation-menu";
 
 export default function Alba() {
   useWheel();
-  useFullScreen();
 
   return (
     <>

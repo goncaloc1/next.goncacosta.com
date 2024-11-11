@@ -23,13 +23,11 @@ import photop from "/public/images/when/p.jpg";
 import photoq from "/public/images/when/q.jpg";
 
 import { useWheel } from "../../hooks/useWheel";
-import { useFullScreen } from "../../hooks/useFullScreen";
 import Photo from "../../components/photo";
 import NavigationMenu from "../../components/navigation-menu";
 
 export default function When() {
   useWheel();
-  useFullScreen();
 
   return (
     <>

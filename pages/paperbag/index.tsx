@@ -14,13 +14,11 @@ import photoa from "/public/images/paperbag/a.jpg";
 import photoi from "/public/images/paperbag/i.jpg";
 
 import { useWheel } from "../../hooks/useWheel";
-import { useFullScreen } from "../../hooks/useFullScreen";
 import Photo from "../../components/photo";
 import NavigationMenu from "../../components/navigation-menu";
 
 export default function Paperbag() {
   useWheel();
-  useFullScreen();
 
   return (
     <>

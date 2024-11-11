@@ -1,6 +1,7 @@
 import { ReactNode, useState } from "react";
 
 import styles from "./Carousel.module.css";
+import SlidePlaceholder from "./slide-placeholder";
 
 enum Placeholder {
   X = "placeholderX",
@@ -38,26 +39,6 @@ const slideConfig = {
     },
   },
 };
-
-type SlidePlaceholderProps = {
-  children: ReactNode;
-  className: string;
-  transitionEnabled?: boolean;
-};
-
-const SlidePlaceholder = ({
-  children,
-  className,
-  transitionEnabled,
-}: SlidePlaceholderProps) => (
-  <div
-    className={`${styles.slide_placeholder} ${
-      transitionEnabled ? styles.slide_transition : ""
-    } ${className}`}
-  >
-    {children}
-  </div>
-);
 
 type CarouselProps = {
   slides: ReactNode[];

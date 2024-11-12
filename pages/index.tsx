@@ -4,6 +4,7 @@ import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
 import MainMenu from "../components/main-menu";
 import MainImage from "../components/main-image";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import Head from "next/head";
 
 type HomeProps = {
   navigationColors: NavigationColors;
@@ -23,6 +24,10 @@ const Home = ({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <>
+      <Head>
+        <title>: Gonçalo Costa</title>
+      </Head>
+
       <main>
         <div className="wrapper w-full">
           <div className="cell align-middle">

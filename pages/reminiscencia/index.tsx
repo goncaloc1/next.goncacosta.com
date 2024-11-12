@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-key*/
 
-import Head from "next/head";
 import styles from "./Reminiscencia.module.css";
 
 import photou from "/public/images/reminiscencia/u.jpg";
@@ -30,6 +29,9 @@ import Carousel from "../../components/carousel/carousel";
 import CarouselSlide, {
   CarouselSlideProps,
 } from "../../components/carousel/carousel-slide";
+import { ReactElement } from "react";
+import { NextPageWithLayout } from "../_app";
+import Layout from "../../components/layout";
 
 const defaultSlideClassName = styles.slide;
 
@@ -183,36 +185,37 @@ const slides = [
   </Slide>,
 ];
 
-export default function Reminiscencia() {
+const Reminiscencia: NextPageWithLayout = () => {
   return (
-    <>
-      <Head>
-        <title>Reminiscencia</title>
-        <meta
-          name="description"
-          content="Reminiscencia - Gonçalo Costa, 2011-12"
+    <div className="wrapper w-full">
+      <div className={`${styles.navigation_wrapper} cell align-top`}>
+        <NavigationMenu
+          bookUrl={
+            "https://issuu.com/goncacosta/docs/reminiscencia?mode=window&viewMode=doublePage"
+          }
         />
-      </Head>
+      </div>
 
-      <main>
-        <div className="wrapper w-full">
-          <div className={`${styles.navigation_wrapper} cell align-top`}>
-            <NavigationMenu
-              bookUrl={
-                "https://issuu.com/goncacosta/docs/reminiscencia?mode=window&viewMode=doublePage"
-              }
-            />
-          </div>
-
-          <div className="cell">
-            <Carousel
-              slides={slides}
-              defaultSlideClassName={defaultSlideClassName}
-              transitionEnabled={true}
-            />
-          </div>
-        </div>
-      </main>
-    </>
+      <div className="cell">
+        <Carousel
+          slides={slides}
+          defaultSlideClassName={defaultSlideClassName}
+          transitionEnabled={true}
+        />
+      </div>
+    </div>
   );
-}
+};
+
+Reminiscencia.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout
+      title={"Reminiscencia"}
+      metaDescription={"Reminiscencia - Gonçalo Costa, 2011-12"}
+    >
+      {page}
+    </Layout>
+  );
+};
+
+export default Reminiscencia;

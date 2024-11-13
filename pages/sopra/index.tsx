@@ -1,12 +1,9 @@
-import { useWheel } from "../../hooks/useWheel";
 import NavigationMenu from "../../components/navigation-menu";
 import Layout from "../../components/layout";
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "../_app";
 
 const Sopra: NextPageWithLayout = () => {
-  useWheel();
-
   return (
     <>
       <div className="wrapper">

@@ -27,15 +27,12 @@ import photox from "/public/images/alba/x.jpg";
 import photoy from "/public/images/alba/y.jpg";
 
 import Photo from "../../components/photo";
-import { useWheel } from "../../hooks/useWheel";
 import NavigationMenu from "../../components/navigation-menu";
 import { NextPageWithLayout } from "../_app";
 import { ReactElement } from "react";
 import Layout from "../../components/layout";
 
 const Alba: NextPageWithLayout = () => {
-  useWheel();
-
   return (
     <div className="wrapper">
       <div className="cell align-top">

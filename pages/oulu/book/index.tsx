@@ -1,12 +1,9 @@
-import { useWheel } from "../../../hooks/useWheel";
 import NavigationMenu from "../../../components/navigation-menu";
 import { ReactElement } from "react";
 import Layout from "../../../components/layout";
 import { NextPageWithLayout } from "../../_app";
 
 const OuluBook: NextPageWithLayout = () => {
-  useWheel();
-
   return (
     <>
       <div className="wrapper">

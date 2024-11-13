@@ -11,7 +11,6 @@ import photoe from "/public/images/paperbag/e.jpg";
 import photoa from "/public/images/paperbag/a.jpg";
 import photoi from "/public/images/paperbag/i.jpg";
 
-import { useWheel } from "../../hooks/useWheel";
 import Photo from "../../components/photo";
 import NavigationMenu from "../../components/navigation-menu";
 import { NextPageWithLayout } from "../_app";
@@ -19,8 +18,6 @@ import Layout from "../../components/layout";
 import { ReactElement } from "react";
 
 const Paperbag: NextPageWithLayout = () => {
-  useWheel();
-
   return (
     <div className="wrapper" style={{ width: "max-content" }}>
       <div className="cell align-top">

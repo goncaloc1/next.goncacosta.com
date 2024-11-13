@@ -22,7 +22,6 @@ import photoo from "/public/images/when/o.jpg";
 import photop from "/public/images/when/p.jpg";
 import photoq from "/public/images/when/q.jpg";
 
-import { useWheel } from "../../hooks/useWheel";
 import Photo from "../../components/photo";
 import NavigationMenu from "../../components/navigation-menu";
 import { NextPageWithLayout } from "../_app";
@@ -30,8 +29,6 @@ import { ReactElement } from "react";
 import Layout from "../../components/layout";
 
 const When: NextPageWithLayout = () => {
-  useWheel();
-
   return (
     <div className="wrapper">
       <div className="cell align-top">

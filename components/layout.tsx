@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { ReactNode } from "react";
+import MainWithHorizontalScroll from "./main-with-horizontal-scroll/main-with-horizontal-scroll";
 
 type LayoutProps = {
   children: ReactNode;
@@ -21,9 +22,11 @@ const Layout = ({
         <meta name="description" content={metaDescription} />
       </Head>
 
-      <main className={horizontalScrollEnabled ? "horizontal_scroll" : ""}>
-        {children}
-      </main>
+      {horizontalScrollEnabled ? (
+        <MainWithHorizontalScroll>{children}</MainWithHorizontalScroll>
+      ) : (
+        <main>{children}</main>
+      )}
     </>
   );
 };

@@ -1,0 +1,33 @@
+.first_image {
+  margin-left: 20px;
+}
+
+.w_full {
+  width: 300px;
+}
+
+@media (min-width: 640px) {
+  .w_full {
+    width: 370px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .first_image {
+    margin-left: 250px;
+  }
+
+  .w_full {
+    width: 650px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .first_image {
+    margin-left: 580px;
+  }
+
+  .w_full {
+    width: 750px;
+  }
+}

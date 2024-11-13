@@ -1,3 +1,5 @@
+import styles from "./When.module.css";
+
 import photoz from "/public/images/when/z.jpg";
 import whenZoomIn from "/public/images/when/when_zoom_in.png";
 import photoa from "/public/images/when/a.jpg";
@@ -31,161 +33,122 @@ const When: NextPageWithLayout = () => {
   useWheel();
 
   return (
-    <>
-      <div className="wrapper">
-        <div className="cell align-top">
-          <NavigationMenu
-            bookUrl={
-              "https://issuu.com/goncacosta/docs/when?mode=window&viewMode=doublePage"
-            }
-          />
-        </div>
+    <div className="wrapper">
+      <div className="cell align-top">
+        <NavigationMenu
+          bookUrl={
+            "https://issuu.com/goncacosta/docs/when?mode=window&viewMode=doublePage"
+          }
+        />
+      </div>
 
-        <div className="cell">
-          {/* TODO center horizontally instead of using margin-left */}
-          <div className="boxDistantXX w_full first_image">
-            <Photo src={photoz} priority={true} />
-          </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full} ${styles.first_image}`}>
+          <Photo src={photoz} priority={true} />
         </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={whenZoomIn} />
-          </div>
-        </div>
-
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photoa} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photob} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photoc} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photod} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photoe} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photof} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photog} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photog1} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photog2} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photoh} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photoi} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photoj} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photok} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photol} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photom} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photon} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photoo} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photop} />
-          </div>
-        </div>
-        <div className="cell">
-          <div className="boxDistantXX w_full">
-            <Photo src={photoq} />
-          </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={whenZoomIn} />
         </div>
       </div>
 
-      <style jsx>{`
-        .first_image {
-          margin-left: 20px;
-        }
-
-        .w_full {
-          width: 300px;
-        }
-
-        @media (min-width: 640px) {
-          .w_full {
-            width: 370px;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .first_image {
-            margin-left: 250px;
-          }
-
-          .w_full {
-            width: 650px;
-          }
-        }
-
-        @media (min-width: 1536px) {
-          .first_image {
-            margin-left: 580px;
-          }
-
-          .w_full {
-            width: 750px;
-          }
-        }
-      `}</style>
-    </>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photoa} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photob} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photoc} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photod} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photoe} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photof} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photog} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photog1} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photog2} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photoh} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photoi} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photoj} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photok} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photol} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photom} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photon} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photoo} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photop} />
+        </div>
+      </div>
+      <div className="cell">
+        <div className={`boxDistantXX ${styles.w_full}`}>
+          <Photo src={photoq} />
+        </div>
+      </div>
+    </div>
   );
 };
 

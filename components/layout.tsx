@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { ReactNode } from "react";
-import MainWithHorizontalScroll from "./main-with-horizontal-scroll/main-with-horizontal-scroll";
+import MainWithHorizontalScroll from "./main-with-horizontal-scroll";
 
 type LayoutProps = {
   children: ReactNode;

@@ -31,10 +31,6 @@ main {
   overflow: hidden;
 }
 
-main .mCSB_container {
-  height: 100%;
-}
-
 .wrapper {
   display: table;
   height: 100%;

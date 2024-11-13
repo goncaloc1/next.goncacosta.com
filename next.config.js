@@ -1,9 +1,6 @@
-/**
- * In local environment add 'unsafe-eval' in `script-src`
- */
 const ContentSecurityPolicy = `
   default-src 'none';
-  script-src 'self';
+  script-src 'self' ${process.env.NODE_ENV !== "production" && "'unsafe-eval'"};
   connect-src 'self' https://vitals.vercel-insights.com/v1/vitals;
   style-src 'self' 'unsafe-inline';
   font-src 'self' data:;

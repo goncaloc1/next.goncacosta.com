@@ -51,6 +51,14 @@
   padding: 0 0 16px 0;
 }
 
+.boxNarrow,
+.boxDistant,
+.boxDistantX,
+.boxDistantXX,
+.boxDistantXXX {
+  width: max-content;
+}
+
 .boxNarrow {
   margin: 0 20px 0 0px;
 }

@@ -187,7 +187,7 @@ const slides = [
 
 const Reminiscencia: NextPageWithLayout = () => {
   return (
-    <div className="wrapper w-full">
+    <div className="wrapper">
       <div className={`${styles.navigation_wrapper} cell align-top`}>
         <NavigationMenu
           bookUrl={
@@ -196,7 +196,7 @@ const Reminiscencia: NextPageWithLayout = () => {
         />
       </div>
 
-      <div className="cell">
+      <div className="cell w-full">
         <Carousel
           slides={slides}
           defaultSlideClassName={defaultSlideClassName}

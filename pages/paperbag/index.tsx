@@ -19,7 +19,7 @@ import { ReactElement } from "react";
 
 const Paperbag: NextPageWithLayout = () => {
   return (
-    <div className="wrapper" style={{ width: "max-content" }}>
+    <div className="wrapper">
       <div className="cell align-top">
         <NavigationMenu />
       </div>

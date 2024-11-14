@@ -29,11 +29,11 @@ const Home = ({
       </Head>
 
       <main>
-        <div className="wrapper w-full">
+        <div className="wrapper">
           <div className="cell align-middle">
             <MainMenu navigationColors={navigationColors} />
           </div>
-          <div className="cell">
+          <div className="cell w-full">
             <MainImage photoMetadata={photoMetadata} />
           </div>
         </div>

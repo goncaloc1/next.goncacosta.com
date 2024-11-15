@@ -6,10 +6,7 @@ import { NextPageWithLayout } from "../_app";
 const Oulu: NextPageWithLayout = () => {
   return (
     <>
-      <div className="wrapper">
-        <div className="cell align-top">
-          <NavigationMenu bookHref={"/oulu/book"} />
-        </div>
+      <>
         <div className="cell">
           <div className="header">
             <div id="description"></div>
@@ -89,7 +86,7 @@ const Oulu: NextPageWithLayout = () => {
             <img alt="photo" src="images/oulu/k.jpg" />
           </div>
         </div>
-      </div>
+      </>
 
       <style jsx>{`
         .hboxNarrow,
@@ -126,6 +123,7 @@ Oulu.getLayout = function getLayout(page: ReactElement) {
       title={"Oulu"}
       metaDescription={"Oulu - Gonçalo Costa, 2005-10"}
       horizontalScrollEnabled
+      slotNavigationMenu={<NavigationMenu bookHref={"/oulu/book"} />}
     >
       {page}
     </Layout>

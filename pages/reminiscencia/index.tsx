@@ -185,33 +185,28 @@ const slides = [
   </Slide>,
 ];
 
-const Reminiscencia: NextPageWithLayout = () => {
-  return (
-    <div className="wrapper">
-      <div className="cell align-top">
-        <NavigationMenu
-          bookUrl={
-            "https://issuu.com/goncacosta/docs/reminiscencia?mode=window&viewMode=doublePage"
-          }
-        />
-      </div>
-
-      <div className="cell w-full">
-        <Carousel
-          slides={slides}
-          defaultSlideClassName={defaultSlideClassName}
-          transitionEnabled={true}
-        />
-      </div>
-    </div>
-  );
-};
+const Reminiscencia: NextPageWithLayout = () => (
+  <div className="cell w-full">
+    <Carousel
+      slides={slides}
+      defaultSlideClassName={defaultSlideClassName}
+      transitionEnabled={true}
+    />
+  </div>
+);
 
 Reminiscencia.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout
       title={"Reminiscencia"}
       metaDescription={"Reminiscencia - Gonçalo Costa, 2011-12"}
+      slotNavigationMenu={
+        <NavigationMenu
+          bookUrl={
+            "https://issuu.com/goncacosta/docs/reminiscencia?mode=window&viewMode=doublePage"
+          }
+        />
+      }
     >
       {page}
     </Layout>

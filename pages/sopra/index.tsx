@@ -1,4 +1,3 @@
-import NavigationMenu from "../../components/navigation-menu";
 import Layout from "../../components/layout";
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "../_app";
@@ -6,10 +5,7 @@ import { NextPageWithLayout } from "../_app";
 const Sopra: NextPageWithLayout = () => {
   return (
     <>
-      <div className="wrapper">
-        <div className="cell align-top">
-          <NavigationMenu />
-        </div>
+      <>
         <div className="cell">
           <div className="header">
             <div id="description"></div>
@@ -154,7 +150,7 @@ const Sopra: NextPageWithLayout = () => {
             <img alt="photo" src="images/sopra/provenc0006.jpg" />
           </div>
         </div>
-      </div>
+      </>
 
       <style jsx>{`
         .boxNarrow,

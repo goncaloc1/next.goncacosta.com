@@ -27,17 +27,13 @@ import photox from "/public/images/alba/x.jpg";
 import photoy from "/public/images/alba/y.jpg";
 
 import Photo from "../../components/photo";
-import NavigationMenu from "../../components/navigation-menu";
 import { NextPageWithLayout } from "../_app";
 import { ReactElement } from "react";
 import Layout from "../../components/layout";
 
 const Alba: NextPageWithLayout = () => {
   return (
-    <div className="wrapper">
-      <div className="cell align-top">
-        <NavigationMenu />
-      </div>
+    <>
       <div className="cell">
         <div className="header">
           <div id={styles.description}>
@@ -354,7 +350,7 @@ const Alba: NextPageWithLayout = () => {
           <Photo src={photoy} />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

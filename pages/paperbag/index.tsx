@@ -12,17 +12,13 @@ import photoa from "/public/images/paperbag/a.jpg";
 import photoi from "/public/images/paperbag/i.jpg";
 
 import Photo from "../../components/photo";
-import NavigationMenu from "../../components/navigation-menu";
 import { NextPageWithLayout } from "../_app";
 import Layout from "../../components/layout";
 import { ReactElement } from "react";
 
 const Paperbag: NextPageWithLayout = () => {
   return (
-    <div className="wrapper">
-      <div className="cell align-top">
-        <NavigationMenu />
-      </div>
+    <>
       <div className="cell">
         <div className={`header ${styles.header}`}>
           <div id="description"></div>
@@ -84,7 +80,7 @@ const Paperbag: NextPageWithLayout = () => {
           <Photo id={styles.photo_i} src={photoi} />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

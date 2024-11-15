@@ -30,15 +30,7 @@ import Layout from "../../components/layout";
 
 const When: NextPageWithLayout = () => {
   return (
-    <div className="wrapper">
-      <div className="cell align-top">
-        <NavigationMenu
-          bookUrl={
-            "https://issuu.com/goncacosta/docs/when?mode=window&viewMode=doublePage"
-          }
-        />
-      </div>
-
+    <>
       <div className="cell">
         <div className={`boxDistantXX ${styles.w_full} ${styles.first_image}`}>
           <Photo src={photoz} priority={true} />
@@ -145,7 +137,7 @@ const When: NextPageWithLayout = () => {
           <Photo src={photoq} />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -157,6 +149,13 @@ When.getLayout = function getLayout(page: ReactElement) {
         "When was the last time someone wrote you a love letter? - Gonçalo Costa, 2009-10"
       }
       horizontalScrollEnabled
+      slotNavigationMenu={
+        <NavigationMenu
+          bookUrl={
+            "https://issuu.com/goncacosta/docs/when?mode=window&viewMode=doublePage"
+          }
+        />
+      }
     >
       {page}
     </Layout>

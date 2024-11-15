@@ -188,7 +188,7 @@ const slides = [
 const Reminiscencia: NextPageWithLayout = () => {
   return (
     <div className="wrapper">
-      <div className={`${styles.navigation_wrapper} cell align-top`}>
+      <div className="cell align-top">
         <NavigationMenu
           bookUrl={
             "https://issuu.com/goncacosta/docs/reminiscencia?mode=window&viewMode=doublePage"

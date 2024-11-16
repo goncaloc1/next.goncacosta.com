@@ -26,9 +26,7 @@ import photor from "/public/images/reminiscencia/r.jpg";
 
 import NavigationMenu from "../../components/navigation-menu";
 import Carousel from "../../components/carousel/carousel";
-import CarouselSlide, {
-  CarouselSlideProps,
-} from "../../components/carousel/carousel-slide";
+import { CarouselSlideProps } from "../../components/carousel/carousel-slide";
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "../_app";
 import Layout from "../../components/layout";
@@ -36,7 +34,7 @@ import Layout from "../../components/layout";
 const defaultSlideClassName = styles.slide;
 
 const Slide = (props: CarouselSlideProps) => (
-  <CarouselSlide {...{ className: defaultSlideClassName, ...props }} />
+  <Carousel.Slide {...{ className: defaultSlideClassName, ...props }} />
 );
 
 const slides = [

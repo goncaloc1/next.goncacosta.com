@@ -2,6 +2,7 @@ import { ReactNode, useState } from "react";
 
 import styles from "./Carousel.module.css";
 import SlidePlaceholder from "./slide-placeholder";
+import CarouselSlide from "./carousel-slide";
 
 enum Placeholder {
   X = "placeholderX",
@@ -46,11 +47,11 @@ type CarouselProps = {
   transitionEnabled?: boolean;
 };
 
-const Carousel = ({
+function Carousel({
   slides,
   defaultSlideClassName,
   transitionEnabled,
-}: CarouselProps) => {
+}: CarouselProps) {
   /**
    * We have three placeholders to deal with the active image and cache / buffer images. The idea is that
    * previous/next operations will rotate the active image in placeholders and therefore eliminate loading times.
@@ -166,6 +167,8 @@ const Carousel = ({
       </div>
     </>
   );
-};
+}
+
+Carousel.Slide = CarouselSlide;
 
 export default Carousel;

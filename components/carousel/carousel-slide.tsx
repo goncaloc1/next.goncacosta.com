@@ -2,25 +2,38 @@ import { StaticImageData } from "next/image";
 import Photo from "../photo";
 import { ReactNode } from "react";
 
-export type CarouselSlideProps = {
-  photoSrc?: StaticImageData;
-  photoPriority?: boolean;
+export type CarouselSlideProps =
+  | CarouselSlidePhotoProps
+  | CarouselSlideTextProps;
+
+type BaseCarouselSlideProps = {
   className?: string;
-  children?: ReactNode;
 };
 
-const CarouselSlide = ({
-  photoSrc,
-  photoPriority,
-  className,
-  children,
-}: CarouselSlideProps) => {
+type CarouselSlidePhotoProps = BaseCarouselSlideProps & {
+  photoSrc: StaticImageData;
+  photoPriority?: boolean;
+};
+
+type CarouselSlideTextProps = BaseCarouselSlideProps & {
+  children: ReactNode;
+};
+
+/**
+ * Type guard for @type CarouselSlidePhotoProps
+ */
+const isCarouselSlidePhoto = (
+  data: CarouselSlideProps
+): data is CarouselSlidePhotoProps =>
+  (data as CarouselSlidePhotoProps).photoSrc != null;
+
+const CarouselSlide = (props: CarouselSlideProps) => {
   return (
-    <div className={className}>
-      {photoSrc && !children ? (
-        <Photo src={photoSrc} priority={photoPriority} />
+    <div className={props.className}>
+      {isCarouselSlidePhoto(props) ? (
+        <Photo src={props.photoSrc} priority={props.photoPriority} />
       ) : (
-        children
+        props.children
       )}
     </div>
   );

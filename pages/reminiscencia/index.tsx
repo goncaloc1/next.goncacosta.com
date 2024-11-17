@@ -26,32 +26,25 @@ import photor from "/public/images/reminiscencia/r.jpg";
 
 import NavigationMenu from "../../components/navigation-menu";
 import Carousel from "../../components/carousel/carousel";
-import { CarouselSlideProps } from "../../components/carousel/carousel-slide";
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "../_app";
 import Layout from "../../components/layout";
 
-const defaultSlideClassName = styles.slide;
-
-const Slide = (props: CarouselSlideProps) => (
-  <Carousel.Slide {...{ className: defaultSlideClassName, ...props }} />
-);
-
 const Reminiscencia: NextPageWithLayout = () => (
   <div className="cell w-full">
     <Carousel
-      defaultSlideClassName={defaultSlideClassName}
+      defaultSlideClassName={styles.slide}
       transitionEnabled={true}
       slides={[
-        <Slide photoSrc={photou} photoPriority={true} />,
-        <Slide>
+        <Carousel.Slide photoSrc={photou} photoPriority={true} />,
+        <Carousel.Slide>
           <div className={`${styles.text_wrapper} ${styles.main_title}`}>
             <p>Reminiscencia</p>
           </div>
-        </Slide>,
-        <Slide photoSrc={photoa} />,
-        <Slide photoSrc={photob} />,
-        <Slide>
+        </Carousel.Slide>,
+        <Carousel.Slide photoSrc={photoa} />,
+        <Carousel.Slide photoSrc={photob} />,
+        <Carousel.Slide>
           <div className={styles.text_wrapper}>
             <p>
               For a long time, life deals with the still-tender memory of
@@ -63,17 +56,17 @@ const Reminiscencia: NextPageWithLayout = () => (
             </p>
             <p className={styles.author}>Walter Benjamin</p>
           </div>
-        </Slide>,
-        <Slide photoSrc={photoc} />,
-        <Slide photoSrc={photod} />,
-        <Slide photoSrc={photoe} />,
-        <Slide photoSrc={photof} />,
-        <Slide photoSrc={photog} />,
-        <Slide photoSrc={photot} className={styles.slideL} />,
-        <Slide photoSrc={photoh} />,
-        <Slide photoSrc={photoi} />,
-        <Slide photoSrc={photoj} />,
-        <Slide>
+        </Carousel.Slide>,
+        <Carousel.Slide photoSrc={photoc} />,
+        <Carousel.Slide photoSrc={photod} />,
+        <Carousel.Slide photoSrc={photoe} />,
+        <Carousel.Slide photoSrc={photof} />,
+        <Carousel.Slide photoSrc={photog} />,
+        <Carousel.Slide photoSrc={photot} className={styles.slideL} />,
+        <Carousel.Slide photoSrc={photoh} />,
+        <Carousel.Slide photoSrc={photoi} />,
+        <Carousel.Slide photoSrc={photoj} />,
+        <Carousel.Slide>
           <div className={styles.text_wrapper}>
             <p>I remember my father said to me something about memory, a</p>
             <p>
@@ -156,12 +149,12 @@ const Reminiscencia: NextPageWithLayout = () => (
             <p>on those memories and not on the actual Photos themselves.”</p>
             <p className={styles.author}>Jorge Luis Borges</p>
           </div>
-        </Slide>,
-        <Slide photoSrc={photok} />,
-        <Slide photoSrc={photol} />,
-        <Slide photoSrc={photom} className={styles.slideS} />,
-        <Slide photoSrc={photon} />,
-        <Slide>
+        </Carousel.Slide>,
+        <Carousel.Slide photoSrc={photok} />,
+        <Carousel.Slide photoSrc={photol} />,
+        <Carousel.Slide photoSrc={photom} className={styles.slideS} />,
+        <Carousel.Slide photoSrc={photon} />,
+        <Carousel.Slide>
           <div className={styles.text_wrapper}>
             <p>
               Because we don’t know when we will die, we get to think of life as
@@ -190,13 +183,13 @@ const Reminiscencia: NextPageWithLayout = () => (
             <p>rise? Perhaps 20. And yet it all seems limitless.</p>
             <p className={styles.author}>Paul Bowles</p>
           </div>
-        </Slide>,
-        <Slide photoSrc={photoo} className={styles.slideL} />,
-        <Slide photoSrc={photop} />,
-        <Slide photoSrc={photoq} />,
-        <Slide photoSrc={photos} className={styles.slideL} />,
-        <Slide photoSrc={photor} />,
-        <Slide>
+        </Carousel.Slide>,
+        <Carousel.Slide photoSrc={photoo} className={styles.slideL} />,
+        <Carousel.Slide photoSrc={photop} />,
+        <Carousel.Slide photoSrc={photoq} />,
+        <Carousel.Slide photoSrc={photos} className={styles.slideL} />,
+        <Carousel.Slide photoSrc={photor} />,
+        <Carousel.Slide>
           <div className={`${styles.text_wrapper} ${styles.last}`}>
             <p className={styles.title}>Reminiscencia</p>
             <p className={styles.author}>Gonçalo Costa</p>
@@ -213,7 +206,7 @@ const Reminiscencia: NextPageWithLayout = () => (
               Bowles, Paul (2004). <i>The Sheltering Sky.</i> Penguin classics.
             </p>
           </div>
-        </Slide>,
+        </Carousel.Slide>,
       ]}
     />
   </div>

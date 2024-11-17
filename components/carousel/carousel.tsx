@@ -3,6 +3,7 @@ import { ReactNode, useState } from "react";
 import styles from "./Carousel.module.css";
 import SlidePlaceholder from "./slide-placeholder";
 import CarouselSlide from "./carousel-slide";
+import { CarouselProvider } from "./use-carousel-context";
 
 enum Placeholder {
   X = "placeholderX",
@@ -136,36 +137,32 @@ function Carousel({
   };
 
   return (
-    <>
-      <div>
-        <div
-          className={`${styles.my_cycle_slideshow} ${defaultSlideClassName}`}
+    <CarouselProvider defaultSlideClassName={defaultSlideClassName}>
+      <div className={`${styles.my_cycle_slideshow} ${defaultSlideClassName}`}>
+        <SlidePlaceholder
+          className={placeholderXStyle}
+          transitionEnabled={transitionEnabled}
         >
-          <SlidePlaceholder
-            className={placeholderXStyle}
-            transitionEnabled={transitionEnabled}
-          >
-            {slides[placeholderXIdx]}
-          </SlidePlaceholder>
-          <SlidePlaceholder
-            className={placeholderYStyle}
-            transitionEnabled={transitionEnabled}
-          >
-            {slides[placeholderYIdx]}
-          </SlidePlaceholder>
-          <SlidePlaceholder
-            className={placeholderZStyle}
-            transitionEnabled={transitionEnabled}
-          >
-            {slides[placeholderZIdx]}
-          </SlidePlaceholder>
-        </div>
-        <div className={styles.slideshow_buttons}>
-          <a className={styles.mCSB_buttonRight} onClick={nextSlide}></a>
-          <a className={styles.mCSB_buttonLeft} onClick={previousSlide}></a>
-        </div>
+          {slides[placeholderXIdx]}
+        </SlidePlaceholder>
+        <SlidePlaceholder
+          className={placeholderYStyle}
+          transitionEnabled={transitionEnabled}
+        >
+          {slides[placeholderYIdx]}
+        </SlidePlaceholder>
+        <SlidePlaceholder
+          className={placeholderZStyle}
+          transitionEnabled={transitionEnabled}
+        >
+          {slides[placeholderZIdx]}
+        </SlidePlaceholder>
       </div>
-    </>
+      <div className={styles.slideshow_buttons}>
+        <a className={styles.mCSB_buttonRight} onClick={nextSlide}></a>
+        <a className={styles.mCSB_buttonLeft} onClick={previousSlide}></a>
+      </div>
+    </CarouselProvider>
   );
 }
 

@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
 import Photo from "../photo";
 import { ReactNode } from "react";
+import { useCarouselContext } from "./use-carousel-context";
 
 export type CarouselSlideProps =
   | CarouselSlidePhotoProps
@@ -28,8 +29,10 @@ const isCarouselSlidePhoto = (
   (data as CarouselSlidePhotoProps).photoSrc != null;
 
 const CarouselSlide = (props: CarouselSlideProps) => {
+  const { defaultSlideClassName } = useCarouselContext();
+
   return (
-    <div className={props.className}>
+    <div className={props.className ?? defaultSlideClassName}>
       {isCarouselSlidePhoto(props) ? (
         <Photo src={props.photoSrc} priority={props.photoPriority} />
       ) : (

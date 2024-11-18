@@ -22,121 +22,44 @@ import photoo from "/public/images/when/o.jpg";
 import photop from "/public/images/when/p.jpg";
 import photoq from "/public/images/when/q.jpg";
 
-import Photo from "../../components/photo";
 import NavigationMenu from "../../components/navigation-menu";
 import { NextPageWithLayout } from "../_app";
 import { ReactElement } from "react";
 import Layout from "../../components/layout";
+import { Box as BaseBox, BoxProps } from "../../components/box/box";
+
+const Box = (props: BoxProps) => (
+  <BaseBox photoWidth={styles.box_width} className="boxDistantXX" {...props} />
+);
 
 const When: NextPageWithLayout = () => {
   return (
     <>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full} ${styles.first_image}`}>
-          <Photo src={photoz} priority={true} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={whenZoomIn} />
-        </div>
-      </div>
-
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photoa} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photob} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photoc} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photod} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photoe} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photof} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photog} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photog1} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photog2} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photoh} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photoi} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photoj} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photok} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photol} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photom} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photon} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photoo} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photop} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`boxDistantXX ${styles.w_full}`}>
-          <Photo src={photoq} />
-        </div>
-      </div>
+      <Box
+        photoSrc={photoz}
+        photoPriority={true}
+        className={`boxDistantXX ${styles.first_image}`}
+      />
+      <Box photoSrc={whenZoomIn} />
+      <Box photoSrc={photoa} />
+      <Box photoSrc={photob} />
+      <Box photoSrc={photoc} />
+      <Box photoSrc={photod} />
+      <Box photoSrc={photoe} />
+      <Box photoSrc={photof} />
+      <Box photoSrc={photog} />
+      <Box photoSrc={photog1} />
+      <Box photoSrc={photog2} />
+      <Box photoSrc={photoh} />
+      <Box photoSrc={photoi} />
+      <Box photoSrc={photoj} />
+      <Box photoSrc={photok} />
+      <Box photoSrc={photol} />
+      <Box photoSrc={photom} />
+      <Box photoSrc={photon} />
+      <Box photoSrc={photoo} />
+      <Box photoSrc={photop} />
+      <Box photoSrc={photoq} />
     </>
   );
 };

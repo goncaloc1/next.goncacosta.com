@@ -26,15 +26,19 @@ import photow from "/public/images/alba/w.jpg";
 import photox from "/public/images/alba/x.jpg";
 import photoy from "/public/images/alba/y.jpg";
 
-import Photo from "../../components/photo";
 import { NextPageWithLayout } from "../_app";
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
 import Layout from "../../components/layout";
+import { Box as BaseBox, BoxProps } from "../../components/box/box";
+
+const Box = (props: BoxProps) => (
+  <BaseBox photoWidth={styles.box_width} {...props} />
+);
 
 const Alba: NextPageWithLayout = () => {
   return (
     <>
-      <div className="cell">
+      <Box>
         <div className="header">
           <div id={styles.description}>
             <br />
@@ -50,28 +54,12 @@ const Alba: NextPageWithLayout = () => {
             <div className="title_right">2011</div>
           </div>
         </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photoa} priority={true} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photob} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photoc} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photod} />
-        </div>
-      </div>
-      <div className="cell">
+      </Box>
+      <Box photoSrc={photoa} photoPriority={true} />
+      <Box photoSrc={photob} />
+      <Box photoSrc={photoc} />
+      <Box photoSrc={photod} />
+      <Box>
         <div className={styles.box_text_wrapper_1}>
           <div className={styles.box_text}>
             "(...)You know this used to be a hell of a good country.
@@ -132,23 +120,11 @@ const Alba: NextPageWithLayout = () => {
             <i>Easy Rider, Dennis Hopper</i>
           </div>
         </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photoe} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photof} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistantX`}>
-          <Photo src={photog} />
-        </div>
-      </div>
-      <div className="cell">
+      </Box>
+      <Box photoSrc={photoe} />
+      <Box photoSrc={photof} />
+      <Box photoSrc={photog} gap="boxDistantX" />
+      <Box>
         <div className={styles.box_text_wrapper_2}>
           <div className={styles.box_text}>
             22.02.11
@@ -179,28 +155,12 @@ const Alba: NextPageWithLayout = () => {
             <br />
           </div>
         </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistantX`}>
-          <Photo src={photoh} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photoi} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photoj} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistantX`}>
-          <Photo src={photok} />
-        </div>
-      </div>
-      <div className="cell">
+      </Box>
+      <Box photoSrc={photoh} gap="boxDistantX" />
+      <Box photoSrc={photoi} />
+      <Box photoSrc={photoj} />
+      <Box photoSrc={photok} gap="boxDistantX" />
+      <Box>
         <div className={styles.box_text_wrapper_3}>
           <div className={styles.box_text}>
             27.03.11
@@ -221,43 +181,15 @@ const Alba: NextPageWithLayout = () => {
             <br />
           </div>
         </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photol} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photom} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photon} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photoo} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photop} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photoq} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistantX`}>
-          <Photo src={photor} />
-        </div>
-      </div>
-      <div className="cell">
+      </Box>
+      <Box photoSrc={photol} />
+      <Box photoSrc={photom} />
+      <Box photoSrc={photon} />
+      <Box photoSrc={photoo} />
+      <Box photoSrc={photop} />
+      <Box photoSrc={photoq} />
+      <Box photoSrc={photor} gap="boxDistantX" />
+      <Box>
         <div className={styles.box_text_wrapper_4}>
           <div className={styles.box_text}>
             "(...)I don't care, I move.
@@ -289,33 +221,13 @@ const Alba: NextPageWithLayout = () => {
             <i>Sans Toit Ni Loi, Agnès Varda</i>
           </div>
         </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photos} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photot} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photou} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photov} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photow} />
-        </div>
-      </div>
-      <div className="cell">
+      </Box>
+      <Box photoSrc={photos} />
+      <Box photoSrc={photot} />
+      <Box photoSrc={photou} />
+      <Box photoSrc={photov} />
+      <Box photoSrc={photow} />
+      <Box>
         <div className={styles.box_text_wrapper_5}>
           <div className={styles.box_text}>
             06.06.11
@@ -339,17 +251,9 @@ const Alba: NextPageWithLayout = () => {
             <br />
           </div>
         </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistant`}>
-          <Photo src={photox} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={`${styles.box_width} boxDistantXX`}>
-          <Photo src={photoy} />
-        </div>
-      </div>
+      </Box>
+      <Box photoSrc={photox} />
+      <Box photoSrc={photoy} gap="boxDistantXX" />
     </>
   );
 };

@@ -5,10 +5,11 @@ import Photo from "../photo";
 export type BoxProps = BoxPhotoProps | BoxTextProps;
 
 type BoxPhotoProps = {
-  gap?: string;
   photoSrc: StaticImageData;
+  photoId?: string;
   photoWidth?: string;
   photoPriority?: boolean;
+  className?: string;
 };
 
 type BoxTextProps = {
@@ -24,8 +25,12 @@ const isBoxPhoto = (data: BoxProps): data is BoxPhotoProps =>
 export const Box = (props: BoxProps) => (
   <div className="cell">
     {isBoxPhoto(props) ? (
-      <div className={`${props.photoWidth ?? ""} ${props.gap ?? "boxDistant"}`}>
-        <Photo src={props.photoSrc} priority={props.photoPriority} />
+      <div className={`${props.photoWidth ?? ""} ${props.className ?? ""}`}>
+        <Photo
+          src={props.photoSrc}
+          id={props.photoId}
+          priority={props.photoPriority}
+        />
       </div>
     ) : (
       <>{props.children}</>

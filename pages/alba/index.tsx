@@ -32,7 +32,7 @@ import Layout from "../../components/layout";
 import { Box as BaseBox, BoxProps } from "../../components/box/box";
 
 const Box = (props: BoxProps) => (
-  <BaseBox photoWidth={styles.box_width} {...props} />
+  <BaseBox photoWidth={styles.box_width} className="boxDistant" {...props} />
 );
 
 const Alba: NextPageWithLayout = () => {
@@ -123,7 +123,7 @@ const Alba: NextPageWithLayout = () => {
       </Box>
       <Box photoSrc={photoe} />
       <Box photoSrc={photof} />
-      <Box photoSrc={photog} gap="boxDistantX" />
+      <Box photoSrc={photog} className="boxDistantX" />
       <Box>
         <div className={styles.box_text_wrapper_2}>
           <div className={styles.box_text}>
@@ -156,10 +156,10 @@ const Alba: NextPageWithLayout = () => {
           </div>
         </div>
       </Box>
-      <Box photoSrc={photoh} gap="boxDistantX" />
+      <Box photoSrc={photoh} className="boxDistantX" />
       <Box photoSrc={photoi} />
       <Box photoSrc={photoj} />
-      <Box photoSrc={photok} gap="boxDistantX" />
+      <Box photoSrc={photok} className="boxDistantX" />
       <Box>
         <div className={styles.box_text_wrapper_3}>
           <div className={styles.box_text}>
@@ -188,7 +188,7 @@ const Alba: NextPageWithLayout = () => {
       <Box photoSrc={photoo} />
       <Box photoSrc={photop} />
       <Box photoSrc={photoq} />
-      <Box photoSrc={photor} gap="boxDistantX" />
+      <Box photoSrc={photor} className="boxDistantX" />
       <Box>
         <div className={styles.box_text_wrapper_4}>
           <div className={styles.box_text}>
@@ -253,7 +253,7 @@ const Alba: NextPageWithLayout = () => {
         </div>
       </Box>
       <Box photoSrc={photox} />
-      <Box photoSrc={photoy} gap="boxDistantXX" />
+      <Box photoSrc={photoy} className="boxDistantXX" />
     </>
   );
 };

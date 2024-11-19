@@ -129,6 +129,10 @@ main {
 }
 
 /* Utility Classes */
+.h-full {
+  height: 100%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -139,4 +143,8 @@ main {
 
 .align-middle {
   vertical-align: middle;
+}
+
+.flex {
+  display: flex;
 }

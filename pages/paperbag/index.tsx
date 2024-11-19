@@ -11,15 +11,15 @@ import photoe from "/public/images/paperbag/e.jpg";
 import photoa from "/public/images/paperbag/a.jpg";
 import photoi from "/public/images/paperbag/i.jpg";
 
-import Photo from "../../components/photo";
 import { NextPageWithLayout } from "../_app";
 import Layout from "../../components/layout";
 import { ReactElement } from "react";
+import { Box } from "../../components/box/box";
 
 const Paperbag: NextPageWithLayout = () => {
   return (
     <>
-      <div className="cell">
+      <Box>
         <div className={`header ${styles.header}`}>
           <div id="description"></div>
           <div className="title">
@@ -29,57 +29,58 @@ const Paperbag: NextPageWithLayout = () => {
             <div className="title_right">2008</div>
           </div>
         </div>
-      </div>
-      <div className="cell">
-        <div className={styles.boxNarrow}>
-          <Photo id={styles.photo_1} src={photo1} priority={true} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={styles.boxDistantX}>
-          <Photo id={styles.photo_5} src={photo5} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={styles.boxDistantX}>
-          <Photo id={styles.photo_7} src={photo7} />
-        </div>
-      </div>
-      <div className={styles.cell_bottom}>
-        <div className={styles.boxNarrow}>
-          <Photo id={styles.photo_f} src={photof} />
-        </div>
-      </div>
-      <div className={styles.cell_bottom}>
-        <div className={styles.boxDistantX}>
-          <Photo id={styles.photo_g} src={photog} />
-        </div>
-      </div>
-      <div className="cell">
-        <div id={styles.photo_h_box} className={styles.boxDistantXX}>
-          <Photo id={styles.photo_h} src={photoh} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={styles.boxDistantXXX}>
-          <Photo id={styles.photo_6} src={photo6} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={styles.boxNarrow}>
-          <Photo id={styles.photo_e} src={photoe} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={styles.boxDistantXX}>
-          <Photo id={styles.photo_a} src={photoa} />
-        </div>
-      </div>
-      <div className="cell">
-        <div className={styles.boxDistantX}>
-          <Photo id={styles.photo_i} src={photoi} />
-        </div>
-      </div>
+      </Box>
+      <Box
+        photoSrc={photo1}
+        photoId={styles.photo_1}
+        photoPriority={true}
+        className={styles.boxNarrow}
+      />
+      <Box
+        photoSrc={photo5}
+        photoId={styles.photo_5}
+        className={styles.boxDistantX}
+      />
+      <Box
+        photoSrc={photo7}
+        photoId={styles.photo_7}
+        className={styles.boxDistantX}
+      />
+      <Box
+        photoSrc={photof}
+        photoId={styles.photo_f}
+        className={`${styles.boxNarrow} h-full flex`}
+      />
+      <Box
+        photoSrc={photog}
+        photoId={styles.photo_g}
+        className={`${styles.boxDistantX} h-full flex`}
+      />
+      <Box
+        photoSrc={photoh}
+        photoId={styles.photo_h}
+        className={styles.boxDistantXX}
+      />
+      <Box
+        photoSrc={photo6}
+        photoId={styles.photo_6}
+        className={styles.boxDistantXXX}
+      />
+      <Box
+        photoSrc={photoe}
+        photoId={styles.photo_e}
+        className={styles.boxNarrow}
+      />
+      <Box
+        photoSrc={photoa}
+        photoId={styles.photo_a}
+        className={styles.boxDistantXX}
+      />
+      <Box
+        photoSrc={photoi}
+        photoId={styles.photo_i}
+        className={styles.boxDistantX}
+      />
     </>
   );
 };

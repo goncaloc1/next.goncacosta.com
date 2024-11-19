@@ -13,14 +13,19 @@
 #photo_f {
   width: 572px;
   height: 380px;
+  align-self: flex-end;
+  margin-bottom: 16px;
 }
 #photo_g {
   width: 575px;
   height: 380px;
+  align-self: flex-end;
+  margin-bottom: 16px;
 }
 #photo_h {
   width: 566px;
   height: 380px;
+  margin-top: -150px;
 }
 #photo_6 {
   width: 800px;
@@ -45,12 +50,6 @@
   margin: 0 100px 0 0px;
 }
 
-.cell_bottom {
-  display: table-cell;
-  vertical-align: bottom;
-  padding: 0 0 16px 0;
-}
-
 .boxNarrow,
 .boxDistant,
 .boxDistantX,
@@ -73,8 +72,4 @@
 }
 .boxDistantXXX {
   margin: 0 1100px 0 0px;
-}
-
-#photo_h_box {
-  height: 552px;
 }

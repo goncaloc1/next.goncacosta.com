@@ -12,6 +12,7 @@ const Photo = ({ src, priority, id }: PhotoProps) => {
       id={id}
       alt="photo"
       src={src}
+      quality={85}
       priority={priority}
       loading={priority ? undefined : "eager"}
       style={{

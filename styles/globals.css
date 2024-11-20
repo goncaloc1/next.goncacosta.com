@@ -137,6 +137,10 @@ main {
   width: 100%;
 }
 
+.max-w-max {
+  width: max-content;
+}
+
 .align-top {
   vertical-align: top;
 }

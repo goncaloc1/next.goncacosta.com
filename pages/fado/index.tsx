@@ -35,18 +35,18 @@ const Fado: NextPageWithLayout = () => {
         </div>
       </Box>
       <Box photoSrc={photo1} photoPriority={true} className="boxDistant" />
-      <Box photoSrc={photo2} photoPriority={true} className="hboxNarrow" />
-      <Box photoSrc={photo3} className="hboxNarrow" />
-      <Box photoSrc={photo4} className="hboxNarrow" />
-      <Box photoSrc={photo5} className="hboxDistantX" />
-      <Box photoSrc={photo6} className="vboxDistant" />
-      <Box photoSrc={photo7} className="hboxNarrow" />
-      <Box photoSrc={photo8} className="hboxNarrow" />
-      <Box photoSrc={photo9} className="hboxNarrow" />
-      <Box photoSrc={photo10} className="hboxNarrow" />
-      <Box photoSrc={photo11} className="hboxNarrow" />
-      <Box photoSrc={photo12} className="hboxNarrow" />
-      <Box photoSrc={photo13} className="hboxDistantXX" />
+      <Box photoSrc={photo2} photoPriority={true} className="boxNarrow" />
+      <Box photoSrc={photo3} className="boxNarrow" />
+      <Box photoSrc={photo4} className="boxNarrow" />
+      <Box photoSrc={photo5} className="boxDistantX" />
+      <Box photoSrc={photo6} className="boxDistant" />
+      <Box photoSrc={photo7} className="boxNarrow" />
+      <Box photoSrc={photo8} className="boxNarrow" />
+      <Box photoSrc={photo9} className="boxNarrow" />
+      <Box photoSrc={photo10} className="boxNarrow" />
+      <Box photoSrc={photo11} className="boxNarrow" />
+      <Box photoSrc={photo12} className="boxNarrow" />
+      <Box photoSrc={photo13} className="boxDistantXX" />
     </>
   );
 };

@@ -35,20 +35,20 @@ const Oulu: NextPageWithLayout = () => {
           </div>
         </div>
       </Box>
-      <Box photoSrc={photo4} photoPriority={true} className="hboxNarrow" />
-      <Box photoSrc={photo20} photoPriority={true} className="hboxNarrow" />
-      <Box photoSrc={photo30} photoPriority={true} className="hboxDistant" />
-      <Box photoSrc={photo31} className="hboxDistant" />
-      <Box photoSrc={photoq} className="hboxDistantXX" />
-      <Box photoSrc={photog} className="hboxDistantXX" />
-      <Box photoSrc={photo18} className="hboxDistant" />
-      <Box photoSrc={photo99} className="hboxDistantXX" />
-      <Box photoSrc={photoj} className="hboxDistant" />
-      <Box photoSrc={photo98} className="hboxNarrow" />
-      <Box photoSrc={photo28} className="hboxDistantX" />
-      <Box photoSrc={photof} className="hboxDistant" />
-      <Box photoSrc={photoi} className="hboxDistantXX" />
-      <Box photoSrc={photok} className="hboxDistantXX" />
+      <Box photoSrc={photo4} photoPriority={true} className="boxNarrow" />
+      <Box photoSrc={photo20} photoPriority={true} className="boxNarrow" />
+      <Box photoSrc={photo30} photoPriority={true} className="boxDistant" />
+      <Box photoSrc={photo31} className="boxDistant" />
+      <Box photoSrc={photoq} className="boxDistantXX" />
+      <Box photoSrc={photog} className="boxDistantXX" />
+      <Box photoSrc={photo18} className="boxDistant" />
+      <Box photoSrc={photo99} className="boxDistantXX" />
+      <Box photoSrc={photoj} className="boxDistant" />
+      <Box photoSrc={photo98} className="boxNarrow" />
+      <Box photoSrc={photo28} className="boxDistantX" />
+      <Box photoSrc={photof} className="boxDistant" />
+      <Box photoSrc={photoi} className="boxDistantXX" />
+      <Box photoSrc={photok} className="boxDistantXX" />
     </>
   );
 };

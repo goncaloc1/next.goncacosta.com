@@ -75,57 +75,32 @@ main {
 }
 
 .box,
-.boxbox,
 .boxNarrow,
 .boxDistant,
 .boxDistantX,
-.boxDistantXX,
-.hbox,
-.hboxbox,
-.hboxNarrow,
-.hboxDistant,
-.hboxDistantX,
-.hboxDistantXX,
-.vbox,
-.vboxbox,
-.vboxNarrow,
-.vboxDistant,
-.vboxDistantX,
-.vboxDistantXX {
+.boxDistantXX {
   position: relative;
   float: left;
   text-align: center;
 }
 
-.boxNarrow,
-.hboxNarrow,
-.vboxNarrow {
+.boxNarrow {
   margin: 0 20px 0 0px;
 }
-.box,
-.hbox,
-.vbox {
+.box {
   margin: 0 40px 0 0px;
 }
-.boxbox,
-.hboxbox,
-.vboxbox {
-  margin: 0 80px 0 0px;
-}
-.boxDistant,
-.hboxDistant,
-.vboxDistant {
+.boxDistant {
   margin: 0 150px 0 0px;
 }
-.boxDistantX,
-.hboxDistantX,
-.vboxDistantX {
+.boxDistantX {
   margin: 0 300px 0 0px;
 }
-.boxDistantXX,
-.hboxDistantXX,
-.vboxDistantXX {
+.boxDistantXX {
   margin: 0 600px 0 0px;
+}
+.boxDistantXXX {
+  margin: 0 1100px 0 0px;
 }
 
 /* Utility Classes */

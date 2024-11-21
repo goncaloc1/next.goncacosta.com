@@ -14,7 +14,9 @@ import photoi from "/public/images/paperbag/i.jpg";
 import { NextPageWithLayout } from "../_app";
 import Layout from "../../components/layout";
 import { ReactElement } from "react";
-import { Box } from "../../components/box/box";
+import { Box as BaseBox, BoxProps } from "../../components/box/box";
+
+const Box = (props: BoxProps) => <BaseBox photoWidth="max-w-max" {...props} />;
 
 const Paperbag: NextPageWithLayout = () => {
   return (
@@ -34,53 +36,37 @@ const Paperbag: NextPageWithLayout = () => {
         photoSrc={photo1}
         photoId={styles.photo_1}
         photoPriority={true}
-        className={styles.boxNarrow}
+        className="boxNarrow"
       />
-      <Box
-        photoSrc={photo5}
-        photoId={styles.photo_5}
-        className={styles.boxDistantX}
-      />
-      <Box
-        photoSrc={photo7}
-        photoId={styles.photo_7}
-        className={styles.boxDistantX}
-      />
+      <Box photoSrc={photo5} photoId={styles.photo_5} className="boxDistantX" />
+      <Box photoSrc={photo7} photoId={styles.photo_7} className="boxDistantX" />
       <Box
         photoSrc={photof}
         photoId={styles.photo_f}
-        className={`${styles.boxNarrow} h-full flex`}
+        className={`boxNarrow h-full flex`}
       />
       <Box
         photoSrc={photog}
         photoId={styles.photo_g}
-        className={`${styles.boxDistantX} h-full flex`}
+        className={`boxDistantX h-full flex`}
       />
       <Box
         photoSrc={photoh}
         photoId={styles.photo_h}
-        className={styles.boxDistantXX}
+        className="boxDistantXX"
       />
       <Box
         photoSrc={photo6}
         photoId={styles.photo_6}
-        className={styles.boxDistantXXX}
+        className="boxDistantXXX"
       />
-      <Box
-        photoSrc={photoe}
-        photoId={styles.photo_e}
-        className={styles.boxNarrow}
-      />
+      <Box photoSrc={photoe} photoId={styles.photo_e} className="boxNarrow" />
       <Box
         photoSrc={photoa}
         photoId={styles.photo_a}
-        className={styles.boxDistantXX}
+        className="boxDistantXX"
       />
-      <Box
-        photoSrc={photoi}
-        photoId={styles.photo_i}
-        className={styles.boxDistantX}
-      />
+      <Box photoSrc={photoi} photoId={styles.photo_i} className="boxDistantX" />
     </>
   );
 };

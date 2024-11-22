@@ -1,5 +1,3 @@
-import styles from "./Oulu.module.css";
-
 import photo4 from "/public/images/oulu/4.jpg";
 import photo20 from "/public/images/oulu/20.jpg";
 import photo30 from "/public/images/oulu/30.jpg";
@@ -27,7 +25,7 @@ const Oulu: NextPageWithLayout = () => {
   return (
     <>
       <Box>
-        <div className={`header ${styles.header}`}>
+        <div className="header">
           <div id="description"></div>
           <div className="title">
             <div className="title_left">Oulu</div>

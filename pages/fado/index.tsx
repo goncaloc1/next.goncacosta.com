@@ -1,5 +1,3 @@
-import styles from "./Fado.module.css";
-
 import photo1 from "/public/images/fado/proven0004.jpg";
 import photo2 from "/public/images/fado/pro0018.jpg";
 import photo3 from "/public/images/fado/prov0002.jpg";
@@ -25,8 +23,8 @@ const Box = (props: BoxProps) => <BaseBox photoWidth="max-w-max" {...props} />;
 const Fado: NextPageWithLayout = () => {
   return (
     <>
-      <Box className="cell">
-        <div className={`header ${styles.header}`}>
+      <Box>
+        <div className="header">
           <div id="description"></div>
           <div className="title">
             <div className="title_left">Fado</div>

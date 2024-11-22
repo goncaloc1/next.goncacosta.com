@@ -1,3 +1,8 @@
+.header {
+  width: 380px;
+  margin: 0 100px 0 0px;
+}
+
 #photo_1 {
   width: 585px;
   height: 380px;
@@ -42,10 +47,4 @@
 #photo_i {
   width: 783px;
   height: 518px;
-}
-
-.header {
-  width: 380px;
-  height: 600px;
-  margin: 0 100px 0 0px;
 }

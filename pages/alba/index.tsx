@@ -39,7 +39,7 @@ const Alba: NextPageWithLayout = () => {
   return (
     <>
       <Box>
-        <div className="header">
+        <div className={`header ${styles.header}`}>
           <div id={styles.description}>
             <br />
             <br />

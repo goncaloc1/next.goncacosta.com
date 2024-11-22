@@ -39,8 +39,8 @@ const Box = (props: BoxProps) => <BaseBox photoWidth="max-w-max" {...props} />;
 const Sopra: NextPageWithLayout = () => {
   return (
     <>
-      <Box className="cell">
-        <div className={`header ${styles.header}`}>
+      <Box>
+        <div className="header">
           <div id="description"></div>
           <div className="title">
             <div className="title_left">Sopra</div>

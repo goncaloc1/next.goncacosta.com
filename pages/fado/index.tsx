@@ -24,12 +24,10 @@ const Fado: NextPageWithLayout = () => {
   return (
     <>
       <Box>
-        <div className="header">
-          <div id="description"></div>
-          <div className="title">
-            <div className="title_left">Fado</div>
-            <div className="title_right">2010</div>
-          </div>
+        <div id="description"></div>
+        <div className="title">
+          <div className="title_left">Fado</div>
+          <div className="title_right">2010</div>
         </div>
       </Box>
       <Box photoSrc={photo1} photoPriority={true} className="boxDistant" />

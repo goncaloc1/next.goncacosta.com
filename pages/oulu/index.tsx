@@ -25,12 +25,10 @@ const Oulu: NextPageWithLayout = () => {
   return (
     <>
       <Box>
-        <div className="header">
-          <div id="description"></div>
-          <div className="title">
-            <div className="title_left">Oulu</div>
-            <div className="title_right">2005-10</div>
-          </div>
+        <div id="description"></div>
+        <div className="title">
+          <div className="title_left">Oulu</div>
+          <div className="title_right">2005-10</div>
         </div>
       </Box>
       <Box photoSrc={photo4} photoPriority={true} className="boxNarrow" />

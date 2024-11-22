@@ -40,12 +40,10 @@ const Sopra: NextPageWithLayout = () => {
   return (
     <>
       <Box>
-        <div className="header">
-          <div id="description"></div>
-          <div className="title">
-            <div className="title_left">Sopra</div>
-            <div className="title_right">2010-11</div>
-          </div>
+        <div id="description"></div>
+        <div className="title">
+          <div className="title_left">Sopra</div>
+          <div className="title_right">2010-11</div>
         </div>
       </Box>
       <Box photoSrc={photo2} photoPriority={true} className="boxNarrow" />

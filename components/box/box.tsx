@@ -14,6 +14,7 @@ type BoxPhotoProps = {
 
 type BoxTextProps = {
   children: ReactNode;
+  className?: string;
 };
 
 /**
@@ -22,18 +23,22 @@ type BoxTextProps = {
 const isBoxPhoto = (data: BoxProps): data is BoxPhotoProps =>
   (data as BoxPhotoProps).photoSrc != null;
 
-export const Box = (props: BoxProps) => (
-  <div className="cell">
-    {isBoxPhoto(props) ? (
-      <div className={`${props.photoWidth ?? ""} ${props.className ?? ""}`}>
-        <Photo
-          src={props.photoSrc}
-          id={props.photoId}
-          priority={props.photoPriority}
-        />
-      </div>
-    ) : (
-      <>{props.children}</>
-    )}
-  </div>
-);
+export const Box = (props: BoxProps) => {
+  const { className = "" } = props;
+
+  return (
+    <div className="cell">
+      {isBoxPhoto(props) ? (
+        <div className={`${props.photoWidth ?? ""} ${className}`}>
+          <Photo
+            src={props.photoSrc}
+            id={props.photoId}
+            priority={props.photoPriority}
+          />
+        </div>
+      ) : (
+        <div className={`header ${className}`}>{props.children}</div>
+      )}
+    </div>
+  );
+};

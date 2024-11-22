@@ -21,15 +21,13 @@ const Box = (props: BoxProps) => <BaseBox photoWidth="max-w-max" {...props} />;
 const Paperbag: NextPageWithLayout = () => {
   return (
     <>
-      <Box>
-        <div className={`header ${styles.header}`}>
-          <div id="description"></div>
-          <div className="title">
-            <div className="title_left">
-              It's a paper bag to scream, It's a bag of affections
-            </div>
-            <div className="title_right">2008</div>
+      <Box className={styles.header}>
+        <div id="description"></div>
+        <div className="title">
+          <div className="title_left">
+            It's a paper bag to scream, It's a bag of affections
           </div>
+          <div className="title_right">2008</div>
         </div>
       </Box>
       <Box

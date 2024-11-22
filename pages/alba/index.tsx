@@ -38,21 +38,19 @@ const Box = (props: BoxProps) => (
 const Alba: NextPageWithLayout = () => {
   return (
     <>
-      <Box>
-        <div className={`header ${styles.header}`}>
-          <div id={styles.description}>
-            <br />
-            <br />
-            "El hoy fugaz es tenue y es eterno;
-            <br />
-            otro Cielo non esperes, ni otro Infierno."
-            <br />
-            <i>Jorge Luis Borges</i>
-          </div>
-          <div className="title">
-            <div className="title_left">Alba</div>
-            <div className="title_right">2011</div>
-          </div>
+      <Box className={styles.header}>
+        <div id={styles.description}>
+          <br />
+          <br />
+          "El hoy fugaz es tenue y es eterno;
+          <br />
+          otro Cielo non esperes, ni otro Infierno."
+          <br />
+          <i>Jorge Luis Borges</i>
+        </div>
+        <div className="title">
+          <div className="title_left">Alba</div>
+          <div className="title_right">2011</div>
         </div>
       </Box>
       <Box photoSrc={photoa} photoPriority={true} />

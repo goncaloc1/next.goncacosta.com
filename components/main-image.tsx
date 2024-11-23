@@ -17,47 +17,63 @@ const MainImage = ({ photoMetadata }: MainImageProps) => {
       >
         <Link legacyBehavior href={photoMetadata.path as string}>
           <a style={{ float: "right" }}>
-            <Image
-              alt="&nbsp"
-              src={photoMetadata.source}
-              priority={true}
-              onLoad={() => setIsPhotoLoaded(true)}
-              width={photoMetadata.source.width * photoMetadata.proportion!}
-              height={photoMetadata.source.height * photoMetadata.proportion!}
-            />
-            <p id="main-img-desc">
-              in&nbsp;
-              <span id="main-img-project">{photoMetadata.title as string}</span>
-            </p>
+            <figure>
+              <Image
+                alt="&nbsp"
+                src={photoMetadata.source}
+                priority={true}
+                quality={85}
+                onLoad={() => setIsPhotoLoaded(true)}
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "right",
+                }}
+              />
+              <figcaption>
+                in&nbsp;
+                <span>{photoMetadata.title}</span>
+              </figcaption>
+            </figure>
           </a>
         </Link>
       </section>
 
       <style jsx>{`
         section {
-          margin: 0 5% 0 150px;
-          text-align: right;
           visibility: hidden;
           opacity: 0;
           transition: opacity 1s ease-in-out;
           -moz-transition: opacity 1s ease-in-out;
           -webkit-transition: opacity 1s ease-in-out;
+          position: relative;
+          height: 90%;
+          width: 65%;
+          float: right;
+          margin-right: 5%;
         }
 
-        @media (max-width: 820px) {
+        @media (max-width: 768px) {
           section {
             display: none;
           }
         }
 
-        #main-img-desc {
+        figcaption {
           font-variant: normal;
           font-style: italic;
           margin: 5px 10px 0 0;
-        }
+          position: absolute;
+          right: 0;
+          bottom: -18px;
+          position: absolute;
+          right: 0;
+          bottom: -18px;
 
-        #main-img-project {
-          text-transform: uppercase;
+          span {
+            text-transform: uppercase;
+          }
         }
       `}</style>
     </>

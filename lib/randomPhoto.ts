@@ -155,16 +155,16 @@ const photos: PhotoMetadata[] = [
     title: "when was the last time someone wrote you a love letter?",
     source: when_z,
   },
-  {
-    path: "/paperbag",
-    title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_1,
-  },
-  {
-    path: "/paperbag",
-    title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_5,
-  },
+  // {
+  //   path: "/paperbag",
+  //   title: "it's a paper bag to scream, it's a bag of affections",
+  //   source: paperbag_1,
+  // },
+  // {
+  //   path: "/paperbag",
+  //   title: "it's a paper bag to scream, it's a bag of affections",
+  //   source: paperbag_5,
+  // },
   {
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
@@ -175,17 +175,17 @@ const photos: PhotoMetadata[] = [
     title: "it's a paper bag to scream, it's a bag of affections",
     source: paperbag_6,
   },
-  {
-    path: "/paperbag",
-    title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_i,
-  },
-  { path: "/oulu", title: "oulu", source: oulu_q },
-  { path: "/oulu", title: "oulu", source: oulu_99 },
-  { path: "/fado", title: "fado", source: fado_proven0004 },
-  { path: "/fado", title: "fado", source: fado_pro0018 },
-  { path: "/fado", title: "fado", source: fado_prov0012 },
-  { path: "/fado", title: "fado", source: fado_35_2 },
+  // {
+  //   path: "/paperbag",
+  //   title: "it's a paper bag to scream, it's a bag of affections",
+  //   source: paperbag_i,
+  // },
+  // { path: "/oulu", title: "oulu", source: oulu_q },
+  // { path: "/oulu", title: "oulu", source: oulu_99 },
+  // { path: "/fado", title: "fado", source: fado_proven0004 },
+  // { path: "/fado", title: "fado", source: fado_pro0018 },
+  // { path: "/fado", title: "fado", source: fado_prov0012 },
+  // { path: "/fado", title: "fado", source: fado_35_2 },
 ];
 
 const calcProportion = (height: number): number => {

@@ -61,7 +61,6 @@ export type PhotoMetadata = {
   path: string;
   title: string;
   source: StaticImageData;
-  proportion?: number;
 };
 
 const photos: PhotoMetadata[] = [
@@ -169,35 +168,29 @@ const photos: PhotoMetadata[] = [
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
     source: paperbag_7,
+    is35mm: true,
   },
   {
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
     source: paperbag_6,
+    is35mm: true,
   },
   // {
   //   path: "/paperbag",
   //   title: "it's a paper bag to scream, it's a bag of affections",
   //   source: paperbag_i,
   // },
-  // { path: "/oulu", title: "oulu", source: oulu_q },
-  // { path: "/oulu", title: "oulu", source: oulu_99 },
+  { path: "/oulu", title: "oulu", source: oulu_2, is35mm: true },
+  { path: "/oulu", title: "oulu", source: oulu_6, is35mm: true },
+  { path: "/oulu", title: "oulu", source: oulu_12, is35mm: true },
   // { path: "/fado", title: "fado", source: fado_proven0004 },
   // { path: "/fado", title: "fado", source: fado_pro0018 },
   // { path: "/fado", title: "fado", source: fado_prov0012 },
   // { path: "/fado", title: "fado", source: fado_35_2 },
 ];
 
-const calcProportion = (height: number): number => {
-  const targetHeight = 800;
-  return height > targetHeight ? targetHeight / height : 1;
-};
-
 export const getRandomPhotoMetadata = (): PhotoMetadata => {
   const idx = random(0, photos.length - 1);
-  const photo = photos[idx];
-
-  photo.proportion = calcProportion(photo.source.height);
-
-  return photo;
+  return photos[idx];
 };

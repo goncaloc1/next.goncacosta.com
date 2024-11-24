@@ -1,6 +1,9 @@
 import React from "react";
-import { getNavigationColors, NavigationColors } from "../lib/navigationColors";
-import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/randomPhoto";
+import {
+  getNavigationColors,
+  NavigationColors,
+} from "../lib/navigation-colors";
+import { getRandomPhotoMetadata, PhotoMetadata } from "../lib/random-photo";
 import MainMenu from "../components/main-menu";
 import MainImage from "../components/main-image";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { NavigationColors } from "../lib/navigationColors";
+import { NavigationColors } from "../lib/navigation-colors";
 
 type MainMenuProps = {
   navigationColors: NavigationColors;

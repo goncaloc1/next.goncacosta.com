@@ -48,8 +48,9 @@ import paperbag_5 from "/public/images/paperbag/5.jpg";
 import paperbag_7 from "/public/images/paperbag/7.jpg";
 import paperbag_6 from "/public/images/paperbag/6.jpg";
 import paperbag_i from "/public/images/paperbag/i.jpg";
-import oulu_q from "/public/images/oulu/q.jpg";
-import oulu_99 from "/public/images/oulu/99.jpg";
+import oulu_2 from "/public/images/oulu/high-res/2.jpg";
+import oulu_6 from "/public/images/oulu/high-res/6.jpg";
+import oulu_12 from "/public/images/oulu/high-res/12.jpg";
 import fado_proven0004 from "/public/images/fado/proven0004.jpg";
 import fado_pro0018 from "/public/images/fado/pro0018.jpg";
 import fado_prov0012 from "/public/images/fado/prov0012.jpg";
@@ -61,6 +62,7 @@ export type PhotoMetadata = {
   path: string;
   title: string;
   source: StaticImageData;
+  is35mm?: boolean;
 };
 
 const photos: PhotoMetadata[] = [

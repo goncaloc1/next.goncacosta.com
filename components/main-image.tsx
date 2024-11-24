@@ -14,6 +14,7 @@ const MainImage = ({ photoMetadata }: MainImageProps) => {
     <>
       <section
         style={isPhotoLoaded ? { visibility: "visible", opacity: "1" } : {}}
+        className={photoMetadata.is35mm ? "landscape" : ""}
       >
         <Link legacyBehavior href={photoMetadata.path as string}>
           <a style={{ float: "right" }}>
@@ -52,6 +53,10 @@ const MainImage = ({ photoMetadata }: MainImageProps) => {
           width: 65%;
           float: right;
           margin-right: 5%;
+        }
+
+        .landscape {
+          height: 60%;
         }
 
         @media (max-width: 768px) {

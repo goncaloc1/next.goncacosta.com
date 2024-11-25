@@ -16,11 +16,11 @@ import reminiscencia_r from "/public/images/reminiscencia/r.jpg";
 import reminiscencia_s from "/public/images/reminiscencia/s.jpg";
 import reminiscencia_t from "/public/images/reminiscencia/t.jpg";
 import reminiscencia_u from "/public/images/reminiscencia/u.jpg";
-import alba_a from "/public/images/alba/a.jpg";
 import alba_b from "/public/images/alba/b.jpg";
+import alba_c from "/public/images/alba/c.jpg";
 import alba_d from "/public/images/alba/d.jpg";
 import alba_e from "/public/images/alba/e.jpg";
-import alba_h from "/public/images/alba/h.jpg";
+import alba_j from "/public/images/alba/j.jpg";
 import alba_k from "/public/images/alba/k.jpg";
 import alba_l from "/public/images/alba/l.jpg";
 import alba_m from "/public/images/alba/m.jpg";
@@ -43,11 +43,10 @@ import when_l from "/public/images/when/l.jpg";
 import when_n from "/public/images/when/n.jpg";
 import when_o from "/public/images/when/o.jpg";
 import when_z from "/public/images/when/z.jpg";
-import paperbag_1 from "/public/images/paperbag/1.jpg";
-import paperbag_5 from "/public/images/paperbag/5.jpg";
 import paperbag_7 from "/public/images/paperbag/7.jpg";
 import paperbag_6 from "/public/images/paperbag/6.jpg";
-import paperbag_i from "/public/images/paperbag/i.jpg";
+import paperbag_t from "/public/images/paperbag/high-res/t.jpg";
+import paperbag_x from "/public/images/paperbag/high-res/x.jpg";
 import oulu_2 from "/public/images/oulu/high-res/2.jpg";
 import oulu_6 from "/public/images/oulu/high-res/6.jpg";
 import oulu_12 from "/public/images/oulu/high-res/12.jpg";
@@ -81,11 +80,11 @@ const photos: PhotoMetadata[] = [
   { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_s },
   { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_t },
   { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_u },
-  { path: "/alba", title: "alba", source: alba_a },
   { path: "/alba", title: "alba", source: alba_b },
+  { path: "/alba", title: "alba", source: alba_c },
   { path: "/alba", title: "alba", source: alba_d },
   { path: "/alba", title: "alba", source: alba_e },
-  { path: "/alba", title: "alba", source: alba_h },
+  { path: "/alba", title: "alba", source: alba_j },
   { path: "/alba", title: "alba", source: alba_k },
   { path: "/alba", title: "alba", source: alba_l },
   { path: "/alba", title: "alba", source: alba_m },
@@ -156,16 +155,6 @@ const photos: PhotoMetadata[] = [
     title: "when was the last time someone wrote you a love letter?",
     source: when_z,
   },
-  // {
-  //   path: "/paperbag",
-  //   title: "it's a paper bag to scream, it's a bag of affections",
-  //   source: paperbag_1,
-  // },
-  // {
-  //   path: "/paperbag",
-  //   title: "it's a paper bag to scream, it's a bag of affections",
-  //   source: paperbag_5,
-  // },
   {
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
@@ -178,11 +167,18 @@ const photos: PhotoMetadata[] = [
     source: paperbag_6,
     is35mm: true,
   },
-  // {
-  //   path: "/paperbag",
-  //   title: "it's a paper bag to scream, it's a bag of affections",
-  //   source: paperbag_i,
-  // },
+  {
+    path: "/paperbag",
+    title: "it's a paper bag to scream, it's a bag of affections",
+    source: paperbag_t,
+    is35mm: true,
+  },
+  {
+    path: "/paperbag",
+    title: "it's a paper bag to scream, it's a bag of affections",
+    source: paperbag_x,
+    is35mm: true,
+  },
   { path: "/oulu", title: "oulu", source: oulu_2, is35mm: true },
   { path: "/oulu", title: "oulu", source: oulu_6, is35mm: true },
   { path: "/oulu", title: "oulu", source: oulu_12, is35mm: true },

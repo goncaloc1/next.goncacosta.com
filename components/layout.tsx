@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import Head from "next/head";
 import { ReactNode, useMemo } from "react";
 import MainWithHorizontalScroll from "./main-with-horizontal-scroll";
@@ -23,6 +24,7 @@ const Layout = ({
       <div className="wrapper">
         <div className="cell align-top">{slotNavigationMenu}</div>
         {children}
+        <Analytics />
       </div>
     ),
     [children, slotNavigationMenu]

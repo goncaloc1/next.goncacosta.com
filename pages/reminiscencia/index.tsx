@@ -33,7 +33,7 @@ import Layout from "../../components/layout";
 const Reminiscencia: NextPageWithLayout = () => (
   <div className="cell w-full">
     <Carousel
-      defaultSlideClassName={styles.slide}
+      defaultSlideClassName={""}
       transitionEnabled={true}
       slides={[
         <Carousel.Slide photoSrc={photou} photoPriority={true} />,
@@ -62,7 +62,7 @@ const Reminiscencia: NextPageWithLayout = () => (
         <Carousel.Slide photoSrc={photoe} />,
         <Carousel.Slide photoSrc={photof} />,
         <Carousel.Slide photoSrc={photog} />,
-        <Carousel.Slide photoSrc={photot} className={styles.slideL} />,
+        <Carousel.Slide photoSrc={photot} />,
         <Carousel.Slide photoSrc={photoh} />,
         <Carousel.Slide photoSrc={photoi} />,
         <Carousel.Slide photoSrc={photoj} />,
@@ -152,7 +152,7 @@ const Reminiscencia: NextPageWithLayout = () => (
         </Carousel.Slide>,
         <Carousel.Slide photoSrc={photok} />,
         <Carousel.Slide photoSrc={photol} />,
-        <Carousel.Slide photoSrc={photom} className={styles.slideS} />,
+        <Carousel.Slide photoSrc={photom} />,
         <Carousel.Slide photoSrc={photon} />,
         <Carousel.Slide>
           <div className={styles.text_wrapper}>
@@ -184,10 +184,10 @@ const Reminiscencia: NextPageWithLayout = () => (
             <p className={styles.author}>Paul Bowles</p>
           </div>
         </Carousel.Slide>,
-        <Carousel.Slide photoSrc={photoo} className={styles.slideL} />,
+        <Carousel.Slide photoSrc={photoo} />,
         <Carousel.Slide photoSrc={photop} />,
         <Carousel.Slide photoSrc={photoq} />,
-        <Carousel.Slide photoSrc={photos} className={styles.slideL} />,
+        <Carousel.Slide photoSrc={photos} />,
         <Carousel.Slide photoSrc={photor} />,
         <Carousel.Slide>
           <div className={`${styles.text_wrapper} ${styles.last}`}>

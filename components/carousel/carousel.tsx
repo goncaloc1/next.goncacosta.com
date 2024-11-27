@@ -138,7 +138,7 @@ function Carousel({
 
   return (
     <CarouselProvider defaultSlideClassName={defaultSlideClassName}>
-      <div className={`${styles.my_cycle_slideshow} ${defaultSlideClassName}`}>
+      <div className={styles.carousel}>
         <SlidePlaceholder
           className={placeholderXStyle}
           transitionEnabled={transitionEnabled}

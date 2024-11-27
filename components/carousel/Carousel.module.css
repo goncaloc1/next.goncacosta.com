@@ -1,10 +1,32 @@
-div.my_cycle_slideshow {
-  width: auto;
+.carousel {
+  position: relative;
+  height: 90%;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .carousel {
+    height: 68%;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 40%;
+  }
+}
+
+@media (max-width: 375px) {
+  .carousel {
+    height: 50%;
+  }
 }
 
 .slide_placeholder {
   position: absolute;
   right: 3%;
+  height: 100%;
+  width: 95%;
 }
 
 .slide_transition {

@@ -33,7 +33,6 @@ import Layout from "../../components/layout";
 const Reminiscencia: NextPageWithLayout = () => (
   <div className="cell w-full">
     <Carousel
-      defaultSlideClassName={""}
       transitionEnabled={true}
       slides={[
         <Carousel.Slide photoSrc={photou} photoPriority={true} />,

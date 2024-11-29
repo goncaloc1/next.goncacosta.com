@@ -1,5 +1,3 @@
-import styles from "./Sopra.module.css";
-
 import photo2 from "/public/images/sopra/7.jpg";
 import photo3 from "/public/images/sopra/6.jpg";
 import photo4 from "/public/images/sopra/26.jpg";

@@ -27,19 +27,17 @@ import photox from "/public/images/alba/x.jpg";
 import photoy from "/public/images/alba/y.jpg";
 
 import { NextPageWithLayout } from "../_app";
-import { ReactElement, ReactNode } from "react";
+import { ReactElement } from "react";
 import Layout from "../../components/layout";
-import { Box as BaseBox, BoxProps } from "../../components/box/box";
+import { BoxV2 as BaseBox, BoxProps } from "../../components/box/box-v2";
 
-const Box = (props: BoxProps) => (
-  <BaseBox photoWidth={styles.box_width} className="boxDistant" {...props} />
-);
+const Box = (props: BoxProps) => <BaseBox className="boxDistant" {...props} />;
 
 const Alba: NextPageWithLayout = () => {
   return (
     <>
-      <Box className={styles.header}>
-        <div id={styles.description}>
+      <Box>
+        <div className={styles.description}>
           <br />
           <br />
           "El hoy fugaz es tenue y es eterno;
@@ -48,7 +46,7 @@ const Alba: NextPageWithLayout = () => {
           <br />
           <i>Jorge Luis Borges</i>
         </div>
-        <div className="title">
+        <div className={styles.title}>
           <div className="title_left">Alba</div>
           <div className="title_right">2011</div>
         </div>
@@ -57,7 +55,7 @@ const Alba: NextPageWithLayout = () => {
       <Box photoSrc={photob} />
       <Box photoSrc={photoc} />
       <Box photoSrc={photod} />
-      <Box>
+      <Box className="box">
         <div className={styles.box_text_wrapper_1}>
           <div className={styles.box_text}>
             "(...)You know this used to be a hell of a good country.
@@ -122,7 +120,7 @@ const Alba: NextPageWithLayout = () => {
       <Box photoSrc={photoe} />
       <Box photoSrc={photof} />
       <Box photoSrc={photog} className="boxDistantX" />
-      <Box>
+      <Box className="box">
         <div className={styles.box_text_wrapper_2}>
           <div className={styles.box_text}>
             22.02.11
@@ -158,7 +156,7 @@ const Alba: NextPageWithLayout = () => {
       <Box photoSrc={photoi} />
       <Box photoSrc={photoj} />
       <Box photoSrc={photok} className="boxDistantX" />
-      <Box>
+      <Box className="box">
         <div className={styles.box_text_wrapper_3}>
           <div className={styles.box_text}>
             27.03.11
@@ -187,7 +185,7 @@ const Alba: NextPageWithLayout = () => {
       <Box photoSrc={photop} />
       <Box photoSrc={photoq} />
       <Box photoSrc={photor} className="boxDistantX" />
-      <Box>
+      <Box className="box">
         <div className={styles.box_text_wrapper_4}>
           <div className={styles.box_text}>
             "(...)I don't care, I move.
@@ -225,7 +223,7 @@ const Alba: NextPageWithLayout = () => {
       <Box photoSrc={photou} />
       <Box photoSrc={photov} />
       <Box photoSrc={photow} />
-      <Box>
+      <Box className="box">
         <div className={styles.box_text_wrapper_5}>
           <div className={styles.box_text}>
             06.06.11
@@ -262,6 +260,7 @@ Alba.getLayout = function getLayout(page: ReactElement) {
       title={"Alba"}
       metaDescription={"Alba - Gonçalo Costa, 2011"}
       horizontalScrollEnabled
+      flex
     >
       {page}
     </Layout>

@@ -1,16 +1,21 @@
-.header {
+.description {
+  font-size: 6pt;
+  height: 95%;
   width: 300px;
-  height: 750px;
-}
-
-#description {
   text-align: right;
   line-height: 1.5em;
-  font-size: 1.45em;
 }
 
-.box_width {
-  width: 750px;
+.title {
+  font-size: 5pt;
+  font-style: italic;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.description,
+.title {
+  margin-left: 50px;
 }
 
 .box_text_wrapper_1,
@@ -19,8 +24,6 @@
 .box_text_wrapper_4,
 .box_text_wrapper_5 {
   display: table;
-  height: 750px;
-  margin: 0 80px 0 0;
   text-align: right;
 }
 
@@ -30,9 +33,7 @@
 .box_text_wrapper_2 {
   width: 510px;
 }
-.box_text_wrapper_3 {
-  width: 370px;
-}
+.box_text_wrapper_3,
 .box_text_wrapper_4 {
   width: 400px;
 }
@@ -42,9 +43,31 @@
 
 .box_text {
   display: table-cell;
-  font-size: 1.3em;
+  font-size: 5.5pt;
   line-height: 1.35em;
-  padding: 0 0 20px;
+  padding: 0 0 3%;
   vertical-align: bottom;
   word-spacing: 0.2em;
+}
+
+@media (min-width: 768px) {
+  .description,
+  .box_text {
+    font-size: 8pt;
+  }
+
+  .title {
+    font-size: 5.5pt;
+  }
+}
+
+@media (min-width: 1536px) {
+  .description,
+  .box_text {
+    font-size: 9pt;
+  }
+
+  .title {
+    font-size: 6.5pt;
+  }
 }

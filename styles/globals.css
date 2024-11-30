@@ -109,6 +109,10 @@ main {
   height: 100%;
 }
 
+.h-9\/10 {
+  height: 90%;
+}
+
 .w-full {
   width: 100%;
 }

@@ -1,6 +1,9 @@
 .box_wrapper {
   display: flex;
   align-items: center;
+  /* This 100% height is essential for iPhone devices.
+  Chrome devtools device emulator does not do a good job on this one. */
+  height: 100%;
 }
 
 .box_photo_wrapper {

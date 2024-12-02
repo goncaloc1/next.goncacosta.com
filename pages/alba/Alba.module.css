@@ -1,16 +1,27 @@
 .description {
-  font-size: 6pt;
   height: 95%;
   width: 300px;
+}
+
+.description,
+.box_text {
   text-align: right;
-  line-height: 1.5em;
+  line-height: 1.35em;
 }
 
 .title {
-  font-size: 5pt;
   font-style: italic;
   width: 100%;
-  margin-bottom: 3%;
+  margin-bottom: 10px;
+}
+
+.title_left {
+  float: left;
+  margin: 0 0 0 30px;
+}
+
+.title_right {
+  float: right;
 }
 
 .description,
@@ -18,56 +29,39 @@
   margin-left: 50px;
 }
 
-.box_text_wrapper_1,
-.box_text_wrapper_2,
-.box_text_wrapper_3,
-.box_text_wrapper_4,
-.box_text_wrapper_5 {
-  display: table;
-  text-align: right;
-}
-
-.box_text_wrapper_1 {
-  width: 690px;
-}
-.box_text_wrapper_2 {
-  width: 510px;
-}
-.box_text_wrapper_3,
-.box_text_wrapper_4 {
-  width: 400px;
-}
-.box_text_wrapper_5 {
-  width: 600px;
-}
-
 .box_text {
-  display: table-cell;
-  font-size: 5.5pt;
-  line-height: 1.35em;
-  padding: 0 0 3%;
-  vertical-align: bottom;
   word-spacing: 0.2em;
+  width: max-content;
+  margin-bottom: 10px;
 }
 
-@media (min-width: 768px) {
+.box_text i {
+  display: contents;
+}
+
+.description,
+.box_text,
+.title_left,
+.title_right {
+  font-size: 9pt;
+}
+
+/* Medium screens (768px to 1535px) */
+@media (max-width: 1535px) {
   .description,
-  .box_text {
+  .box_text,
+  .title_left,
+  .title_right {
     font-size: 8pt;
   }
-
-  .title {
-    font-size: 5.5pt;
-  }
 }
 
-@media (min-width: 1536px) {
+/* Small screens (below 768px) */
+@media (max-width: 767px) {
   .description,
-  .box_text {
-    font-size: 9pt;
-  }
-
-  .title {
-    font-size: 6.5pt;
+  .box_text,
+  .title_left,
+  .title_right {
+    font-size: 5.5pt;
   }
 }

@@ -98,10 +98,12 @@ const Alba: NextPageWithLayout = () => {
         marketplace.
         <br />
         Don't tell anybody that they're not free, because they'll get busy
+        <br />
         killing and maiming to prove to you that they are.
         <br />
         Oh yeah they're going to talk to you and talk to you and talk to you
-        about individual freedom. <br />
+        about individual freedom.
+        <br />
         But they see a free individual, it's going to scare them.
         <br />
         <br />

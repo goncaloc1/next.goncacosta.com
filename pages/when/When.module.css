@@ -1,33 +1,11 @@
-.first_image {
-  margin-left: 20px;
-}
-
-.box_width {
-  width: 300px;
-}
-
-@media (min-width: 640px) {
-  .box_width {
-    width: 370px;
-  }
-}
-
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .first_image {
-    margin-left: 250px;
-  }
-
-  .box_width {
-    width: 650px;
+    margin-left: 320px;
   }
 }
 
 @media (min-width: 1536px) {
   .first_image {
-    margin-left: 580px;
-  }
-
-  .box_width {
-    width: 750px;
+    margin-left: 500px;
   }
 }

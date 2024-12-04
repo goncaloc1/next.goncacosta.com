@@ -26,10 +26,10 @@ import NavigationMenu from "../../components/navigation-menu";
 import { NextPageWithLayout } from "../_app";
 import { ReactElement } from "react";
 import Layout from "../../components/layout";
-import { Box as BaseBox, BoxProps } from "../../components/box/box";
+import { BoxV2 as BaseBox, BoxProps } from "../../components/box/box-v2";
 
 const Box = (props: BoxProps) => (
-  <BaseBox photoWidth={styles.box_width} className="boxDistantXX" {...props} />
+  <BaseBox className="boxDistantXX" {...props} />
 );
 
 const When: NextPageWithLayout = () => {
@@ -79,6 +79,7 @@ When.getLayout = function getLayout(page: ReactElement) {
           }
         />
       }
+      flex
     >
       {page}
     </Layout>

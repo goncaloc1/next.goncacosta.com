@@ -4,9 +4,10 @@ type PhotoProps = {
   src: StaticImageData;
   priority?: boolean;
   id?: string;
+  legacy?: boolean;
 };
 
-const Photo = ({ src, priority, id }: PhotoProps) => {
+const Photo = ({ src, priority, id, legacy }: PhotoProps) => {
   return (
     <Image
       id={id}
@@ -15,10 +16,19 @@ const Photo = ({ src, priority, id }: PhotoProps) => {
       quality={85}
       priority={priority}
       loading={priority ? undefined : "eager"}
-      style={{
-        maxWidth: "100%",
-        height: "auto",
-      }}
+      fill={!legacy}
+      sizes={legacy ? undefined : "100vw"}
+      style={
+        legacy
+          ? {
+              maxWidth: "100%",
+              height: "auto",
+            }
+          : {
+              objectFit: "contain",
+              objectPosition: "right",
+            }
+      }
     />
   );
 };

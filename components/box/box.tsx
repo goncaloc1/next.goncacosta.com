@@ -34,6 +34,7 @@ export const Box = (props: BoxProps) => {
             src={props.photoSrc}
             id={props.photoId}
             priority={props.photoPriority}
+            legacy={true}
           />
         </div>
       ) : (

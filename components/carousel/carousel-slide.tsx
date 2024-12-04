@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import PhotoV2 from "../photo-v2";
+import Photo from "../photo";
 import { ReactNode } from "react";
 
 export type CarouselSlideProps =
@@ -30,7 +30,7 @@ const isCarouselSlidePhoto = (
 const CarouselSlide = (props: CarouselSlideProps) => (
   <div className={props.className} style={{ height: "100%" }}>
     {isCarouselSlidePhoto(props) ? (
-      <PhotoV2 src={props.photoSrc} priority={props.photoPriority} />
+      <Photo src={props.photoSrc} priority={props.photoPriority} />
     ) : (
       props.children
     )}

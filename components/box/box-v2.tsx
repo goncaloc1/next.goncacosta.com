@@ -1,7 +1,7 @@
 import styles from "./Box.module.css";
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
-import PhotoV2 from "../photo-v2";
+import Photo from "../photo";
 
 export type BoxProps = BoxPhotoProps | BoxTextProps;
 
@@ -30,7 +30,7 @@ export const BoxV2 = (props: BoxProps) => {
     <div className={styles.box_wrapper}>
       {isBoxPhoto(props) ? (
         <div className={`${styles.box_photo_wrapper} ${className}`}>
-          <PhotoV2
+          <Photo
             src={props.photoSrc}
             id={props.photoId}
             priority={props.photoPriority}

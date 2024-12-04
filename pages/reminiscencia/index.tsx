@@ -31,7 +31,7 @@ import { NextPageWithLayout } from "../_app";
 import Layout from "../../components/layout";
 
 const Reminiscencia: NextPageWithLayout = () => (
-  <div className="cell w-full">
+  <div className="w-full content-center">
     <Carousel
       transitionEnabled={true}
       slides={[
@@ -223,6 +223,7 @@ Reminiscencia.getLayout = function getLayout(page: ReactElement) {
           }
         />
       }
+      flex
     >
       {page}
     </Layout>

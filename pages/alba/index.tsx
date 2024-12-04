@@ -29,7 +29,7 @@ import photoy from "/public/images/alba/y.jpg";
 import { NextPageWithLayout } from "../_app";
 import { ReactElement } from "react";
 import Layout from "../../components/layout";
-import { BoxV2 as BaseBox, BoxProps } from "../../components/box/box-v2";
+import { Box as BaseBox, BoxProps } from "../../components/box/box";
 
 const Box = (props: BoxProps) => <BaseBox className="boxDistant" {...props} />;
 

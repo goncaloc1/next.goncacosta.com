@@ -16,7 +16,7 @@ import Layout from "../../components/layout";
 import { ReactElement } from "react";
 import { Box as BaseBox, BoxProps } from "../../components/box/box";
 
-const Box = (props: BoxProps) => <BaseBox {...props} />;
+const Box = (props: BoxProps) => <BaseBox {...props} legacy />;
 
 const Paperbag: NextPageWithLayout = () => {
   return (

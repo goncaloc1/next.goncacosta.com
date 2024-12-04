@@ -32,7 +32,7 @@ import { NextPageWithLayout } from "../_app";
 
 import { Box as BaseBox, BoxProps } from "../../components/box/box";
 
-const Box = (props: BoxProps) => <BaseBox photoWidth="max-w-max" {...props} />;
+const Box = (props: BoxProps) => <BaseBox {...props} />;
 
 const Sopra: NextPageWithLayout = () => {
   return (

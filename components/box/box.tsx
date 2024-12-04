@@ -7,7 +7,6 @@ export type BoxProps = BoxPhotoProps | BoxTextProps;
 type BoxPhotoProps = {
   photoSrc: StaticImageData;
   photoId?: string;
-  photoWidth?: string;
   photoPriority?: boolean;
   className?: string;
 };
@@ -29,7 +28,7 @@ export const Box = (props: BoxProps) => {
   return (
     <div className="cell">
       {isBoxPhoto(props) ? (
-        <div className={`${props.photoWidth ?? ""} ${className}`}>
+        <div className={`max-w-max ${className}`}>
           <Photo
             src={props.photoSrc}
             id={props.photoId}

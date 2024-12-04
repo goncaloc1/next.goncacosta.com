@@ -81,6 +81,7 @@ Sopra.getLayout = function getLayout(page: ReactElement) {
       title={"Sopra"}
       metaDescription={"Sopra - Gonçalo Costa, 2010-11"}
       horizontalScrollEnabled
+      legacy
     >
       {page}
     </Layout>

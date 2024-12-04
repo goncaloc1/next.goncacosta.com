@@ -68,6 +68,7 @@ OuluBook.getLayout = function getLayout(page: ReactElement) {
       metaDescription={"Oulu book - Gonçalo Costa, 2009"}
       horizontalScrollEnabled
       slotNavigationMenu={<NavigationMenu backHref={"/oulu"} />}
+      legacy
     >
       {page}
     </Layout>

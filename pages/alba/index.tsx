@@ -242,7 +242,6 @@ Alba.getLayout = function getLayout(page: ReactElement) {
       title={"Alba"}
       metaDescription={"Alba - Gonçalo Costa, 2011"}
       horizontalScrollEnabled
-      flex
     >
       {page}
     </Layout>

@@ -77,6 +77,7 @@ Paperbag.getLayout = function getLayout(page: ReactElement) {
         "It's a paper bag to scream, It's a bag of affections - Gonçalo Costa, 2008"
       }
       horizontalScrollEnabled
+      legacy
     >
       {page}
     </Layout>

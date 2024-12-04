@@ -79,7 +79,6 @@ When.getLayout = function getLayout(page: ReactElement) {
           }
         />
       }
-      flex
     >
       {page}
     </Layout>

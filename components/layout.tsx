@@ -11,7 +11,7 @@ type LayoutProps = {
   metaDescription: string;
   horizontalScrollEnabled?: boolean;
   slotNavigationMenu?: ReactNode;
-  flex?: boolean;
+  legacy?: boolean;
 };
 
 const Layout = ({
@@ -20,11 +20,11 @@ const Layout = ({
   metaDescription,
   horizontalScrollEnabled,
   slotNavigationMenu = <NavigationMenu />,
-  flex,
+  legacy,
 }: LayoutProps) => {
   const childrenWrapper = useMemo(
     () => (
-      <div className={flex ? "flex h-full" : "wrapper"}>
+      <div className={legacy ? "wrapper" : "flex h-full"}>
         <div className="cell align-top">{slotNavigationMenu}</div>
         {children}
         <Analytics />

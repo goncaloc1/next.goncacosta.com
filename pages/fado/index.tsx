@@ -53,6 +53,7 @@ Fado.getLayout = function getLayout(page: ReactElement) {
       title={"Fado"}
       metaDescription={"Fado - Gonçalo Costa, 2010"}
       horizontalScrollEnabled
+      legacy
     >
       {page}
     </Layout>

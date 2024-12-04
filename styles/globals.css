@@ -132,3 +132,7 @@ main {
 .flex {
   display: flex;
 }
+
+.content-center {
+  align-content: center;
+}

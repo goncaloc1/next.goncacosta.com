@@ -31,7 +31,7 @@ const Layout = ({
         <SpeedInsights />
       </div>
     ),
-    [children, slotNavigationMenu]
+    [children, slotNavigationMenu, legacy]
   );
 
   return (

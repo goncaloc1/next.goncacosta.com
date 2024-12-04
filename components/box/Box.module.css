@@ -17,6 +17,16 @@
   align-content: flex-end;
 }
 
+.box_text_wrapper_legacy {
+  position: relative;
+  padding: 0;
+  line-height: 12pt;
+  display: table;
+  width: 240px;
+  height: 600px;
+  margin: 0 120px 0 50px;
+}
+
 .box_photo_wrapper,
 .box_text_wrapper {
   height: 90%;

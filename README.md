@@ -5,4 +5,6 @@
   </a>
 </p>
 
-The original version of `goncacosta.com` website was written in vanilla javacript around 2010. Eleven years later it was migrated to NextJS.
+<p align="center">
+Portfolio website showcasing personal photography artwork. Built with Next.Js, React and Typescript.
+</p>

@@ -24,8 +24,6 @@ const Photo = ({
   const easeInStyle = useMemo<CSSProperties>(() => {
     const base = {
       transition: "opacity 0.75s ease-in-out",
-      "-moz-transition": "opacity 0.75s ease-in-out",
-      "-webkit-transition": "opacity 0.75s ease-in-out",
     };
 
     return isPhotoLoaded

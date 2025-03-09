@@ -46,8 +46,6 @@ const MainImage = ({ photoMetadata }: MainImageProps) => {
           visibility: hidden;
           opacity: 0;
           transition: opacity 1s ease-in-out;
-          -moz-transition: opacity 1s ease-in-out;
-          -webkit-transition: opacity 1s ease-in-out;
           position: relative;
           height: 90%;
           width: 65%;

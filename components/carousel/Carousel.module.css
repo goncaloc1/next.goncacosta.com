@@ -31,8 +31,6 @@
 
 .slide_transition {
   transition: opacity 650ms ease-in-out;
-  -moz-transition: opacity 650ms ease-in-out;
-  -webkit-transition: opacity 650ms ease-in-out;
 }
 
 .transition_hide {

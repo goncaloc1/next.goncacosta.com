@@ -90,16 +90,10 @@ const NavigationMenu = ({
 
         ul a {
           transition: opacity 0.25s ease-in-out;
-          -moz-transition: opacity 0.25s ease-in-out;
-          -webkit-transition: opacity 0.25s ease-in-out;
         }
 
         ul span {
           transition: visibility 0.25s ease-in-out, opacity 0.25s ease-in-out;
-          -moz-transition: visibility 0.25s ease-in-out,
-            opacity 0.25s ease-in-out;
-          -webkit-transition: visibility 0.25s ease-in-out,
-            opacity 0.25s ease-in-out;
         }
 
         ul a:hover span {

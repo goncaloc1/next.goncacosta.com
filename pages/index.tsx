@@ -36,7 +36,7 @@ const Home = ({
           <div className="cell align-middle">
             <MainMenu navigationColors={navigationColors} />
           </div>
-          <div className="cell w-full">
+          <div className="cell w-full h-full">
             <MainImage photoMetadata={photoMetadata} />
           </div>
         </div>

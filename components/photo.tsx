@@ -1,5 +1,6 @@
 import { PlaceholderValue } from "next/dist/shared/lib/get-img-props";
 import Image, { StaticImageData } from "next/image";
+import { CSSProperties, useMemo, useState } from "react";
 
 export type PhotoProps = {
   src: StaticImageData;
@@ -7,33 +8,66 @@ export type PhotoProps = {
   id?: string;
   legacy?: boolean;
   placeholder?: PlaceholderValue;
+  easeIn?: boolean;
 };
 
-const Photo = ({ src, priority, id, legacy, placeholder }: PhotoProps) => {
+const Photo = ({
+  src,
+  priority,
+  id,
+  legacy,
+  placeholder,
+  easeIn,
+}: PhotoProps) => {
+  const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
+
+  const easeInStyle = useMemo<CSSProperties>(() => {
+    const base = {
+      transition: "opacity 0.75s ease-in-out",
+      "-moz-transition": "opacity 0.75s ease-in-out",
+      "-webkit-transition": "opacity 0.75s ease-in-out",
+    };
+
+    return isPhotoLoaded
+      ? {
+          ...base,
+          visibility: "visible",
+          opacity: "1",
+        }
+      : {
+          ...base,
+          visibility: "hidden",
+          opacity: 0,
+        };
+  }, [isPhotoLoaded]);
+
   return (
-    <Image
-      id={id}
-      alt="photo"
-      src={src}
-      quality={85}
-      priority={priority}
-      loading={priority ? undefined : "eager"}
-      fill={!legacy}
-      sizes={legacy ? undefined : "100vw"}
-      style={
-        legacy
-          ? {
-              maxWidth: "100%",
-              height: "auto",
-            }
-          : {
-              objectFit: "contain",
-              objectPosition: "right",
-            }
-      }
-      placeholder={placeholder}
-      blurDataURL={src.blurDataURL}
-    />
+    <div style={easeIn ? easeInStyle : undefined}>
+      <Image
+        id={id}
+        alt="photo"
+        src={src}
+        quality={85}
+        priority={priority}
+        loading={priority ? undefined : "eager"}
+        fill={!legacy}
+        sizes={legacy ? undefined : "100vw"}
+        style={
+          legacy
+            ? {
+                maxWidth: "100%",
+                height: "auto",
+              }
+            : {
+                objectFit: "contain",
+                objectPosition: "right",
+              }
+        }
+        placeholder={placeholder}
+        blurDataURL={src.blurDataURL}
+        onLoad={() => setIsPhotoLoaded(true)}
+      />
+    </div>
   );
 };
 

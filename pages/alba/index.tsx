@@ -51,7 +51,7 @@ const Alba: NextPageWithLayout = () => {
           <div className={styles.title_right}>2011</div>
         </div>
       </Box>
-      <Box photoSrc={photoa} photoPriority={true} />
+      <Box photoSrc={photoa} photoPriority />
       <Box photoSrc={photob} />
       <Box photoSrc={photoc} />
       <Box photoSrc={photod} />

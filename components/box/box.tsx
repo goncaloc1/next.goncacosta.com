@@ -15,6 +15,7 @@ type BoxPhotoProps = BaseBoxProps & {
   photoId?: string;
   photoPriority?: boolean;
   placeholder?: PhotoProps["placeholder"];
+  easeIn?: boolean;
 };
 
 type BoxTextProps = BaseBoxProps & {
@@ -44,6 +45,7 @@ export const Box = (props: BoxProps) => {
             priority={props.photoPriority}
             legacy={legacy}
             placeholder={props.placeholder}
+            easeIn={props.easeIn}
           />
         </div>
       ) : (

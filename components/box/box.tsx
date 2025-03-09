@@ -1,7 +1,7 @@
 import styles from "./Box.module.css";
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
-import Photo from "../photo";
+import Photo, { PhotoProps } from "../photo";
 
 export type BoxProps = BoxPhotoProps | BoxTextProps;
 
@@ -14,6 +14,7 @@ type BoxPhotoProps = BaseBoxProps & {
   photoSrc: StaticImageData;
   photoId?: string;
   photoPriority?: boolean;
+  placeholder?: PhotoProps["placeholder"];
 };
 
 type BoxTextProps = BaseBoxProps & {
@@ -42,6 +43,7 @@ export const Box = (props: BoxProps) => {
             id={props.photoId}
             priority={props.photoPriority}
             legacy={legacy}
+            placeholder={props.placeholder}
           />
         </div>
       ) : (

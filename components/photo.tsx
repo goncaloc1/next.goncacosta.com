@@ -1,13 +1,15 @@
+import { PlaceholderValue } from "next/dist/shared/lib/get-img-props";
 import Image, { StaticImageData } from "next/image";
 
-type PhotoProps = {
+export type PhotoProps = {
   src: StaticImageData;
   priority?: boolean;
   id?: string;
   legacy?: boolean;
+  placeholder?: PlaceholderValue;
 };
 
-const Photo = ({ src, priority, id, legacy }: PhotoProps) => {
+const Photo = ({ src, priority, id, legacy, placeholder }: PhotoProps) => {
   return (
     <Image
       id={id}
@@ -29,6 +31,8 @@ const Photo = ({ src, priority, id, legacy }: PhotoProps) => {
               objectPosition: "right",
             }
       }
+      placeholder={placeholder}
+      blurDataURL={src.blurDataURL}
     />
   );
 };

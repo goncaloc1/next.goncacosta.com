@@ -17,7 +17,7 @@ const Photo = ({
   id,
   legacy,
   placeholder,
-  easeIn,
+  easeIn = true,
 }: PhotoProps) => {
   const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
 

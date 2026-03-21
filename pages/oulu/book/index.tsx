@@ -1,22 +1,22 @@
-import photo01 from "/public/images/oulu/book/01.jpg";
-import photo02 from "/public/images/oulu/book/02.jpg";
-import photo03 from "/public/images/oulu/book/03.jpg";
-import photo04 from "/public/images/oulu/book/04.jpg";
-import photo05 from "/public/images/oulu/book/05.jpg";
-import photo06 from "/public/images/oulu/book/06.jpg";
-import photo07 from "/public/images/oulu/book/07.jpg";
-import photo08 from "/public/images/oulu/book/08.jpg";
-import photo09 from "/public/images/oulu/book/09.jpg";
-import photo10 from "/public/images/oulu/book/10.jpg";
-import photo11 from "/public/images/oulu/book/11.jpg";
-import photo12 from "/public/images/oulu/book/12.jpg";
-import photo13 from "/public/images/oulu/book/13.jpg";
-import photo14 from "/public/images/oulu/book/14.jpg";
-import photo15 from "/public/images/oulu/book/15.jpg";
-import photo16 from "/public/images/oulu/book/16.jpg";
-import photo17 from "/public/images/oulu/book/17.jpg";
-import photo18 from "/public/images/oulu/book/18.jpg";
-import photo19 from "/public/images/oulu/book/19.jpg";
+import photo01 from "../../../public/images/oulu/book/01.jpg";
+import photo02 from "../../../public/images/oulu/book/02.jpg";
+import photo03 from "../../../public/images/oulu/book/03.jpg";
+import photo04 from "../../../public/images/oulu/book/04.jpg";
+import photo05 from "../../../public/images/oulu/book/05.jpg";
+import photo06 from "../../../public/images/oulu/book/06.jpg";
+import photo07 from "../../../public/images/oulu/book/07.jpg";
+import photo08 from "../../../public/images/oulu/book/08.jpg";
+import photo09 from "../../../public/images/oulu/book/09.jpg";
+import photo10 from "../../../public/images/oulu/book/10.jpg";
+import photo11 from "../../../public/images/oulu/book/11.jpg";
+import photo12 from "../../../public/images/oulu/book/12.jpg";
+import photo13 from "../../../public/images/oulu/book/13.jpg";
+import photo14 from "../../../public/images/oulu/book/14.jpg";
+import photo15 from "../../../public/images/oulu/book/15.jpg";
+import photo16 from "../../../public/images/oulu/book/16.jpg";
+import photo17 from "../../../public/images/oulu/book/17.jpg";
+import photo18 from "../../../public/images/oulu/book/18.jpg";
+import photo19 from "../../../public/images/oulu/book/19.jpg";
 
 import NavigationMenu from "../../../components/navigation-menu";
 import { ReactElement } from "react";
@@ -61,7 +61,7 @@ const OuluBook: NextPageWithLayout = () => {
   );
 };
 
-OuluBook.getLayout = function getLayout(page: ReactElement) {
+OuluBook.getLayout = function getLayout(page: ReactElement<any>) {
   return (
     <Layout
       title={"Oulu book"}

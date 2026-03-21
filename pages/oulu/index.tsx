@@ -1,17 +1,17 @@
-import photo4 from "/public/images/oulu/4.jpg";
-import photo20 from "/public/images/oulu/20.jpg";
-import photo30 from "/public/images/oulu/30.jpg";
-import photo31 from "/public/images/oulu/31.jpg";
-import photoq from "/public/images/oulu/q.jpg";
-import photog from "/public/images/oulu/g.jpg";
-import photo18 from "/public/images/oulu/18.jpg";
-import photo99 from "/public/images/oulu/99.jpg";
-import photoj from "/public/images/oulu/j.jpg";
-import photo98 from "/public/images/oulu/98.jpg";
-import photo28 from "/public/images/oulu/28.jpg";
-import photof from "/public/images/oulu/f.jpg";
-import photoi from "/public/images/oulu/i.jpg";
-import photok from "/public/images/oulu/k.jpg";
+import photo4 from "../../public/images/oulu/4.jpg";
+import photo20 from "../../public/images/oulu/20.jpg";
+import photo30 from "../../public/images/oulu/30.jpg";
+import photo31 from "../../public/images/oulu/31.jpg";
+import photoq from "../../public/images/oulu/q.jpg";
+import photog from "../../public/images/oulu/g.jpg";
+import photo18 from "../../public/images/oulu/18.jpg";
+import photo99 from "../../public/images/oulu/99.jpg";
+import photoj from "../../public/images/oulu/j.jpg";
+import photo98 from "../../public/images/oulu/98.jpg";
+import photo28 from "../../public/images/oulu/28.jpg";
+import photof from "../../public/images/oulu/f.jpg";
+import photoi from "../../public/images/oulu/i.jpg";
+import photok from "../../public/images/oulu/k.jpg";
 
 import NavigationMenu from "../../components/navigation-menu";
 import { ReactElement } from "react";
@@ -49,7 +49,7 @@ const Oulu: NextPageWithLayout = () => {
   );
 };
 
-Oulu.getLayout = function getLayout(page: ReactElement) {
+Oulu.getLayout = function getLayout(page: ReactElement<any>) {
   return (
     <Layout
       title={"Oulu"}

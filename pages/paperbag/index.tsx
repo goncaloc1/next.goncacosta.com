@@ -1,15 +1,15 @@
 import styles from "./Paperbag.module.css";
 
-import photo1 from "/public/images/paperbag/1.jpg";
-import photo5 from "/public/images/paperbag/5.jpg";
-import photo7 from "/public/images/paperbag/7.jpg";
-import photof from "/public/images/paperbag/f.jpg";
-import photog from "/public/images/paperbag/g.jpg";
-import photoh from "/public/images/paperbag/h.jpg";
-import photo6 from "/public/images/paperbag/6.jpg";
-import photoe from "/public/images/paperbag/e.jpg";
-import photoa from "/public/images/paperbag/a.jpg";
-import photoi from "/public/images/paperbag/i.jpg";
+import photo1 from "../../public/images/paperbag/1.jpg";
+import photo5 from "../../public/images/paperbag/5.jpg";
+import photo7 from "../../public/images/paperbag/7.jpg";
+import photof from "../../public/images/paperbag/f.jpg";
+import photog from "../../public/images/paperbag/g.jpg";
+import photoh from "../../public/images/paperbag/h.jpg";
+import photo6 from "../../public/images/paperbag/6.jpg";
+import photoe from "../../public/images/paperbag/e.jpg";
+import photoa from "../../public/images/paperbag/a.jpg";
+import photoi from "../../public/images/paperbag/i.jpg";
 
 import { NextPageWithLayout } from "../_app";
 import Layout from "../../components/layout";
@@ -69,7 +69,7 @@ const Paperbag: NextPageWithLayout = () => {
   );
 };
 
-Paperbag.getLayout = function getLayout(page: ReactElement) {
+Paperbag.getLayout = function getLayout(page: ReactElement<any>) {
   return (
     <Layout
       title={"It's a paper bag to scream, It's a bag of affections"}

@@ -1,30 +1,30 @@
 import styles from "./Alba.module.css";
 
-import photoa from "/public/images/alba/a.jpg";
-import photob from "/public/images/alba/b.jpg";
-import photoc from "/public/images/alba/c.jpg";
-import photod from "/public/images/alba/d.jpg";
-import photoe from "/public/images/alba/e.jpg";
-import photof from "/public/images/alba/f.jpg";
-import photog from "/public/images/alba/g.jpg";
-import photoh from "/public/images/alba/h.jpg";
-import photoi from "/public/images/alba/i.jpg";
-import photoj from "/public/images/alba/j.jpg";
-import photok from "/public/images/alba/k.jpg";
-import photol from "/public/images/alba/l.jpg";
-import photom from "/public/images/alba/m.jpg";
-import photon from "/public/images/alba/n.jpg";
-import photoo from "/public/images/alba/o.jpg";
-import photop from "/public/images/alba/p.jpg";
-import photoq from "/public/images/alba/q.jpg";
-import photor from "/public/images/alba/r.jpg";
-import photos from "/public/images/alba/s.jpg";
-import photot from "/public/images/alba/t.jpg";
-import photou from "/public/images/alba/u.jpg";
-import photov from "/public/images/alba/v.jpg";
-import photow from "/public/images/alba/w.jpg";
-import photox from "/public/images/alba/x.jpg";
-import photoy from "/public/images/alba/y.jpg";
+import photoa from "../../public/images/alba/a.jpg";
+import photob from "../../public/images/alba/b.jpg";
+import photoc from "../../public/images/alba/c.jpg";
+import photod from "../../public/images/alba/d.jpg";
+import photoe from "../../public/images/alba/e.jpg";
+import photof from "../../public/images/alba/f.jpg";
+import photog from "../../public/images/alba/g.jpg";
+import photoh from "../../public/images/alba/h.jpg";
+import photoi from "../../public/images/alba/i.jpg";
+import photoj from "../../public/images/alba/j.jpg";
+import photok from "../../public/images/alba/k.jpg";
+import photol from "../../public/images/alba/l.jpg";
+import photom from "../../public/images/alba/m.jpg";
+import photon from "../../public/images/alba/n.jpg";
+import photoo from "../../public/images/alba/o.jpg";
+import photop from "../../public/images/alba/p.jpg";
+import photoq from "../../public/images/alba/q.jpg";
+import photor from "../../public/images/alba/r.jpg";
+import photos from "../../public/images/alba/s.jpg";
+import photot from "../../public/images/alba/t.jpg";
+import photou from "../../public/images/alba/u.jpg";
+import photov from "../../public/images/alba/v.jpg";
+import photow from "../../public/images/alba/w.jpg";
+import photox from "../../public/images/alba/x.jpg";
+import photoy from "../../public/images/alba/y.jpg";
 
 import { NextPageWithLayout } from "../_app";
 import { ReactElement } from "react";
@@ -236,7 +236,7 @@ const Alba: NextPageWithLayout = () => {
   );
 };
 
-Alba.getLayout = function getLayout(page: ReactElement) {
+Alba.getLayout = function getLayout(page: ReactElement<any>) {
   return (
     <Layout
       title={"Alba"}

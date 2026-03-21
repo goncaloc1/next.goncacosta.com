@@ -27,9 +27,6 @@ const securityHeaders = [
 ];
 
 module.exports = {
-  eslint: {
-    dirs: ['pages', 'components', 'lib', 'hooks']
-  },
   reactStrictMode: true,
   async headers() {
     return [

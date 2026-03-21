@@ -2,27 +2,27 @@
 
 import styles from "./Reminiscencia.module.css";
 
-import photou from "/public/images/reminiscencia/u.jpg";
-import photoa from "/public/images/reminiscencia/a.jpg";
-import photob from "/public/images/reminiscencia/b.jpg";
-import photoc from "/public/images/reminiscencia/c.jpg";
-import photod from "/public/images/reminiscencia/d.jpg";
-import photoe from "/public/images/reminiscencia/e.jpg";
-import photof from "/public/images/reminiscencia/f.jpg";
-import photog from "/public/images/reminiscencia/g.jpg";
-import photot from "/public/images/reminiscencia/t.jpg";
-import photoh from "/public/images/reminiscencia/h.jpg";
-import photoi from "/public/images/reminiscencia/i.jpg";
-import photoj from "/public/images/reminiscencia/j.jpg";
-import photok from "/public/images/reminiscencia/k.jpg";
-import photol from "/public/images/reminiscencia/l.jpg";
-import photom from "/public/images/reminiscencia/m.jpg";
-import photon from "/public/images/reminiscencia/n.jpg";
-import photoo from "/public/images/reminiscencia/o.jpg";
-import photop from "/public/images/reminiscencia/p.jpg";
-import photoq from "/public/images/reminiscencia/q.jpg";
-import photos from "/public/images/reminiscencia/s.jpg";
-import photor from "/public/images/reminiscencia/r.jpg";
+import photou from "../../public/images/reminiscencia/u.jpg";
+import photoa from "../../public/images/reminiscencia/a.jpg";
+import photob from "../../public/images/reminiscencia/b.jpg";
+import photoc from "../../public/images/reminiscencia/c.jpg";
+import photod from "../../public/images/reminiscencia/d.jpg";
+import photoe from "../../public/images/reminiscencia/e.jpg";
+import photof from "../../public/images/reminiscencia/f.jpg";
+import photog from "../../public/images/reminiscencia/g.jpg";
+import photot from "../../public/images/reminiscencia/t.jpg";
+import photoh from "../../public/images/reminiscencia/h.jpg";
+import photoi from "../../public/images/reminiscencia/i.jpg";
+import photoj from "../../public/images/reminiscencia/j.jpg";
+import photok from "../../public/images/reminiscencia/k.jpg";
+import photol from "../../public/images/reminiscencia/l.jpg";
+import photom from "../../public/images/reminiscencia/m.jpg";
+import photon from "../../public/images/reminiscencia/n.jpg";
+import photoo from "../../public/images/reminiscencia/o.jpg";
+import photop from "../../public/images/reminiscencia/p.jpg";
+import photoq from "../../public/images/reminiscencia/q.jpg";
+import photos from "../../public/images/reminiscencia/s.jpg";
+import photor from "../../public/images/reminiscencia/r.jpg";
 
 import NavigationMenu from "../../components/navigation-menu";
 import Carousel from "../../components/carousel/carousel";
@@ -211,7 +211,7 @@ const Reminiscencia: NextPageWithLayout = () => (
   </div>
 );
 
-Reminiscencia.getLayout = function getLayout(page: ReactElement) {
+Reminiscencia.getLayout = function getLayout(page: ReactElement<any>) {
   return (
     <Layout
       title={"Reminiscencia"}

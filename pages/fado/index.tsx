@@ -1,16 +1,16 @@
-import photo1 from "/public/images/fado/proven0004.jpg";
-import photo2 from "/public/images/fado/pro0018.jpg";
-import photo3 from "/public/images/fado/prov0002.jpg";
-import photo4 from "/public/images/fado/prov0012.jpg";
-import photo5 from "/public/images/fado/21.jpg";
-import photo6 from "/public/images/fado/9.jpg";
-import photo7 from "/public/images/fado/7.jpg";
-import photo8 from "/public/images/fado/35(2).jpg";
-import photo9 from "/public/images/fado/16.jpg";
-import photo10 from "/public/images/fado/2.jpg";
-import photo11 from "/public/images/fado/provence0019.jpg";
-import photo12 from "/public/images/fado/33.jpg";
-import photo13 from "/public/images/fado/10.jpg";
+import photo1 from "../../public/images/fado/proven0004.jpg";
+import photo2 from "../../public/images/fado/pro0018.jpg";
+import photo3 from "../../public/images/fado/prov0002.jpg";
+import photo4 from "../../public/images/fado/prov0012.jpg";
+import photo5 from "../../public/images/fado/21.jpg";
+import photo6 from "../../public/images/fado/9.jpg";
+import photo7 from "../../public/images/fado/7.jpg";
+import photo8 from "../../public/images/fado/35(2).jpg";
+import photo9 from "../../public/images/fado/16.jpg";
+import photo10 from "../../public/images/fado/2.jpg";
+import photo11 from "../../public/images/fado/provence0019.jpg";
+import photo12 from "../../public/images/fado/33.jpg";
+import photo13 from "../../public/images/fado/10.jpg";
 
 import Layout from "../../components/layout";
 import { ReactElement } from "react";
@@ -47,7 +47,7 @@ const Fado: NextPageWithLayout = () => {
   );
 };
 
-Fado.getLayout = function getLayout(page: ReactElement) {
+Fado.getLayout = function getLayout(page: ReactElement<any>) {
   return (
     <Layout
       title={"Fado"}

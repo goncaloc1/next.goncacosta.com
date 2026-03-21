@@ -1,26 +1,26 @@
 import styles from "./When.module.css";
 
-import photoz from "/public/images/when/z.jpg";
-import whenZoomIn from "/public/images/when/when_zoom_in.png";
-import photoa from "/public/images/when/a.jpg";
-import photob from "/public/images/when/b.jpg";
-import photoc from "/public/images/when/c.jpg";
-import photod from "/public/images/when/d.jpg";
-import photoe from "/public/images/when/e.jpg";
-import photof from "/public/images/when/f.jpg";
-import photog from "/public/images/when/g.jpg";
-import photog1 from "/public/images/when/g1.jpg";
-import photog2 from "/public/images/when/g2.jpg";
-import photoh from "/public/images/when/h.jpg";
-import photoi from "/public/images/when/i.jpg";
-import photoj from "/public/images/when/j.jpg";
-import photok from "/public/images/when/k.jpg";
-import photol from "/public/images/when/l.jpg";
-import photom from "/public/images/when/m.jpg";
-import photon from "/public/images/when/n.jpg";
-import photoo from "/public/images/when/o.jpg";
-import photop from "/public/images/when/p.jpg";
-import photoq from "/public/images/when/q.jpg";
+import photoz from "../../public/images/when/z.jpg";
+import whenZoomIn from "../../public/images/when/when_zoom_in.png";
+import photoa from "../../public/images/when/a.jpg";
+import photob from "../../public/images/when/b.jpg";
+import photoc from "../../public/images/when/c.jpg";
+import photod from "../../public/images/when/d.jpg";
+import photoe from "../../public/images/when/e.jpg";
+import photof from "../../public/images/when/f.jpg";
+import photog from "../../public/images/when/g.jpg";
+import photog1 from "../../public/images/when/g1.jpg";
+import photog2 from "../../public/images/when/g2.jpg";
+import photoh from "../../public/images/when/h.jpg";
+import photoi from "../../public/images/when/i.jpg";
+import photoj from "../../public/images/when/j.jpg";
+import photok from "../../public/images/when/k.jpg";
+import photol from "../../public/images/when/l.jpg";
+import photom from "../../public/images/when/m.jpg";
+import photon from "../../public/images/when/n.jpg";
+import photoo from "../../public/images/when/o.jpg";
+import photop from "../../public/images/when/p.jpg";
+import photoq from "../../public/images/when/q.jpg";
 
 import NavigationMenu from "../../components/navigation-menu";
 import { NextPageWithLayout } from "../_app";
@@ -64,7 +64,7 @@ const When: NextPageWithLayout = () => {
   );
 };
 
-When.getLayout = function getLayout(page: ReactElement) {
+When.getLayout = function getLayout(page: ReactElement<any>) {
   return (
     <Layout
       title={"When was the last time someone wrote you a love letter?"}

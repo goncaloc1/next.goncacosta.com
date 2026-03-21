@@ -1,30 +1,30 @@
-import photo2 from "/public/images/sopra/7.jpg";
-import photo3 from "/public/images/sopra/6.jpg";
-import photo4 from "/public/images/sopra/26.jpg";
-import photo5 from "/public/images/sopra/2.jpg";
-import photo6 from "/public/images/sopra/4.jpg";
-import photo7 from "/public/images/sopra/15.jpg";
-import photo8 from "/public/images/sopra/10 (1).jpg";
-import photo9 from "/public/images/sopra/prove0004.jpg";
-import photo10 from "/public/images/sopra/8.jpg";
-import photo11 from "/public/images/sopra/10.jpg";
-import photo12 from "/public/images/sopra/14.jpg";
-import photo13 from "/public/images/sopra/11.jpg";
-import photo14 from "/public/images/sopra/16.jpg";
-import photo15 from "/public/images/sopra/8 (1).jpg";
-import photo16 from "/public/images/sopra/5.jpg";
-import photo17 from "/public/images/sopra/35.jpg";
-import photo18 from "/public/images/sopra/34.jpg";
-import photo19 from "/public/images/sopra/prov0005.jpg";
-import photo20 from "/public/images/sopra/20.jpg";
-import photo21 from "/public/images/sopra/prove0005.jpg";
-import photo22 from "/public/images/sopra/30.jpg";
-import photo23 from "/public/images/sopra/6 (1).jpg";
-import photo24 from "/public/images/sopra/6 (2).jpg";
-import photo25 from "/public/images/sopra/7 (1).jpg";
-import photo26 from "/public/images/sopra/31.jpg";
-import photo27 from "/public/images/sopra/33.jpg";
-import photo28 from "/public/images/sopra/provenc0006.jpg";
+import photo2 from "../../public/images/sopra/7.jpg";
+import photo3 from "../../public/images/sopra/6.jpg";
+import photo4 from "../../public/images/sopra/26.jpg";
+import photo5 from "../../public/images/sopra/2.jpg";
+import photo6 from "../../public/images/sopra/4.jpg";
+import photo7 from "../../public/images/sopra/15.jpg";
+import photo8 from "../../public/images/sopra/10 (1).jpg";
+import photo9 from "../../public/images/sopra/prove0004.jpg";
+import photo10 from "../../public/images/sopra/8.jpg";
+import photo11 from "../../public/images/sopra/10.jpg";
+import photo12 from "../../public/images/sopra/14.jpg";
+import photo13 from "../../public/images/sopra/11.jpg";
+import photo14 from "../../public/images/sopra/16.jpg";
+import photo15 from "../../public/images/sopra/8 (1).jpg";
+import photo16 from "../../public/images/sopra/5.jpg";
+import photo17 from "../../public/images/sopra/35.jpg";
+import photo18 from "../../public/images/sopra/34.jpg";
+import photo19 from "../../public/images/sopra/prov0005.jpg";
+import photo20 from "../../public/images/sopra/20.jpg";
+import photo21 from "../../public/images/sopra/prove0005.jpg";
+import photo22 from "../../public/images/sopra/30.jpg";
+import photo23 from "../../public/images/sopra/6 (1).jpg";
+import photo24 from "../../public/images/sopra/6 (2).jpg";
+import photo25 from "../../public/images/sopra/7 (1).jpg";
+import photo26 from "../../public/images/sopra/31.jpg";
+import photo27 from "../../public/images/sopra/33.jpg";
+import photo28 from "../../public/images/sopra/provenc0006.jpg";
 
 import Layout from "../../components/layout";
 import { ReactElement } from "react";
@@ -75,7 +75,7 @@ const Sopra: NextPageWithLayout = () => {
   );
 };
 
-Sopra.getLayout = function getLayout(page: ReactElement) {
+Sopra.getLayout = function getLayout(page: ReactElement<any>) {
   return (
     <Layout
       title={"Sopra"}

@@ -1,3 +1,5 @@
+import type { NextConfig } from "next";
+
 const ContentSecurityPolicy = `
   default-src 'none';
   script-src 'self' ${process.env.NODE_ENV !== "production" && "'unsafe-eval'"};
@@ -13,28 +15,30 @@ const ContentSecurityPolicy = `
 
 const securityHeaders = [
   {
-    key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim()
+    key: "Content-Security-Policy",
+    value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
   },
   {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff'
+    key: "X-Content-Type-Options",
+    value: "nosniff",
   },
   {
-    key: 'Referrer-Policy',
-    value: 'no-referrer-when-downgrade'
-  }
+    key: "Referrer-Policy",
+    value: "no-referrer-when-downgrade",
+  },
 ];
 
-module.exports = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   async headers() {
     return [
       {
         // Apply these headers to all routes in the application.
-        source: '/:path*',
+        source: "/:path*",
         headers: securityHeaders,
       },
-    ]
+    ];
   },
-}
+};
+
+export default nextConfig;

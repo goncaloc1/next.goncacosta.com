@@ -3,7 +3,7 @@ import {
   getNavigationColors,
   NavigationColors,
 } from "../lib/navigation-colors";
-import { buildPhotosCollection, PhotoMetadata } from "../lib/random-photo";
+import { buildPhotosCollection, PhotoMetadata } from "../lib/photo-collection";
 import { getRandomFromArray } from "../lib/helpers";
 import MainMenu from "../components/main-menu";
 import MainImage from "../components/main-image";

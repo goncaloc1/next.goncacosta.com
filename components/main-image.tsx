@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { PhotoMetadata } from "../lib/random-photo";
+import { PhotoMetadata } from "../lib/photo-collection";
 
 type MainImageProps = {
   photoMetadata: PhotoMetadata;

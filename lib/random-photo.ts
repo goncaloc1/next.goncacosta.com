@@ -50,10 +50,6 @@ import paperbag_x from "../public/images/paperbag/high-res/x.jpg";
 import oulu_2 from "../public/images/oulu/high-res/2.jpg";
 import oulu_6 from "../public/images/oulu/high-res/6.jpg";
 import oulu_12 from "../public/images/oulu/high-res/12.jpg";
-import fado_proven0004 from "../public/images/fado/proven0004.jpg";
-import fado_pro0018 from "../public/images/fado/pro0018.jpg";
-import fado_prov0012 from "../public/images/fado/prov0012.jpg";
-import fado_35_2 from "../public/images/fado/35(2).jpg";
 import { StaticImageData } from "next/image";
 import { random } from "./helpers";
 
@@ -64,128 +60,103 @@ export type PhotoMetadata = {
   is35mm?: boolean;
 };
 
+interface BuildPhotosCollectionProps {
+  sources: StaticImageData[];
+  path: string;
+  title: string;
+  is35mm?: boolean;
+}
+
+/**
+ * Helper function to create photo metadata for a collection
+ */
+const buildPhotosCollection = ({
+  sources,
+  path,
+  title,
+  is35mm = false,
+}: BuildPhotosCollectionProps): PhotoMetadata[] => {
+  return sources.map((source) => ({
+    path,
+    title,
+    source,
+    ...(is35mm && { is35mm: true }),
+  }));
+};
+
 const photos: PhotoMetadata[] = [
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_a },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_b },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_c },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_d },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_e },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_k },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_l },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_m },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_o },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_p },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_q },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_r },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_s },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_t },
-  { path: "/reminiscencia", title: "reminiscencia", source: reminiscencia_u },
-  { path: "/alba", title: "alba", source: alba_b },
-  { path: "/alba", title: "alba", source: alba_c },
-  { path: "/alba", title: "alba", source: alba_d },
-  { path: "/alba", title: "alba", source: alba_e },
-  { path: "/alba", title: "alba", source: alba_j },
-  { path: "/alba", title: "alba", source: alba_k },
-  { path: "/alba", title: "alba", source: alba_l },
-  { path: "/alba", title: "alba", source: alba_m },
-  { path: "/alba", title: "alba", source: alba_n },
-  { path: "/alba", title: "alba", source: alba_o },
-  { path: "/alba", title: "alba", source: alba_p },
-  { path: "/alba", title: "alba", source: alba_q },
-  { path: "/alba", title: "alba", source: alba_r },
-  { path: "/alba", title: "alba", source: alba_v },
-  { path: "/alba", title: "alba", source: alba_w },
-  {
+  ...buildPhotosCollection({
+    sources: [
+      reminiscencia_a,
+      reminiscencia_b,
+      reminiscencia_c,
+      reminiscencia_d,
+      reminiscencia_e,
+      reminiscencia_k,
+      reminiscencia_l,
+      reminiscencia_m,
+      reminiscencia_o,
+      reminiscencia_p,
+      reminiscencia_q,
+      reminiscencia_r,
+      reminiscencia_s,
+      reminiscencia_t,
+      reminiscencia_u,
+    ],
+    path: "/reminiscencia",
+    title: "reminiscencia",
+  }),
+  ...buildPhotosCollection({
+    sources: [
+      alba_b,
+      alba_c,
+      alba_d,
+      alba_e,
+      alba_j,
+      alba_k,
+      alba_l,
+      alba_m,
+      alba_n,
+      alba_o,
+      alba_p,
+      alba_q,
+      alba_r,
+      alba_v,
+      alba_w,
+    ],
+    path: "/alba",
+    title: "alba",
+  }),
+  ...buildPhotosCollection({
+    sources: [
+      when_a,
+      when_b,
+      when_c,
+      when_d,
+      when_e,
+      when_f,
+      when_i,
+      when_k,
+      when_l,
+      when_n,
+      when_o,
+      when_z,
+    ],
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
-    source: when_a,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_b,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_c,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_d,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_e,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_f,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_i,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_k,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_l,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_n,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_o,
-  },
-  {
-    path: "/when",
-    title: "when was the last time someone wrote you a love letter?",
-    source: when_z,
-  },
-  {
+  }),
+  ...buildPhotosCollection({
+    sources: [paperbag_7, paperbag_6, paperbag_t, paperbag_x],
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_7,
     is35mm: true,
-  },
-  {
-    path: "/paperbag",
-    title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_6,
+  }),
+  ...buildPhotosCollection({
+    sources: [oulu_2, oulu_6, oulu_12],
+    path: "/oulu",
+    title: "oulu",
     is35mm: true,
-  },
-  {
-    path: "/paperbag",
-    title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_t,
-    is35mm: true,
-  },
-  {
-    path: "/paperbag",
-    title: "it's a paper bag to scream, it's a bag of affections",
-    source: paperbag_x,
-    is35mm: true,
-  },
-  { path: "/oulu", title: "oulu", source: oulu_2, is35mm: true },
-  { path: "/oulu", title: "oulu", source: oulu_6, is35mm: true },
-  { path: "/oulu", title: "oulu", source: oulu_12, is35mm: true },
-  // { path: "/fado", title: "fado", source: fado_proven0004 },
-  // { path: "/fado", title: "fado", source: fado_pro0018 },
-  // { path: "/fado", title: "fado", source: fado_prov0012 },
-  // { path: "/fado", title: "fado", source: fado_35_2 },
+  }),
 ];
 
 export const getRandomPhotoMetadata = (): PhotoMetadata => {

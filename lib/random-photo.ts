@@ -51,7 +51,6 @@ import oulu_2 from "../public/images/oulu/high-res/2.jpg";
 import oulu_6 from "../public/images/oulu/high-res/6.jpg";
 import oulu_12 from "../public/images/oulu/high-res/12.jpg";
 import { StaticImageData } from "next/image";
-import { random } from "./helpers";
 
 export type PhotoMetadata = {
   path: string;
@@ -70,7 +69,7 @@ interface BuildPhotosCollectionProps {
 /**
  * Helper function to create photo metadata for a collection
  */
-const buildPhotosCollection = ({
+const buildPhotosCollectionNested = ({
   sources,
   path,
   title,
@@ -84,8 +83,11 @@ const buildPhotosCollection = ({
   }));
 };
 
-const photos: PhotoMetadata[] = [
-  ...buildPhotosCollection({
+/**
+ * Creates a collection of photos that can be displayed in main page
+ */
+export const buildPhotosCollection = () => [
+  ...buildPhotosCollectionNested({
     sources: [
       reminiscencia_a,
       reminiscencia_b,
@@ -106,7 +108,7 @@ const photos: PhotoMetadata[] = [
     path: "/reminiscencia",
     title: "reminiscencia",
   }),
-  ...buildPhotosCollection({
+  ...buildPhotosCollectionNested({
     sources: [
       alba_b,
       alba_c,
@@ -127,7 +129,7 @@ const photos: PhotoMetadata[] = [
     path: "/alba",
     title: "alba",
   }),
-  ...buildPhotosCollection({
+  ...buildPhotosCollectionNested({
     sources: [
       when_a,
       when_b,
@@ -145,21 +147,16 @@ const photos: PhotoMetadata[] = [
     path: "/when",
     title: "when was the last time someone wrote you a love letter?",
   }),
-  ...buildPhotosCollection({
+  ...buildPhotosCollectionNested({
     sources: [paperbag_7, paperbag_6, paperbag_t, paperbag_x],
     path: "/paperbag",
     title: "it's a paper bag to scream, it's a bag of affections",
     is35mm: true,
   }),
-  ...buildPhotosCollection({
+  ...buildPhotosCollectionNested({
     sources: [oulu_2, oulu_6, oulu_12],
     path: "/oulu",
     title: "oulu",
     is35mm: true,
   }),
 ];
-
-export const getRandomPhotoMetadata = (): PhotoMetadata => {
-  const idx = random(0, photos.length - 1);
-  return photos[idx];
-};
